@@ -21,10 +21,20 @@ class AppError(Exception):
         self.status_code = status_code
 
 
+def _jsonable(value: Any) -> Any:
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    if isinstance(value, dict):
+        return {str(key): _jsonable(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_jsonable(item) for item in value]
+    return str(value)
+
+
 def error_body(*, code: str, message: str, details: Any = None) -> dict[str, Any]:
     body: dict[str, Any] = {"error": {"code": code, "message": message}}
     if details is not None:
-        body["error"]["details"] = details
+        body["error"]["details"] = _jsonable(details)
     return body
 
 

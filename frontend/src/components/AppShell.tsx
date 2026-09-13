@@ -1,51 +1,40 @@
-import Link from "next/link";
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 
-const NAV = [
-  { href: "/", label: "Dashboard" },
-  { href: "/search", label: "Search" },
-  { href: "/need-impact", label: "Need & Impact" },
-  { href: "/reviews", label: "Reviews" },
-];
+import { AppHeader } from "@/components/AppHeader";
+import { CopilotDrawer } from "@/components/system/CopilotDrawer";
+import { GovernanceStrip } from "@/components/system/GovernanceStrip";
+import { PRODUCT_LAYER, PRODUCT_NAME } from "@/lib/explanations";
 
 export function AppShell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen">
-      <header className="bg-[var(--navy)] text-white">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
-          <div>
-            <p className="text-xs uppercase tracking-[0.18em] text-[var(--saffron)]">
-              SIH26102 · MoSPI
-            </p>
-            <Link href="/" className="text-xl font-semibold tracking-wide">
-              SARVSAKSHI
-            </Link>
-            <p className="text-sm text-white/80">
-              MPLADS Project Integrity & Investigation Layer
-            </p>
-          </div>
-          <Link
-            href="/login"
-            className="border border-white/30 px-3 py-1.5 text-sm hover:bg-white/10"
-          >
-            Officer login
-          </Link>
-        </div>
-        <nav className="bg-[var(--navy-mid)]">
-          <div className="mx-auto flex max-w-6xl gap-6 px-6 py-2 text-sm">
-            {NAV.map((item) => (
-              <Link key={item.href} href={item.href} className="hover:text-[var(--saffron)]">
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      </header>
-      <main className="mx-auto max-w-6xl px-6 py-8">{children}</main>
-      <footer className="border-t border-[var(--line)] px-6 py-4 text-center text-sm text-[var(--muted)]">
-        AI recommends. Authorized officers decide. Investigation priority and
-        evidence confidence — not a legal finding of fraud.
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <Suspense
+        fallback={
+          <header className="bg-[var(--shell)] px-6 py-4 text-[var(--navy)]">
+            <p className="svk-display text-xl font-semibold">{PRODUCT_NAME}</p>
+            <p className="text-sm">{PRODUCT_LAYER}</p>
+            <p className="mt-2 text-xs">Current Pilot: Andhra Pradesh</p>
+          </header>
+        }
+      >
+        <AppHeader />
+      </Suspense>
+      <main id="main-content" className="svk-shell-main mx-auto max-w-[92rem] px-4 py-6 lg:pl-[19.5rem] sm:px-6 sm:py-8">
+        {children}
+      </main>
+      <footer className="border-t border-[var(--line)] px-6 py-4 text-center lg:pl-[19.5rem]">
+        <p className="text-sm font-medium text-[var(--navy)]">
+          {PRODUCT_NAME} · {PRODUCT_LAYER}
+        </p>
+        <p className="mt-1 text-xs text-[var(--muted)]">Current pilot: Andhra Pradesh</p>
+        <GovernanceStrip />
       </footer>
+      <Suspense fallback={null}>
+        <CopilotDrawer />
+      </Suspense>
     </div>
   );
 }

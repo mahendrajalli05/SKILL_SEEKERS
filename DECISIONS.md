@@ -67,3 +67,21 @@ Ghost
 Over-bill
 Stuck
 Clean
+
+## D016 — Peer Comparison Geography
+
+Primary peer scope:
+same constituency + same category/work type.
+
+Fallback order:
+1. Same constituency + same category/work type
+2. Same constituency + broader category
+3. Same Andhra Pradesh state + same category/work type
+4. Same Andhra Pradesh state + broader comparable group
+
+The system must display which peer scope was used.
+
+Do not use MP name as the primary geographic peer group.
+MP may be used only as contextual/relationship information.
+
+If insufficient comparable records exist, report insufficient evidence or expand to the next peer level. Never fabricate peers.

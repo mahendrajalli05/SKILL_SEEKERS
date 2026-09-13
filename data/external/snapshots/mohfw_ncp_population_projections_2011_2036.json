@@ -1,0 +1,1352 @@
+{
+  "snapshot_id": "mohfw_ncp_population_projections_2011_2036",
+  "source_id": "mohfw_ncp_population_projections_2011_2036",
+  "publisher": "National Commission on Population, Ministry of Health and Family Welfare, Government of India",
+  "report_title": "Population Projections for India and States, 2011-2036 (Report of the Technical Group on Population Projections)",
+  "publication_date": "2020-07",
+  "table": "TABLE-21 Projected Total Population As on 1st March",
+  "source_unit": "thousands of persons",
+  "output_unit": "persons",
+  "transformation": "persons = persons_thousands * 1000. This scaling is a unit conversion from the published table, not a modelled estimate.",
+  "geographic_level": "STATE",
+  "notes": [
+    "2011 figures for Andhra Pradesh and Telangana are reconstituted successor-state populations after the 2014 bifurcation, as published in this report. They are not the undivided 2011 Census Andhra Pradesh total.",
+    "Values are projections (except the reconstituted 2011 base). They are not a project-specific beneficiary count and are not contemporaneous with every MPLADS recommendation year unless a documented nearest-year match is applied.",
+    "National (INDIA) totals are omitted from this snapshot because project matching is not performed at NATIONAL level.",
+    "Uttarakhand is listed as Uttaranchal in Table-21; stored here as Uttarakhand with an alias in the matcher."
+  ],
+  "rows": [
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Jammu & Kashmir (UT)",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 12267,
+      "persons": 12267000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Jammu & Kashmir (UT)",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 12897,
+      "persons": 12897000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Jammu & Kashmir (UT)",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 13408,
+      "persons": 13408000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Jammu & Kashmir (UT)",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 13896,
+      "persons": 13896000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Himachal Pradesh",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 6865,
+      "persons": 6865000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Himachal Pradesh",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 7158,
+      "persons": 7158000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Himachal Pradesh",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 7394,
+      "persons": 7394000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Himachal Pradesh",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 7579,
+      "persons": 7579000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Punjab",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 27743,
+      "persons": 27743000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Punjab",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 29140,
+      "persons": 29140000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Punjab",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 30339,
+      "persons": 30339000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Punjab",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 31318,
+      "persons": 31318000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Chandigarh",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 1056,
+      "persons": 1056000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Chandigarh",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 1136,
+      "persons": 1136000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Chandigarh",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 1208,
+      "persons": 1208000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Chandigarh",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 1267,
+      "persons": 1267000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Uttarakhand",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 10086,
+      "persons": 10086000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Uttarakhand",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 10755,
+      "persons": 10755000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Uttarakhand",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 11399,
+      "persons": 11399000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Uttarakhand",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 11993,
+      "persons": 11993000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Haryana",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 25351,
+      "persons": 25351000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Haryana",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 27455,
+      "persons": 27455000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Haryana",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 29483,
+      "persons": 29483000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Haryana",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 31299,
+      "persons": 31299000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "NCT of Delhi",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 16788,
+      "persons": 16788000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "NCT of Delhi",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 18677,
+      "persons": 18677000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "NCT of Delhi",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 20571,
+      "persons": 20571000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "NCT of Delhi",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 22540,
+      "persons": 22540000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Rajasthan",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 68548,
+      "persons": 68548000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Rajasthan",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 74240,
+      "persons": 74240000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Rajasthan",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 79281,
+      "persons": 79281000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Rajasthan",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 83642,
+      "persons": 83642000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Uttar Pradesh",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 199812,
+      "persons": 199812000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Uttar Pradesh",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 216087,
+      "persons": 216087000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Uttar Pradesh",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 230907,
+      "persons": 230907000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Uttar Pradesh",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 242859,
+      "persons": 242859000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Bihar",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 104099,
+      "persons": 104099000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Bihar",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 114176,
+      "persons": 114176000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Bihar",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 123083,
+      "persons": 123083000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Bihar",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 132265,
+      "persons": 132265000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Sikkim",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 611,
+      "persons": 611000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Sikkim",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 644,
+      "persons": 644000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Sikkim",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 677,
+      "persons": 677000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Sikkim",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 708,
+      "persons": 708000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Arunachal Pradesh",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 1384,
+      "persons": 1384000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Arunachal Pradesh",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 1459,
+      "persons": 1459000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Arunachal Pradesh",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 1533,
+      "persons": 1533000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Arunachal Pradesh",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 1604,
+      "persons": 1604000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Nagaland",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 1979,
+      "persons": 1979000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Nagaland",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 2086,
+      "persons": 2086000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Nagaland",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 2192,
+      "persons": 2192000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Nagaland",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 2294,
+      "persons": 2294000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Manipur",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 2856,
+      "persons": 2856000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Manipur",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 3012,
+      "persons": 3012000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Manipur",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 3165,
+      "persons": 3165000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Manipur",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 3311,
+      "persons": 3311000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Mizoram",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 1097,
+      "persons": 1097000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Mizoram",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 1157,
+      "persons": 1157000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Mizoram",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 1216,
+      "persons": 1216000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Mizoram",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 1272,
+      "persons": 1272000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Tripura",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 3674,
+      "persons": 3674000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Tripura",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 3874,
+      "persons": 3874000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Tripura",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 4071,
+      "persons": 4071000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Tripura",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 4260,
+      "persons": 4260000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Meghalaya",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 2967,
+      "persons": 2967000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Meghalaya",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 3129,
+      "persons": 3129000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Meghalaya",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 3288,
+      "persons": 3288000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Meghalaya",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 3440,
+      "persons": 3440000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Assam",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 31206,
+      "persons": 31206000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Assam",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 33168,
+      "persons": 33168000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Assam",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 35043,
+      "persons": 35043000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Assam",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 36717,
+      "persons": 36717000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "West Bengal",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 91276,
+      "persons": 91276000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "West Bengal",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 95079,
+      "persons": 95079000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "West Bengal",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 98125,
+      "persons": 98125000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "West Bengal",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 100522,
+      "persons": 100522000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Jharkhand",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 32988,
+      "persons": 32988000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Jharkhand",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 35800,
+      "persons": 35800000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Jharkhand",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 38471,
+      "persons": 38471000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Jharkhand",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 40958,
+      "persons": 40958000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Odisha",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 41974,
+      "persons": 41974000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Odisha",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 43128,
+      "persons": 43128000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Odisha",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 44033,
+      "persons": 44033000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Odisha",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 44677,
+      "persons": 44677000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Chhattisgarh",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 25545,
+      "persons": 25545000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Chhattisgarh",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 27571,
+      "persons": 27571000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Chhattisgarh",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 29493,
+      "persons": 29493000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Chhattisgarh",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 31211,
+      "persons": 31211000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Madhya Pradesh",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 72627,
+      "persons": 72627000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Madhya Pradesh",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 78806,
+      "persons": 78806000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Madhya Pradesh",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 84516,
+      "persons": 84516000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Madhya Pradesh",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 89673,
+      "persons": 89673000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Gujarat",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 60440,
+      "persons": 60440000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Gujarat",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 65158,
+      "persons": 65158000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Gujarat",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 69788,
+      "persons": 69788000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Gujarat",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 74086,
+      "persons": 74086000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Dadra & Nagar Haveli",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 344,
+      "persons": 344000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Dadra & Nagar Haveli",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 452,
+      "persons": 452000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Dadra & Nagar Haveli",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 608,
+      "persons": 608000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Dadra & Nagar Haveli",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 836,
+      "persons": 836000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Maharashtra",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 112374,
+      "persons": 112374000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Maharashtra",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 118727,
+      "persons": 118727000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Maharashtra",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 124437,
+      "persons": 124437000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Maharashtra",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 129308,
+      "persons": 129308000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Andhra Pradesh",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 49577,
+      "persons": 49577000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Andhra Pradesh",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 51371,
+      "persons": 51371000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Andhra Pradesh",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 52787,
+      "persons": 52787000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Andhra Pradesh",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 53709,
+      "persons": 53709000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Karnataka",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 61095,
+      "persons": 61095000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Karnataka",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 64229,
+      "persons": 64229000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Karnataka",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 66845,
+      "persons": 66845000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Karnataka",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 68962,
+      "persons": 68962000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Goa",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 1458,
+      "persons": 1458000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Goa",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 1512,
+      "persons": 1512000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Goa",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 1559,
+      "persons": 1559000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Goa",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 1598,
+      "persons": 1598000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Daman Diu",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 243,
+      "persons": 243000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Daman Diu",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 329,
+      "persons": 329000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Daman Diu",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 470,
+      "persons": 470000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Daman Diu",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 705,
+      "persons": 705000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Lakshadweep",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 64,
+      "persons": 64000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Lakshadweep",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 66,
+      "persons": 66000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Lakshadweep",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 68,
+      "persons": 68000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Lakshadweep",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 70,
+      "persons": 70000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Kerala",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 33406,
+      "persons": 33406000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Kerala",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 34578,
+      "persons": 34578000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Kerala",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 35489,
+      "persons": 35489000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Kerala",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 36207,
+      "persons": 36207000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Tamil Nadu",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 72147,
+      "persons": 72147000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Tamil Nadu",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 74635,
+      "persons": 74635000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Tamil Nadu",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 76402,
+      "persons": 76402000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Tamil Nadu",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 77546,
+      "persons": 77546000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Puducherry",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 1248,
+      "persons": 1248000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Puducherry",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 1402,
+      "persons": 1402000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Puducherry",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 1572,
+      "persons": 1572000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Puducherry",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 1757,
+      "persons": 1757000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Andaman & Nicobar Islands",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 381,
+      "persons": 381000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Andaman & Nicobar Islands",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 392,
+      "persons": 392000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Andaman & Nicobar Islands",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 400,
+      "persons": 400000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Andaman & Nicobar Islands",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 406,
+      "persons": 406000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Telangana",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 35004,
+      "persons": 35004000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Telangana",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 36462,
+      "persons": 36462000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Telangana",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 37725,
+      "persons": 37725000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Telangana",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 38636,
+      "persons": 38636000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Ladakh",
+      "reference_year": 2011,
+      "reference_date": "2011-03-01",
+      "persons_thousands": 274,
+      "persons": 274000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Ladakh",
+      "reference_year": 2016,
+      "reference_date": "2016-03-01",
+      "persons_thousands": 287,
+      "persons": 287000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Ladakh",
+      "reference_year": 2021,
+      "reference_date": "2021-03-01",
+      "persons_thousands": 297,
+      "persons": 297000,
+      "unit": "persons"
+    },
+    {
+      "geographic_level": "STATE",
+      "geo_key": "Ladakh",
+      "reference_year": 2026,
+      "reference_date": "2026-03-01",
+      "persons_thousands": 305,
+      "persons": 305000,
+      "unit": "persons"
+    }
+  ]
+}

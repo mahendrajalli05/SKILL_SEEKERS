@@ -8,9 +8,13 @@ from app.domain.schemas.project import ProjectRead
 
 
 class NeedImpactSection(BaseModel):
-    """Partial until census / infrastructure-gap sources are actually available."""
+    """Decision-support placeholder. Full assessment is GET /need-impact."""
 
     score: float | None = None
+    need_score: float | None = None
+    impact_score: float | None = None
+    priority_score: float | None = None
+    priority_class: str | None = None
     unavailable_signals: list[str] = Field(
         default_factory=lambda: [
             "infrastructure_gap",
@@ -20,8 +24,9 @@ class NeedImpactSection(BaseModel):
         ]
     )
     note: str = (
-        "Need & Impact is partial until external data sources are available. "
-        "Do not treat a missing score as a place label."
+        "Priority recommendation only. Authorized officials make final "
+        "administrative decisions. Need & Impact remains INCONCLUSIVE where "
+        "census, infrastructure-gap, or beneficiary sources are unavailable."
     )
 
 

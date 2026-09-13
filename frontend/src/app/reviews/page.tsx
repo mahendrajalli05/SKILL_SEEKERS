@@ -1,12 +1,18 @@
+import { PageHeader } from "@/components/system/PageHeader";
+import { PageState } from "@/components/ui/PageState";
+
 export default function ReviewsPage() {
   return (
-    <div>
-      <h1 className="text-2xl font-semibold text-[var(--navy)]">Human review</h1>
-      <p className="mt-2 max-w-2xl text-sm text-[var(--muted)]">
-        Officer decisions (confirm concern, dismiss, need more info) will be
-        recorded here after the investigation workspace is built. The audit
-        table exists; this UI is a shell.
-      </p>
+    <div className="space-y-4">
+      <PageHeader
+        title="Human review"
+        explanation="A fleet-wide review queue is not available. Officer decisions are recorded on each Investigation Workspace."
+      />
+      <PageState
+        kind="unavailable"
+        title="Unavailable"
+        message="A fleet-wide review queue is not available in this prototype. Officer decisions are recorded on each Investigation Workspace. The audit table exists; this page is a shell."
+      />
     </div>
   );
 }

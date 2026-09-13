@@ -17,5 +17,9 @@ class FusionScore(Base, TimestampMixin):
     config_version: Mapped[str] = mapped_column(String(64), nullable=False)
     why_flagged: Mapped[str | None] = mapped_column(Text, nullable=True)
     why_not_flagged: Mapped[str | None] = mapped_column(Text, nullable=True)
+    data_mode: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    recommended_action: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    explanation_type: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    payload_json: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     project = relationship("Project", back_populates="fusion_score")

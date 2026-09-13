@@ -1,0 +1,441 @@
+{
+  "engine": "compliance",
+  "engine_version": "compliance-rules-v1",
+  "guideline_document": "Guidelines on MPLADS, 2023",
+  "effective_from": "2023-04-01",
+  "disclaimer": "Deterministic rule engine. Not an ML model. Not a legal finding. Rules are grounded only in cited official/public sources. Missing inputs yield NOT_ASSESSABLE.",
+  "sources": [
+    {
+      "source_id": "LS-SQ-44-2026-07-22",
+      "publisher": "Government of India, Ministry of Statistics and Programme Implementation",
+      "citation": "Lok Sabha Starred Question No. *44, answered on 22.07.2026",
+      "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AS44_hNPX9H.pdf"
+    },
+    {
+      "source_id": "LS-USQ-2887-2026-08-05",
+      "publisher": "Government of India, Ministry of Statistics and Programme Implementation",
+      "citation": "Lok Sabha Unstarred Question No. 2887, answered on 05.08.2026",
+      "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2887_YqZH4s.pdf"
+    },
+    {
+      "source_id": "MOSPI-MPLADS-ABOUT",
+      "publisher": "Ministry of Statistics and Programme Implementation",
+      "citation": "MoSPI MPLADS division page (public scheme description of Guidelines 2023)",
+      "url": "https://www.mospi.gov.in/about-us/mplads"
+    },
+    {
+      "source_id": "MPLADS-PORTAL-ABOUT",
+      "publisher": "Ministry of Statistics and Programme Implementation",
+      "citation": "Official MPLADS / eSAKSHI landing page",
+      "url": "https://mplads.mospi.gov.in/digigov/landingpage.html"
+    },
+    {
+      "source_id": "MPLADS-GOV-HOME",
+      "publisher": "Ministry of Statistics and Programme Implementation",
+      "citation": "Official MPLADS portal home (Rs. 5 crore entitlement; LS/RS recommendation geography)",
+      "url": "https://mplads.gov.in/"
+    },
+    {
+      "source_id": "GUIDELINES-2023-PDF",
+      "publisher": "Ministry of Statistics and Programme Implementation",
+      "citation": "Guidelines on MPLADS, 2023 (English PDF cited by MoSPI; full PDF is not stored in this repository)",
+      "url": "https://www.mplads.gov.in/MPLADS/UploadedFiles/MPLADSGuidelines2023_English_.pdf"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "R001",
+      "category": "SANCTION_TIMELINE",
+      "title": "Sanction or rejection within 45 days of receipt",
+      "description": "The Implementing District Authority shall issue sanction or rejection of a recommendation within 45 days from the date of receipt of the recommendation.",
+      "severity": "attention",
+      "required_fields": ["recommended_date", "sanction_date"],
+      "evaluation_logic": {
+        "operator": "date_diff_gt",
+        "left_field": "sanction_date",
+        "right_field": "recommended_date",
+        "threshold": 45,
+        "unit": "days"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023",
+        "para": "3.2.4",
+        "source_id": "LS-SQ-44-2026-07-22",
+        "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AS44_hNPX9H.pdf",
+        "quote": "As per Para 3.2.4 of the MPLADS Guidelines, 2023, the sanction/rejection in respect of all recommendations made by the Member of Parliament shall be issued by the Implementing District Authority within 45 days from the date of receipt of the recommendations to the Implementing District Authority."
+      },
+      "limitations": [
+        "Date of receipt by the Implementing District Authority is not in the real extract. HYBRID_TEST uses synthetic sanction_date versus observed recommended_date as a documented proxy, not as an official receipt clock.",
+        "Para 3.2.6 Model Code of Conduct days are not subtracted because an MCC calendar is unavailable."
+      ],
+      "not_assessable_template": "Sanction-date evidence is unavailable in the current real dataset. Date of receipt by the Implementing District Authority is also unavailable."
+    },
+    {
+      "rule_id": "R002",
+      "category": "COMPLETION_TIMELINE",
+      "title": "Completion generally within one year of sanction",
+      "description": "The sanction letter shall stipulate a time limit for completion which should generally not exceed one year from sanction.",
+      "severity": "attention",
+      "required_fields": ["sanction_date"],
+      "evaluation_logic": {
+        "operator": "duration_gt",
+        "start_field": "sanction_date",
+        "end_field": "actual_completion_date",
+        "as_of_field": "as_of_date",
+        "threshold": 365,
+        "unit": "days"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023",
+        "para": "3.2.12",
+        "source_id": "LS-SQ-44-2026-07-22",
+        "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AS44_hNPX9H.pdf",
+        "quote": "As per Para 3.2.12 of the MPLADS Guidelines, 2023, the sanction letter issued by the Implementing District Authority shall stipulate a time limit for completion of the work by the Implementing Agency, which should generally not exceed one year. In exceptional cases, for instance in difficult/ hilly terrain, etc., where the implementation time is likely to exceed one-year, specific justification for the same shall be incorporated in the sanction letter."
+      },
+      "limitations": [
+        "Verified sanction date and completion date are unavailable in the real extract.",
+        "The one-year exception for difficult/hilly terrain cannot be verified from available fields and is not treated as established."
+      ],
+      "not_assessable_template": "Completion-date evidence is unavailable in the current real dataset. Verified sanction date is also unavailable."
+    },
+    {
+      "rule_id": "R003",
+      "category": "PAYMENT_TIMELINE",
+      "title": "No payment recorded within three months of sanction",
+      "description": "Official monitoring of MPLADS includes works where no payment has been made within three months of sanction.",
+      "severity": "watch",
+      "required_fields": ["sanction_date"],
+      "evaluation_logic": {
+        "operator": "no_recorded_spend_after_days",
+        "start_field": "sanction_date",
+        "payment_date_field": "first_payment_date",
+        "expenditure_field": "expenditure_amount",
+        "as_of_field": "as_of_date",
+        "threshold": 90,
+        "unit": "days"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (monitoring described by MoSPI)",
+        "para": null,
+        "source_id": "LS-SQ-44-2026-07-22",
+        "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AS44_hNPX9H.pdf",
+        "quote": "Real time work progress monitoring reports, including details of works pending for sanction beyond 45 days from the date of recommendation, works remaining incomplete after one year of sanction, and works where no payment has been made within three months of sanction, have been made available under State/District logins."
+      },
+      "limitations": [
+        "Verified expenditure and payment date are unavailable in the real extract.",
+        "HYBRID_TEST may use synthetic expenditure_amount as a proxy for whether any payment was recorded. That is not an official PFMS payment date."
+      ],
+      "not_assessable_template": "Payment-date and verified-expenditure evidence are unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R004",
+      "category": "COST_ESTIMATION",
+      "title": "Recorded spend versus sanctioned amount",
+      "description": "The Implementing District Authority examines cost estimation and compliance before sanction. Recorded spend above the sanctioned amount is a cost-estimation mismatch on the available figures.",
+      "severity": "attention",
+      "required_fields": ["sanctioned_amount", "expenditure_amount"],
+      "evaluation_logic": {
+        "operator": "numeric_gt",
+        "left_field": "expenditure_amount",
+        "right_field": "sanctioned_amount"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (MoSPI public summary)",
+        "para": null,
+        "source_id": "MOSPI-MPLADS-ABOUT",
+        "url": "https://www.mospi.gov.in/about-us/mplads",
+        "quote": "The IDAs examines project feasibility, cost estimation, and compliance with MPLADS guidelines. Once verified, the DA issues an administrative sanction. The total estimated amount of all sanctioned works of each Member of Parliament in a particular Financial Year should not exceed his/ her entitlement up to that financial year, including amount of interest and amount of redistribution, if any."
+      },
+      "limitations": [
+        "Verified expenditure is unavailable in the real extract.",
+        "This is a work-level comparison of available sanctioned and expenditure figures. It is not an MP-level entitlement audit and not a legal finding."
+      ],
+      "not_assessable_template": "Verified expenditure and sanctioned-amount evidence are unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R005",
+      "category": "SC_EARMARK",
+      "title": "At least 15 percent of annual entitlement for SC-inhabited areas",
+      "description": "Members of Parliament are to recommend every year works costing at least 15 percent of the total MPLADS entitlement for areas inhabited by Scheduled Caste population.",
+      "severity": "watch",
+      "required_fields": ["mp_sc_share_percent"],
+      "evaluation_logic": {
+        "operator": "numeric_lt",
+        "left_field": "mp_sc_share_percent",
+        "right_constant": 15
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023",
+        "para": "5.4.1",
+        "source_id": "LS-USQ-2887-2026-08-05",
+        "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2887_YqZH4s.pdf",
+        "quote": "Members of Parliament are to recommend every year, works costing at least 15 percent of the total MPLADS entitlement for the year for areas inhabited by Scheduled Caste population and at least 7.5 percent of the total MPLADS entitlement for the year for areas inhabited by Scheduled Tribe population. [Para 5.4.1 of MPLADS Guidelines, 2023]"
+      },
+      "limitations": [
+        "This is an MP-year earmark, not a single-work label. The real extract has no SC-area flag and no MP-year entitlement total."
+      ],
+      "not_assessable_template": "Scheduled-Caste area share and MP-year entitlement evidence are unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R006",
+      "category": "ST_EARMARK",
+      "title": "At least 7.5 percent of annual entitlement for ST-inhabited areas",
+      "description": "Members of Parliament are to recommend every year works costing at least 7.5 percent of the total MPLADS entitlement for areas inhabited by Scheduled Tribe population.",
+      "severity": "watch",
+      "required_fields": ["mp_st_share_percent"],
+      "evaluation_logic": {
+        "operator": "numeric_lt",
+        "left_field": "mp_st_share_percent",
+        "right_constant": 7.5
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023",
+        "para": "5.4.1",
+        "source_id": "LS-USQ-2887-2026-08-05",
+        "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2887_YqZH4s.pdf",
+        "quote": "Members of Parliament are to recommend every year, works costing at least 15 percent of the total MPLADS entitlement for the year for areas inhabited by Scheduled Caste population and at least 7.5 percent of the total MPLADS entitlement for the year for areas inhabited by Scheduled Tribe population. [Para 5.4.1 of MPLADS Guidelines, 2023]"
+      },
+      "limitations": [
+        "Para 5.4.2 interchangeability when ST or SC population is insufficient cannot be applied: constituency population composition is unavailable."
+      ],
+      "not_assessable_template": "Scheduled-Tribe area share and MP-year entitlement evidence are unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R007",
+      "category": "ENTITLEMENT_CEILING",
+      "title": "Financial-year sanctioned total versus MP entitlement",
+      "description": "The total estimated amount of all sanctioned works of an MP in a financial year should not exceed entitlement up to that year, including interest and redistribution.",
+      "severity": "attention",
+      "required_fields": ["mp_fy_sanctioned_total", "mp_entitlement_upto_year", "amount_unit"],
+      "evaluation_logic": {
+        "operator": "numeric_gt",
+        "left_field": "mp_fy_sanctioned_total",
+        "right_field": "mp_entitlement_upto_year"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (MoSPI public summary)",
+        "para": null,
+        "source_id": "MOSPI-MPLADS-ABOUT",
+        "url": "https://www.mospi.gov.in/about-us/mplads",
+        "quote": "The total estimated amount of all sanctioned works of each Member of Parliament in a particular Financial Year should not exceed his/ her entitlement up to that financial year, including amount of interest and amount of redistribution, if any."
+      },
+      "limitations": [
+        "Work-level allocation is not an MP-year sanctioned total.",
+        "Source amount unit is unspecified, so a rupee entitlement ceiling cannot be applied to allocation_amount."
+      ],
+      "not_assessable_template": "MP-year sanctioned total, entitlement, and amount-unit evidence are unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R008",
+      "category": "OUTSIDE_CONSTITUENCY",
+      "title": "Outside constituency or state expenditure ceiling",
+      "description": "Guidelines 2023 increased permissible expenditure outside an MP's constituency or state from Rs. 25 lakh to Rs. 50 lakh.",
+      "severity": "watch",
+      "required_fields": ["outside_constituency_fy_amount", "amount_unit", "verified_work_district"],
+      "evaluation_logic": {
+        "operator": "numeric_gt",
+        "left_field": "outside_constituency_fy_amount",
+        "right_constant": 5000000
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (MoSPI public summary of notable 2023 changes)",
+        "para": null,
+        "source_id": "MOSPI-MPLADS-ABOUT",
+        "url": "https://www.mospi.gov.in/about-us/mplads",
+        "quote": "The MPLADS Guidelines 2023 have certain notable changes which include ... an increase in the permissible expenditure outside an MP’s constituency or state from Rs. 25 lakh to Rs. 50 lakh."
+      },
+      "limitations": [
+        "The real extract has no verified district, so outside-constituency spend cannot be identified.",
+        "Source amount unit is unspecified."
+      ],
+      "not_assessable_template": "Verified work district, outside-constituency amount, and amount-unit evidence are unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R009",
+      "category": "INELIGIBLE_WORKS",
+      "title": "Illustrative eligible and ineligible works list",
+      "description": "Guidelines 2023 prescribe an illustrative list of eligible and ineligible works. This engine does not encode an unsourced prohibited-works dictionary.",
+      "severity": "attention",
+      "required_fields": ["official_ineligible_work_match"],
+      "evaluation_logic": {
+        "operator": "boolean_true",
+        "field": "official_ineligible_work_match"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (MoSPI public summary)",
+        "para": null,
+        "source_id": "MOSPI-MPLADS-ABOUT",
+        "url": "https://www.mospi.gov.in/about-us/mplads",
+        "quote": "Illustrative list of eligible works/Ineligible works are prescribed under Guidelines on MPLADS, 2023."
+      },
+      "limitations": [
+        "The official 2023 illustrative list is not stored in this repository. Work-title keyword matching is not applied.",
+        "The 2016 negative list is not used, because Guidelines 2023 changed admissibility (including repair and maintenance of public assets)."
+      ],
+      "not_assessable_template": "Official 2023 eligible/ineligible work-list matching is unavailable in this repository. Work titles are not classified from unsourced keywords."
+    },
+    {
+      "rule_id": "R010",
+      "category": "STATUTORY_CLEARANCE",
+      "title": "Statutory and regulatory clearances before sanction",
+      "description": "Before sanctioning any work, the Implementing District Authority shall ensure that all requisite statutory and regulatory clearances have been obtained from the competent authorities.",
+      "severity": "attention",
+      "required_fields": ["statutory_clearance_evidence"],
+      "evaluation_logic": {
+        "operator": "boolean_true_not_triggered",
+        "field": "statutory_clearance_evidence"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (quoted by MoSPI in Lok Sabha)",
+        "para": null,
+        "source_id": "LS-SQ-44-2026-07-22",
+        "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AS44_hNPX9H.pdf",
+        "quote": "As per the MPLADS Guidelines, the Implementing District Authority shall, before sanctioning any work, ensure that all requisite statutory and regulatory clearances have been obtained from the competent authorities, that the work conforms to the MPLADS Guidelines, and that a written undertaking has been obtained from the concerned User Agency confirming its willingness to bear the operation and maintenance costs of the proposed asset from its own resources."
+      },
+      "limitations": [
+        "No clearance document or flag exists in the real extract."
+      ],
+      "not_assessable_template": "Statutory-clearance evidence is unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R011",
+      "category": "OM_UNDERTAKING",
+      "title": "User-agency operation and maintenance undertaking",
+      "description": "Before sanction, a written undertaking shall be obtained from the User Agency confirming willingness to bear operation and maintenance costs from its own resources.",
+      "severity": "watch",
+      "required_fields": ["user_agency_om_undertaking"],
+      "evaluation_logic": {
+        "operator": "boolean_true_not_triggered",
+        "field": "user_agency_om_undertaking"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (quoted by MoSPI in Lok Sabha)",
+        "para": null,
+        "source_id": "LS-SQ-44-2026-07-22",
+        "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AS44_hNPX9H.pdf",
+        "quote": "a written undertaking has been obtained from the concerned User Agency confirming its willingness to bear the operation and maintenance costs of the proposed asset from its own resources."
+      },
+      "limitations": [
+        "No user-agency undertaking field exists in the real extract."
+      ],
+      "not_assessable_template": "User-agency operation-and-maintenance undertaking evidence is unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R012",
+      "category": "PUBLIC_USE_PLAQUE",
+      "title": "Completed work put to public use with plaque",
+      "description": "As soon as an MPLADS work is completed, it should be put to public use. For public awareness, a plaque carrying the name of the MP and other details may be placed.",
+      "severity": "info",
+      "required_fields": ["actual_completion_date", "plaque_evidence"],
+      "evaluation_logic": {
+        "operator": "boolean_true_not_triggered",
+        "field": "plaque_evidence"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (MoSPI public summary)",
+        "para": null,
+        "source_id": "MOSPI-MPLADS-ABOUT",
+        "url": "https://www.mospi.gov.in/about-us/mplads",
+        "quote": "As soon as the work under the MPLADS is completed, is should be put to public use. For greater public awareness a plaque carrying name of Hon’ble MP and other details may be placed."
+      },
+      "limitations": [
+        "Completed STATUS in the extract is not a plaque or public-use inspection record."
+      ],
+      "not_assessable_template": "Completion-date and plaque evidence are unavailable in the current real dataset."
+    },
+    {
+      "rule_id": "R013",
+      "category": "GEOGRAPHIC_ELIGIBILITY",
+      "title": "Recommendation geography by House",
+      "description": "Lok Sabha MPs recommend works in their constituencies. Rajya Sabha MPs may recommend in the State of election. Nominated MPs may recommend in the country as provided in the Guidelines.",
+      "severity": "watch",
+      "required_fields": ["verified_work_district", "house", "mp_recommendation_geography_ok"],
+      "evaluation_logic": {
+        "operator": "boolean_true_not_triggered",
+        "field": "mp_recommendation_geography_ok"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (MoSPI public summary) and official MPLADS portal",
+        "para": null,
+        "source_id": "MOSPI-MPLADS-ABOUT",
+        "url": "https://www.mospi.gov.in/about-us/mplads",
+        "quote": "Lok Sabha MPs recommend projects in their respective constituencies. Rajya Sabha MPs can recommend projects anywhere in their State. Nominated MPs can recommend projects anywhere in the country. Guidelines on MPLADS, 2023 also contain provision for recommending works outside the constituency/state."
+      },
+      "limitations": [
+        "The extract constituency field is the MP/chamber label, not a verified work district. Geographic eligibility cannot be checked from that field alone."
+      ],
+      "not_assessable_template": "Verified work-district evidence is unavailable in the current real dataset. Extract constituency is not treated as a verified work location."
+    },
+    {
+      "rule_id": "R014",
+      "category": "ENTITLEMENT_CEILING",
+      "title": "Single-work amount versus annual entitlement requires a known unit",
+      "description": "Annual MPLADS entitlement is Rs. 5 crore per MP from FY 2011-12. A single recorded allocation cannot be compared with that rupee ceiling unless the source amount unit is known.",
+      "severity": "watch",
+      "required_fields": ["allocation_amount", "amount_unit"],
+      "evaluation_logic": {
+        "operator": "numeric_gt",
+        "left_field": "allocation_amount",
+        "right_constant": 50000000
+      },
+      "source_reference": {
+        "document": "Official MPLADS / eSAKSHI landing page",
+        "para": null,
+        "source_id": "MPLADS-PORTAL-ABOUT",
+        "url": "https://mplads.mospi.gov.in/digigov/landingpage.html",
+        "quote": "The annual allocation was subsequently enhanced to ₹1 crore in 1994-95, ₹2 crore in 1998-99, and ₹5 crore from the financial year 2011-12 onwards."
+      },
+      "limitations": [
+        "Source amount unit is unspecified. allocation_amount is not treated as labelled rupees."
+      ],
+      "not_assessable_template": "Source amount unit is unspecified in the current real dataset. The Rs. 5 crore entitlement ceiling is not applied to allocation_amount."
+    },
+    {
+      "rule_id": "R015",
+      "category": "IMPLEMENTING_AUTHORITY",
+      "title": "Implementing District Authority recorded",
+      "description": "Recommendations are forwarded to Implementing District Authorities. A blank IDA on an otherwise recorded work means the expected process actor is missing from the record.",
+      "severity": "info",
+      "required_fields": [],
+      "evaluation_logic": {
+        "operator": "blank_triggers",
+        "field": "ida"
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (MoSPI public summary)",
+        "para": null,
+        "source_id": "MOSPI-MPLADS-ABOUT",
+        "url": "https://www.mospi.gov.in/about-us/mplads",
+        "quote": "The works recommended by Hon’ble MPs are directly forwarded to the Implementing District Authorities (IDAs)."
+      },
+      "limitations": [
+        "A recorded IDA name is not verification that the named authority sanctioned or executed the work."
+      ],
+      "not_assessable_template": "Implementing District Authority text is unavailable in the current record."
+    },
+    {
+      "rule_id": "R016",
+      "category": "ADMISSIBLE_WORKS",
+      "title": "Repair and maintenance of public assets is admissible under Guidelines 2023",
+      "description": "Guidelines 2023 made repair and maintenance of public assets admissible. Observed category Repair and Renovation is therefore not treated as a prohibited-pattern trigger. Other titles are not classified from keywords.",
+      "severity": "info",
+      "required_fields": ["category"],
+      "evaluation_logic": {
+        "operator": "repair_admissible",
+        "field": "category",
+        "match_values": ["Repair and Renovation"]
+      },
+      "source_reference": {
+        "document": "Guidelines on MPLADS, 2023 (MoSPI public summary of notable 2023 changes)",
+        "para": null,
+        "source_id": "MOSPI-MPLADS-ABOUT",
+        "url": "https://www.mospi.gov.in/about-us/mplads",
+        "quote": "The MPLADS Guidelines 2023 have certain notable changes which include admissibility of repair and maintenance of public assets under the scheme."
+      },
+      "limitations": [
+        "This rule only covers the sourced 2023 repair/maintenance admissibility change. It does not encode the full 2023 illustrative list."
+      ],
+      "not_assessable_template": "Observed category is not the sourced Repair and Renovation value. The official 2023 illustrative eligible/ineligible list is not stored in this repository, so other titles are not classified."
+    }
+  ]
+}

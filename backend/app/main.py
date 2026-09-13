@@ -8,6 +8,10 @@ from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import api_router
+from app.api.routes.lifecycle import router as lifecycle_router
+from app.api.routes.context import router as context_router
+from app.api.routes.ml import router as ml_router
+from app.api.routes.risk_v2 import router as risk_v2_router
 from app.config import get_settings
 from app.db import init_db
 from app.errors import register_error_handlers
@@ -53,6 +57,10 @@ def create_app() -> FastAPI:
     )
     register_error_handlers(application)
     application.include_router(api_router, prefix="/api/v1")
+    application.include_router(risk_v2_router, prefix="/api/v2", tags=["risk-fusion-v2"])
+    application.include_router(lifecycle_router, prefix="/api/v2", tags=["lifecycle-orchestration"])
+    application.include_router(ml_router, prefix="/api/v2", tags=["ml-training-inference"])
+    application.include_router(context_router, prefix="/api/v2", tags=["contextual-data-enrichment"])
 
     @application.middleware("http")
     async def log_requests(

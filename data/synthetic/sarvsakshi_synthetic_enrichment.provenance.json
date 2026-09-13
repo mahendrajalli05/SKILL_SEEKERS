@@ -1,0 +1,62 @@
+{
+  "dataset_name": "SARVSAKSHI synthetic enrichment (HYBRID prototype layer)",
+  "record_mode": "HYBRID",
+  "enrichment_source": "SYNTHETIC",
+  "seed": 26102,
+  "synthetic_as_of_date": "2024-06-30",
+  "output_filename": "sarvsakshi_synthetic_enrichment.csv",
+  "output_sha256": "d1de1b151cd115f9e4c0ae291f585481527a1f02846cb593c66d6c819895f4f1",
+  "linked_real_source": "C:\\Users\\MAHENDRA JALLI\\Documents\\SIH_project\\data\\processed\\mplads_works_cleaned.csv",
+  "linked_real_source_sha256": "fb4bd06a75a3f66d7bfc08d02b86c980932682926b441fc4371dca8afdd9dd64",
+  "generated_at": "2026-09-09T20:02:06.312726+00:00",
+  "generated_records": 10000,
+  "unique_internal_project_ids": 10000,
+  "scenario_counts": {
+    "COST_ANOMALY": 999,
+    "DEMO_CLEAN": 1,
+    "DEMO_GHOST": 1,
+    "DEMO_OVERBILL": 1,
+    "DEMO_STUCK": 1,
+    "EVIDENCE_GHOST": 399,
+    "MIXED": 300,
+    "NORMAL": 6999,
+    "OVERLAP": 500,
+    "TIME_ANOMALY": 799
+  },
+  "demo_case_ids": {
+    "GHOST": "internal:464569d6e0e8fa677cd826b350df9c2c0bd680a7665587cadd63e93e2b357d29",
+    "STUCK": "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+    "CLEAN": "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+    "OVERBILL": "internal:eab396eafd121f6c8426cb285be2078aa7cfc6fe718050d6eb7340208318e762"
+  },
+  "notes": "NOT a government dataset. Synthetic prototype/testing layer only. Does not modify the real cleaned extract or SQLite project table. internal_project_id is a SARVSAKSHI surrogate, not an official MPLADS ID. synthetic_record_id is not an official MPLADS ID. District, vendor, GPS, expenditure, and unobserved dates are SYNTHETIC.",
+  "disclaimer": "SYNTHETIC prototype enrichment. Not an official MPLADS field or dataset. Linked to a real work only via internal_project_id. Do not treat district, agency, vendor, coordinates, dates, or expenditure as government values.",
+  "stats": {
+    "seed": 26102,
+    "as_of_date": "2024-06-30",
+    "requested_records": 10000,
+    "generated_records": 10000,
+    "unique_internal_project_ids": 10000,
+    "scenario_counts": {
+      "COST_ANOMALY": 999,
+      "DEMO_CLEAN": 1,
+      "DEMO_GHOST": 1,
+      "DEMO_OVERBILL": 1,
+      "DEMO_STUCK": 1,
+      "EVIDENCE_GHOST": 399,
+      "MIXED": 300,
+      "NORMAL": 6999,
+      "OVERLAP": 500,
+      "TIME_ANOMALY": 799
+    },
+    "demo_case_ids": {
+      "GHOST": "internal:464569d6e0e8fa677cd826b350df9c2c0bd680a7665587cadd63e93e2b357d29",
+      "STUCK": "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+      "CLEAN": "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+      "OVERBILL": "internal:eab396eafd121f6c8426cb285be2078aa7cfc6fe718050d6eb7340208318e762"
+    },
+    "source_csv": "C:\\Users\\MAHENDRA JALLI\\Documents\\SIH_project\\data\\processed\\mplads_works_cleaned.csv",
+    "source_sha256": "fb4bd06a75a3f66d7bfc08d02b86c980932682926b441fc4371dca8afdd9dd64",
+    "generated_at": "2026-09-09T20:02:06.312726+00:00"
+  }
+}

@@ -29,6 +29,12 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+data/uploads/
+
+# ML artifacts (train locally; do not commit large pickles)
+backend/app/ml/models/**
+!backend/app/ml/models/.gitkeep
+!backend/app/ml/models/registry.example.json
 
 # OS / editor
 .DS_Store

@@ -4,39 +4,52 @@ from datetime import date, datetime
 
 from pydantic import BaseModel, ConfigDict, model_validator
 
-from app.domain.enums import AmountRole, LifecycleStage
+from app.domain.enums import LifecycleStage
 
 
 class ProjectRead(BaseModel):
-    """API shape for a master work. All government fields remain optional until profiled."""
+    """API shape for a master work loaded from the cleaned extract."""
 
     model_config = ConfigDict(from_attributes=True)
 
     id: int
-    unique_work_number: str | None = None
-    work_name: str | None = None
-    work_description: str | None = None
-    work_category: str | None = None
-    state: str | None = None
-    implementing_district: str | None = None
-    constituency: str | None = None
-    house_name: str | None = None
+    internal_project_id: str
+    internal_id_kind: str
+    internal_id_scheme: str
+    source_dataset: str | None = None
+    source_first_row_number: int | None = None
+    source_duplicate_count: int | None = None
+    source_mp_name: str | None = None
+    source_work: str | None = None
+    source_category: str | None = None
+    source_state: str | None = None
+    source_constituency: str | None = None
+    source_ida: str | None = None
+    source_city: str | None = None
+    source_ward: str | None = None
+    source_block: str | None = None
+    source_village: str | None = None
+    source_recommended_date: str | None = None
+    source_allocation_amount: str | None = None
+    source_ida_approval: str | None = None
+    source_status: str | None = None
+    source_house: str | None = None
     mp_name: str | None = None
-    agency_name_raw: str | None = None
-    village_or_place: str | None = None
-    amount: float | None = None
-    amount_role: AmountRole | None = None
-    amount_unit: str | None = None
-    recommended_amount: float | None = None
-    sanctioned_amount: float | None = None
-    utilised_amount: float | None = None
-    recommendation_date: date | None = None
-    sanction_date: date | None = None
-    date_of_completion: date | None = None
-    work_status: str | None = None
+    work_description: str | None = None
+    category: str | None = None
+    state: str | None = None
+    constituency: str | None = None
+    ida: str | None = None
+    city: str | None = None
+    ward: str | None = None
+    block: str | None = None
+    village: str | None = None
+    recommended_date: date | None = None
+    allocation_amount: int | None = None
+    ida_approval: str | None = None
+    status: str | None = None
+    house: str | None = None
     lifecycle_stage: LifecycleStage = LifecycleStage.UNKNOWN
-    image_uploaded: str | None = None
-    image_status: str | None = None
     snapshot_id: int | None = None
     is_synthetic: bool = False
     synthetic_label: str | None = None

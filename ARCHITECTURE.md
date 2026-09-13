@@ -1,7 +1,8 @@
 # SARVSAKSHI Architecture
 
 Frozen for the MVP: **modular monolith** · Next.js + FastAPI + SQLite.
-Schema is **nullable-first** until a real public MPLADS extract is profiled.
+Master `project` columns follow the cleaned work-level extract. Absent
+government fields are not stored.
 
 ## High-level flow
 
@@ -72,11 +73,18 @@ Final integrity assessment
 ## API (foundation)
 
 - `GET /api/v1/health` — process + SQLite connectivity
-- `GET /api/v1/projects` — empty list until ingest
-- `GET /api/v1/projects/{id}` — 404 until ingest
+- `GET /api/v1/projects` — work count from SQLite; item listing waits for Search
+- `GET /api/v1/projects/{id}` — SQLite primary key lookup after ingest (`id` is not an official MPLADS work number)
 
 Intelligence, Copilot, graph, citizen, and milestone routes are not registered yet.
 
 ## Schema principle
 
-Dump-derived columns on `project` are nullable (`unique_work_number`, amounts, dates, MP, district, etc.). `lifecycle_stage` defaults to `UNKNOWN` until it can be derived from observed fields. `fusion_score` stores `investigation_priority` and `evidence_confidence` only.
+`project` stores observed cleaned fields plus `source_*` originals and
+`internal_project_id` (a SARVSAKSHI surrogate, not an official work ID).
+District, vendor, GPS, expenditure, sanction date, and completion date are
+absent from the extract and are not columns. Empty tables remain for later
+evidence, fusion, graph, citizen, claim/milestone, and review rows.
+`fusion_score` stores `investigation_priority` and `evidence_confidence` only.
+
+See `DATABASE_SCHEMA.md`.

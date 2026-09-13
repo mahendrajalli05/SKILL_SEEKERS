@@ -6,6 +6,7 @@ from app.db import check_connection, get_engine
 from app.models import Base
 from app.models.fusion import FusionScore
 from app.models.project import Project
+from app.pipeline.db_load import FORBIDDEN_PROJECT_COLUMNS
 
 
 def test_sqlite_select_one(client) -> None:
@@ -25,7 +26,8 @@ def test_expected_tables_exist(client) -> None:
         "photo",
         "photo_details",
         "claim",
-        "plan_artifact",
+        "plan",
+    "plan_artifact",
         "guideline_rule",
         "guideline_snippet",
         "evidence_object",
@@ -37,6 +39,13 @@ def test_expected_tables_exist(client) -> None:
         "audit_event",
         "copilot_turn",
         "citizen_report",
+        "lifecycle_workflow",
+        "lifecycle_decision",
+        "fusion_score_v2",
+        "milestone",
+        "external_source",
+        "external_context_snapshot",
+        "external_context_observation",
     }
     assert expected.issubset(names)
 
@@ -49,33 +58,33 @@ def test_fusion_score_has_priority_and_confidence_not_fraud(client) -> None:
     assert "fraud_score" not in columns
 
 
-def test_project_dump_fields_are_nullable(client) -> None:
-    nullable = {
-        column.name
-        for column in Project.__table__.columns
-        if column.nullable
-    }
+def test_project_observed_fields_are_nullable(client) -> None:
+    nullable = {column.name for column in Project.__table__.columns if column.nullable}
     for field in (
-        "unique_work_number",
-        "work_name",
-        "work_description",
-        "work_category",
-        "state",
-        "implementing_district",
-        "constituency",
-        "house_name",
+        "source_mp_name",
+        "source_work",
         "mp_name",
-        "amount",
-        "recommended_amount",
-        "sanctioned_amount",
-        "utilised_amount",
-        "recommendation_date",
-        "sanction_date",
-        "date_of_completion",
-        "work_status",
-        "village_or_place",
+        "work_description",
+        "category",
+        "state",
+        "constituency",
+        "ida",
+        "city",
+        "ward",
+        "block",
+        "village",
+        "allocation_amount",
+        "recommended_date",
+        "status",
+        "house",
     ):
         assert field in nullable
+
+
+def test_project_does_not_invent_absent_government_fields(client) -> None:
+    columns = {column.name for column in Project.__table__.columns}
+    assert "internal_project_id" in columns
+    assert not (columns & FORBIDDEN_PROJECT_COLUMNS)
 
 
 def test_metadata_matches_base(client) -> None:

@@ -1,5 +1,10 @@
 # Demo artefacts
 
-This directory is empty on purpose.
+This directory does not hold a new government dataset.
 
-When four demo cases are added later, every row and file must be labelled `SYNTHETIC` (`is_synthetic = true`) and must **not** be presented as real government projects.
+The four controlled demonstration cases reuse existing `DEMO_INTERNAL_IDS`
+(GHOST / OVERBILL / STUCK / CLEAN). Demo Evidence Fixtures V1 attach labelled
+HYBRID Evidence Objects through the existing Evidence Object V1 APIs.
+
+Every fixture is marked DEMO / SYNTHETIC / CONTROLLED PROTOTYPE and is not an
+official MPLADS record.

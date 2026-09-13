@@ -6,7 +6,11 @@ from app.models.base import Base, TimestampMixin
 
 
 class GraphEdge(Base, TimestampMixin):
-    """Schema only. Relationship-graph engine is not implemented in this slice."""
+    """Project-to-project SIMILAR_TO edges from Relationship Graph V1.
+
+    Entity links (MP, constituency, category, IDA, state) are derived
+    from observed ``project`` columns and are not stored here.
+    """
 
     __tablename__ = "graph_edge"
 

@@ -36,4 +36,7 @@ class HealthResponse(BaseModel):
 class ProjectListResponse(BaseModel):
     items: list[ProjectRead] = Field(default_factory=list)
     total: int = 0
-    note: str = "Database starts empty. Load real public MPLADS records in Phase 2."
+    note: str = (
+        "Work records live in SQLite. Paginated officer search is served by "
+        "GET /api/v1/projects."
+    )
