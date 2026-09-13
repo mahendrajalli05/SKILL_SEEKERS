@@ -1,0 +1,28 @@
+{
+  "disclaimer": "TEST/SYNTHETIC Need & Impact prototype enrichment only. Not official MPLADS, census, or infrastructure statistics. Do not treat these values as government facts. Linked only by internal_project_id for controlled testing.",
+  "label": "TEST/SYNTHETIC",
+  "records": [
+    {
+      "internal_project_id": "internal:need-impact:high-need",
+      "label": "TEST/SYNTHETIC",
+      "population_need_index": 92,
+      "infrastructure_gap_index": 88,
+      "underserved_index": 90,
+      "beneficiary_count": 12000,
+      "community_coverage_index": 85,
+      "disaster_flag": true,
+      "urgency_index": 80
+    },
+    {
+      "internal_project_id": "internal:need-impact:low-need",
+      "label": "TEST/SYNTHETIC",
+      "population_need_index": 12,
+      "infrastructure_gap_index": 10,
+      "underserved_index": 8,
+      "beneficiary_count": 0,
+      "community_coverage_index": 10,
+      "disaster_flag": false,
+      "urgency_index": 15
+    }
+  ]
+}

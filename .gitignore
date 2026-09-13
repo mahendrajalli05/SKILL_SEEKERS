@@ -1,0 +1,44 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+.next/
+out/
+frontend/tsconfig.tsbuildinfo
+
+# Environment and local secrets
+.env
+.env.local
+frontend/.env.local
+
+# SQLite and local artefacts
+*.db
+*.db-journal
+data/processed/*.db
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/uploads/
+
+# ML artifacts (train locally; do not commit large pickles)
+backend/app/ml/models/**
+!backend/app/ml/models/.gitkeep
+!backend/app/ml/models/registry.example.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

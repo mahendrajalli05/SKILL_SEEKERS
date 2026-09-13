@@ -1,0 +1,177 @@
+{
+  "registry_version": "context-sources-v1",
+  "retrieved_at": "2026-09-11",
+  "notes": [
+    "Source facts live in this registry. Application code must load metadata from here rather than hard-coding publisher URLs.",
+    "Inactive sources are documented so officers can see why an indicator is UNAVAILABLE."
+  ],
+  "sources": [
+    {
+      "source_id": "mohfw_ncp_population_projections_2011_2036",
+      "source_name": "Population Projections for India and States, 2011-2036",
+      "publisher": "National Commission on Population, Ministry of Health and Family Welfare, Government of India",
+      "source_type": "official_statistical_report",
+      "url": "https://main.mohfw.gov.in/sites/default/files/Population%20Projection%20Report%202011-2036%20-%20upload_compressed_0.pdf",
+      "alternate_url": "https://nhm.gov.in/New_Updates_2018/Report_Population_Projection_2019.pdf",
+      "retrieval_date": "2026-09-11",
+      "dataset_version": "July 2020 report; TABLE-21 as on 1 March",
+      "geographic_level": "STATE",
+      "unit": "persons",
+      "update_frequency": "After Census / Technical Group revision (multi-year)",
+      "license_note": "Official Government of India statistical publication. Used here as a transcribed public table snapshot.",
+      "transformation_notes": "Published figures are thousands of persons. Snapshot stores persons = thousands × 1000. Andhra Pradesh and Telangana 2011 values are reconstituted successor-state populations, not undivided Census 2011 Andhra Pradesh.",
+      "limitations": [
+        "State level only. Not constituency, district, block, or locality.",
+        "Not a project beneficiary count.",
+        "2011–2036 projection series; not a live census enumeration.",
+        "Nearest published year may be used only with an explicit documented gap."
+      ],
+      "snapshot_relative_path": "snapshots/mohfw_ncp_population_projections_2011_2036.json",
+      "requires_credential": false,
+      "active": true,
+      "indicators": ["state_population"]
+    },
+    {
+      "source_id": "hybrid_reference_cost_test",
+      "source_name": "HYBRID/TEST reference-cost fixture",
+      "publisher": "SARVSAKSHI controlled test fixture (not a government schedule of rates)",
+      "source_type": "test_fixture",
+      "url": "test://sarvsakshi/hybrid_reference_cost_test",
+      "retrieval_date": "2026-09-11",
+      "dataset_version": "hybrid-reference-cost-test-v1",
+      "geographic_level": "STATE",
+      "unit": "INR_per_sqm",
+      "update_frequency": "test-only",
+      "license_note": "TEST/SYNTHETIC fixture. Not an official SoR and not for REAL mode.",
+      "transformation_notes": "None. Rates are labelled test values.",
+      "limitations": [
+        "Not an official CPWD, AP PWD, or MoSPI schedule of rates.",
+        "REAL mode must not consume this fixture.",
+        "Unit rates cannot be compared to a total allocation without a compatible quantity."
+      ],
+      "snapshot_relative_path": "fixtures/hybrid_reference_cost_test.json",
+      "requires_credential": false,
+      "active": true,
+      "real_mode_allowed": false,
+      "indicators": ["reference_unit_rate"]
+    },
+    {
+      "source_id": "cpwd_delhi_schedule_of_rates",
+      "source_name": "CPWD Delhi Schedule of Rates",
+      "publisher": "Central Public Works Department, Government of India",
+      "source_type": "official_schedule_of_rates",
+      "url": "https://cpwd.gov.in/",
+      "retrieval_date": "2026-09-11",
+      "dataset_version": null,
+      "geographic_level": "STATE",
+      "unit": "INR_per_unit",
+      "update_frequency": "periodic PDF revisions",
+      "license_note": "Official CPWD publication. No verified machine-readable public bulk extract was available for this prototype.",
+      "transformation_notes": "Not integrated. PDF schedules were not transcribed into invented unit rates.",
+      "limitations": [
+        "Official SoR is typically published as PDF, not a public bulk API.",
+        "No credentialed or structured extract is configured.",
+        "Cannot be used as project expenditure."
+      ],
+      "snapshot_relative_path": null,
+      "requires_credential": false,
+      "active": false,
+      "unavailable_reason": "SOURCE_UNAVAILABLE",
+      "indicators": ["reference_unit_rate"]
+    },
+    {
+      "source_id": "ap_pwd_schedule_of_rates",
+      "source_name": "Andhra Pradesh PWD Schedule of Rates",
+      "publisher": "Public Works Department, Government of Andhra Pradesh",
+      "source_type": "official_schedule_of_rates",
+      "url": "https://www.ap.gov.in/",
+      "retrieval_date": "2026-09-11",
+      "dataset_version": null,
+      "geographic_level": "STATE",
+      "unit": "INR_per_unit",
+      "update_frequency": "periodic PDF revisions",
+      "license_note": "State public-works publication. No verified public machine-readable extract was bundled.",
+      "transformation_notes": "Not integrated. No unofficial scraped rates were substituted.",
+      "limitations": [
+        "No legally attributable structured SoR snapshot was available for bundling.",
+        "Cannot be inferred from MPLADS allocation amounts."
+      ],
+      "snapshot_relative_path": null,
+      "requires_credential": false,
+      "active": false,
+      "unavailable_reason": "SOURCE_UNAVAILABLE",
+      "indicators": ["reference_unit_rate"]
+    },
+    {
+      "source_id": "data_gov_in_ckan_api",
+      "source_name": "data.gov.in CKAN API",
+      "publisher": "Open Government Data Platform India / National Informatics Centre",
+      "source_type": "government_open_data_api",
+      "url": "https://data.gov.in/",
+      "retrieval_date": "2026-09-11",
+      "dataset_version": null,
+      "geographic_level": "STATE",
+      "unit": "varies",
+      "update_frequency": "dataset-specific",
+      "license_note": "Government open data. API access typically requires a registered API key.",
+      "transformation_notes": "Not called unless SARVSAKSHI_DATA_GOV_IN_API_KEY is configured.",
+      "limitations": [
+        "Requires configuration. Absence of a key is reported as SOURCE_UNAVAILABLE_REQUIRES_CONFIGURATION.",
+        "No API key is stored in source code."
+      ],
+      "snapshot_relative_path": null,
+      "requires_credential": true,
+      "credential_env": "SARVSAKSHI_DATA_GOV_IN_API_KEY",
+      "active": false,
+      "unavailable_reason": "SOURCE_UNAVAILABLE_REQUIRES_CONFIGURATION",
+      "indicators": ["open_data_catalog"]
+    },
+    {
+      "source_id": "nfhs5_state_household_amenities",
+      "source_name": "NFHS-5 state fact sheets (2019-21)",
+      "publisher": "International Institute for Population Sciences (IIPS) / Ministry of Health and Family Welfare",
+      "source_type": "official_survey_factsheet",
+      "url": "http://rchiips.org/nfhs/nfhs5.shtml",
+      "retrieval_date": "2026-09-11",
+      "dataset_version": "NFHS-5 2019-21",
+      "geographic_level": "STATE",
+      "unit": "percent_of_households",
+      "update_frequency": "survey round (multi-year)",
+      "license_note": "Official survey publication. State factsheets are PDFs.",
+      "transformation_notes": "Not integrated. Percentages were not transcribed from PDFs without a verified machine-readable extract.",
+      "limitations": [
+        "No verified structured NFHS-5 amenity table was bundled.",
+        "State household percentages are not project-specific infrastructure evidence."
+      ],
+      "snapshot_relative_path": null,
+      "requires_credential": false,
+      "active": false,
+      "unavailable_reason": "SOURCE_UNAVAILABLE",
+      "indicators": ["household_electricity_pct", "improved_drinking_water_pct", "improved_sanitation_pct"]
+    },
+    {
+      "source_id": "census_2011_pca_district",
+      "source_name": "Census of India 2011 Primary Census Abstract (district)",
+      "publisher": "Office of the Registrar General & Census Commissioner, India",
+      "source_type": "official_census",
+      "url": "https://censusindia.gov.in/",
+      "retrieval_date": "2026-09-11",
+      "dataset_version": "Census 2011",
+      "geographic_level": "DISTRICT",
+      "unit": "persons",
+      "update_frequency": "decennial",
+      "license_note": "Official Census of India.",
+      "transformation_notes": "Not integrated. The current MPLADS extract has no reliable district identifier, and district values are not fabricated from IDA or constituency text.",
+      "limitations": [
+        "Project records in the cleaned extract do not contain a verified district field.",
+        "Constituency is not treated as equal to district.",
+        "IDA name is not used as a district code."
+      ],
+      "snapshot_relative_path": null,
+      "requires_credential": false,
+      "active": false,
+      "unavailable_reason": "UNSUPPORTED_GEOGRAPHY",
+      "indicators": ["district_population"]
+    }
+  ]
+}

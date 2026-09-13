@@ -1,0 +1,27 @@
+{
+  "disclaimer": "TEST/SYNTHETIC reference-cost fixture only. Not an official CPWD, AP PWD, or MoSPI schedule of rates. Do not treat these values as government facts. REAL mode must not consume this file.",
+  "data_mode": "HYBRID",
+  "source_id": "hybrid_reference_cost_test",
+  "geographic_level": "STATE",
+  "currency": "INR",
+  "rates": [
+    {
+      "work_type": "cement concrete road",
+      "material_or_work": "cement concrete road",
+      "unit": "sqm",
+      "reference_rate": 4500.0,
+      "geography": "Andhra Pradesh",
+      "effective_date": "2023-04-01",
+      "effective_version": "hybrid-test-v1"
+    },
+    {
+      "work_type": "classroom construction",
+      "material_or_work": "classroom construction",
+      "unit": "sqm",
+      "reference_rate": 22000.0,
+      "geography": "Andhra Pradesh",
+      "effective_date": "2023-04-01",
+      "effective_version": "hybrid-test-v1"
+    }
+  ]
+}
