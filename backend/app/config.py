@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     api_host: str = "127.0.0.1"
     api_port: int = 8000
-    cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
+    cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000,https://skill-seekers.vercel.app"
     database_url: str = Field(
         default="",
         validation_alias=AliasChoices("DATABASE_URL", "SARVSAKSHI_DATABASE_URL"),
