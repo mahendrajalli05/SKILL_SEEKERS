@@ -142,24 +142,24 @@ def get_engine() -> Engine:
     global _engine
     if _engine is None:
         settings = get_settings()
-        settings.sqlite_path.parent.mkdir(parents=True, exist_ok=True)
-        _engine = create_engine(
-            settings.sqlalchemy_url,
-            connect_args={"check_same_thread": False, "timeout": 30.0},
-            future=True,
-        )
+        engine_options: dict[str, object] = {"future": True}
+        if settings.sqlalchemy_url.startswith("sqlite"):
+            settings.sqlite_path.parent.mkdir(parents=True, exist_ok=True)
+            engine_options["connect_args"] = {"check_same_thread": False, "timeout": 30.0}
+        _engine = create_engine(settings.sqlalchemy_url, **engine_options)
 
-        @event.listens_for(_engine, "connect")
-        def _enable_foreign_keys(dbapi_connection, _connection_record) -> None:  # type: ignore[no-untyped-def]
-            cursor = dbapi_connection.cursor()
-            cursor.execute("PRAGMA foreign_keys=ON")
-            # WAL plus a bounded busy timeout keeps concurrent API reads/writes from failing immediately.
-            cursor.execute("PRAGMA journal_mode=WAL")
-            cursor.execute("PRAGMA synchronous=NORMAL")
-            cursor.execute("PRAGMA busy_timeout=30000")
-            cursor.close()
+        if settings.sqlalchemy_url.startswith("sqlite"):
+            @event.listens_for(_engine, "connect")
+            def _enable_foreign_keys(dbapi_connection, _connection_record) -> None:  # type: ignore[no-untyped-def]
+                cursor = dbapi_connection.cursor()
+                cursor.execute("PRAGMA foreign_keys=ON")
+                # WAL plus a bounded busy timeout keeps concurrent API reads/writes from failing immediately.
+                cursor.execute("PRAGMA journal_mode=WAL")
+                cursor.execute("PRAGMA synchronous=NORMAL")
+                cursor.execute("PRAGMA busy_timeout=30000")
+                cursor.close()
 
-        logger.info("sqlite_engine_created path=%s", settings.sqlite_path)
+        logger.info("database_engine_created url=%s", settings.sqlalchemy_url.split("://", 1)[0])
     return _engine
 
 
@@ -285,8 +285,7 @@ def init_db() -> None:
     """Create empty tables. Does not insert any government or demo rows."""
     engine = get_engine()
     if schema_is_stale(engine):
-        logger.warning("stale sqlite schema detected; recreating empty tables")
-        Base.metadata.drop_all(bind=engine)
+        logger.warning("stale database schema detected; existing tables preserved")
     Base.metadata.create_all(bind=engine)
     ensure_evidence_schema(engine)
     ensure_fusion_schema(engine)

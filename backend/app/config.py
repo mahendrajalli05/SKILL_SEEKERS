@@ -3,6 +3,7 @@ from __future__ import annotations
 from functools import lru_cache
 from pathlib import Path
 
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +24,10 @@ class Settings(BaseSettings):
     api_host: str = "127.0.0.1"
     api_port: int = 8000
     cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
+    database_url: str = Field(
+        default="",
+        validation_alias=AliasChoices("DATABASE_URL", "SARVSAKSHI_DATABASE_URL"),
+    )
     database_path: str = "data/processed/sarvsakshi.db"
     llm_enabled: bool = False
     llm_api_key: str = ""
@@ -66,6 +71,8 @@ class Settings(BaseSettings):
 
     @property
     def sqlalchemy_url(self) -> str:
+        if self.database_url:
+            return self.database_url.replace("postgres://", "postgresql://", 1)
         return "sqlite:///" + self.sqlite_path.resolve().as_posix()
 
     @property
