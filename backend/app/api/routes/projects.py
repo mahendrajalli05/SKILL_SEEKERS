@@ -101,6 +101,43 @@ def project_search_options(
     )
 
 
+@router.get("/projects/stats")
+def project_stats(
+    db: Session = Depends(get_db),
+    state: str | None = Query(default=None),
+    apply_pilot_scope: bool = Query(default=True),
+) -> dict[str, object]:
+    from app.search.service import effective_state
+    from sqlalchemy import func, select
+
+    state_text = effective_state(state, apply_pilot_scope=apply_pilot_scope)
+    stmt = select(Project.status, func.count(Project.id))
+    if state_text:
+        stmt = stmt.where(Project.state == state_text)
+    stmt = stmt.group_by(Project.status)
+    rows = db.execute(stmt).all()
+    by_status: dict[str, int] = {}
+    total = 0
+    for status_val, cnt in rows:
+        key = (status_val or "Unknown").strip()
+        by_status[key] = cnt
+        total += cnt
+    unsanctioned = by_status.get("Unsanctioned", 0)
+    sanctioned = by_status.get("Sanctioned", 0)
+    ongoing = by_status.get("Ongoing", 0)
+    completed = by_status.get("Completed", 0)
+    future = unsanctioned + sanctioned
+    return {
+        "total": total,
+        "future": future,
+        "ongoing": ongoing,
+        "completed": completed,
+        "by_status": by_status,
+        "state": state_text,
+        "pilot_label": current_pilot_label(),
+    }
+
+
 @router.get("/projects", response_model=ProjectSearchResponse)
 def list_projects(
     db: Session = Depends(get_db),

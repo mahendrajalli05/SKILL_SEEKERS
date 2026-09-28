@@ -182,3 +182,30 @@ def test_real_project_without_enrichment_is_not_hybrid(client, monkeypatch) -> N
     assert body["synthetic_enrichment"] is None
     assert body["is_synthetic"] is True
     assert body["synthetic_label"]
+
+
+def test_project_stats_route_not_captured_by_project_id(client) -> None:
+    session = get_session_factory()()
+    try:
+        row = _insert(session, status="Ongoing")
+        session.commit()
+        project_id = row.id
+    finally:
+        session.close()
+
+    # /api/v1/projects/stats must return 200 and not 422 from /projects/{project_id} capturing "stats"
+    response = client.get("/api/v1/projects/stats")
+    assert response.status_code == 200
+    data = response.json()
+    assert "total" in data
+    assert "future" in data
+    assert "ongoing" in data
+    assert "completed" in data
+    assert "by_status" in data
+    assert data["total"] >= 1
+    assert data["ongoing"] >= 1
+
+    # Ensure dynamic project_id route still functions properly
+    detail_response = client.get(f"/api/v1/projects/{project_id}")
+    assert detail_response.status_code == 200
+    assert detail_response.json()["id"] == project_id
