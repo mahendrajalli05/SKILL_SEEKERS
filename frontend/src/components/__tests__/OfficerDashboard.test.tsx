@@ -24,7 +24,18 @@ vi.mock("@/lib/api", () => ({
   getApiBase: () => "http://127.0.0.1:8000",
 }));
 
-import { OfficerDashboard } from "@/components/OfficerDashboard";
+vi.mock("@/lib/dashboardStats", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@/lib/dashboardStats")>();
+  return {
+    ...actual,
+    fetchPilotCounts: vi.fn((...args: Parameters<typeof actual.fetchPilotCounts>) =>
+      actual.fetchPilotCounts(...args),
+    ),
+  };
+});
+
+import { fetchPilotCounts } from "@/lib/dashboardStats";
+import { OfficerDashboard, fetchHealthResilient } from "@/components/OfficerDashboard";
 
 function searchBody(total: number) {
   return {
@@ -109,10 +120,48 @@ describe("Officer dashboard", () => {
     expect(screen.queryByText(/Prototype simulation/)).toBeNull();
   });
 
-  it("shows an API error without blanking the page", async () => {
-    fetchHealth.mockRejectedValue(new Error("API request failed"));
+  it("does not show an API error when fetchHealth fails (resilient cold start)", async () => {
+    fetchHealth.mockRejectedValue(new Error("Render cold start failure"));
+    render(<OfficerDashboard />);
+    expect(await screen.findByText("42")).toBeInTheDocument();
+    expect(screen.queryByText("API Error")).toBeNull();
+  });
+
+  it("shows an API error without blanking the page when data fetching fails", async () => {
+    vi.mocked(fetchPilotCounts).mockRejectedValueOnce(new Error("API request failed"));
     render(<OfficerDashboard />);
     await waitFor(() => expect(screen.getByText(/API request failed/)).toBeInTheDocument());
     expect(screen.getByText("API Error")).toBeInTheDocument();
+  });
+});
+
+describe("fetchHealthResilient", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("returns health response on first attempt success", async () => {
+    const mockHealth = { status: "ok", service: "sarvsakshi" } as any;
+    fetchHealth.mockResolvedValueOnce(mockHealth);
+    const result = await fetchHealthResilient(1, 10);
+    expect(result).toEqual(mockHealth);
+    expect(fetchHealth).toHaveBeenCalledTimes(1);
+  });
+
+  it("retries on transient failure and returns data if second attempt succeeds", async () => {
+    const mockHealth = { status: "ok", service: "sarvsakshi" } as any;
+    fetchHealth
+      .mockRejectedValueOnce(new Error("Temporary cold start"))
+      .mockResolvedValueOnce(mockHealth);
+    const result = await fetchHealthResilient(1, 10);
+    expect(result).toEqual(mockHealth);
+    expect(fetchHealth).toHaveBeenCalledTimes(2);
+  });
+
+  it("gracefully falls back to null without throwing when all retries fail", async () => {
+    fetchHealth.mockRejectedValue(new Error("Connection refused"));
+    const result = await fetchHealthResilient(1, 10);
+    expect(result).toBeNull();
+    expect(fetchHealth).toHaveBeenCalledTimes(2);
   });
 });

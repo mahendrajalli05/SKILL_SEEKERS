@@ -30,6 +30,22 @@ import {
 import type { HealthResponse, ProjectSearchItem } from "@/lib/types";
 import { SystemPipeline } from "@/components/system/SystemPipeline";
 
+export async function fetchHealthResilient(
+  retries = 1,
+  delayMs = 400,
+): Promise<HealthResponse | null> {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      return await fetchHealth();
+    } catch {
+      if (attempt < retries) {
+        await new Promise((resolve) => setTimeout(resolve, delayMs));
+      }
+    }
+  }
+  return null;
+}
+
 export function OfficerDashboard() {
   const searchParams = useSearchParams();
   const mode = parseDataMode(searchParams.get("mode"));
@@ -43,7 +59,7 @@ export function OfficerDashboard() {
     let cancelled = false;
     setLoading(true);
     Promise.all([
-      fetchHealth(),
+      fetchHealthResilient(),
       fetchPilotCounts(mode),
       fetchProjects({
         page: 1,

@@ -1,4 +1,4 @@
-import { fetchProjects, fetchScope } from "@/lib/api";
+import { fetchProjects, fetchScope, getApiBase } from "@/lib/api";
 import { DEFAULT_PILOT_STATE, PILOT_LABEL, parseDataMode } from "@/lib/display";
 import type { DataMode } from "@/lib/types";
 
@@ -38,6 +38,25 @@ export async function fetchPilotCounts(
   modeValue: string | null | undefined,
 ): Promise<PilotCounts> {
   const mode = parseDataMode(modeValue);
+  try {
+    const res = await fetch(
+      `${getApiBase()}/api/v1/projects/stats?state=${encodeURIComponent(DEFAULT_PILOT_STATE)}&apply_pilot_scope=true`,
+    );
+    if (res.ok) {
+      const stats = await res.json();
+      return {
+        total: stats.total ?? null,
+        future: stats.future ?? null,
+        ongoing: stats.ongoing ?? null,
+        completed: stats.completed ?? null,
+        pilotLabel: stats.pilot_label ?? PILOT_LABEL,
+        note: "",
+      };
+    }
+  } catch {
+    // Fall back to legacy individual queries if /projects/stats fails
+  }
+
   const [scope, all, unsanctioned, sanctioned, ongoing, completed] = await Promise.all([
     fetchScope().catch(() => null),
     totalForQuery(mode),
