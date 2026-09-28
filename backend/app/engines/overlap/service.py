@@ -312,6 +312,7 @@ def assess_project_overlap(
         mode=mode,
         gps_by_id=gps_map,
         subject_is_synthetic=bool(project.is_synthetic),
+        subject=subject,
     )
     backend = embedder or get_default_embedder()
     result = assess_overlap(subject, records, mode=mode, embedder=backend)

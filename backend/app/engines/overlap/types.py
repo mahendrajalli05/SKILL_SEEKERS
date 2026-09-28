@@ -21,7 +21,7 @@ class OverlapAssessmentOutcome(str, Enum):
     INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class OverlapRecord:
     """One work for overlap comparison.
 

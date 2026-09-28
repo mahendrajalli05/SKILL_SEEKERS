@@ -124,7 +124,12 @@ def assess_new_project(session: Session, payload: dict[str, Any]) -> dict[str, A
         place_text=combine_place_text(),
         rare_tokens=rare_block_tokens(work),
     )
-    corpus = load_overlap_records(session, mode=OverlapMode.REAL, subject_is_synthetic=False)
+    corpus = load_overlap_records(
+        session,
+        mode=OverlapMode.REAL,
+        subject_is_synthetic=False,
+        subject=overlap_subject,
+    )
     overlap_engine = assess_overlap(overlap_subject, corpus, mode=OverlapMode.REAL)
 
     time_subject = TimePeerRecord(
