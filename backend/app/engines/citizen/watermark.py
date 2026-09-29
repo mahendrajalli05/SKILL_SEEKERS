@@ -11,7 +11,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, UnidentifiedImageError
 
-from app.config import REPO_ROOT
+from app.config import REPO_ROOT, get_settings
 from app.engines.citizen.constants import WATERMARK_NOTE
 from app.engines.citizen.types import WatermarkResult
 from app.engines.image.security import sha256_bytes
@@ -122,12 +122,13 @@ def save_watermark_copy(
             watermark_path=None,
             note=f"{WATERMARK_NOTE} A presentation copy could not be generated from this file.",
         )
-    folder = REPO_ROOT / _WM_REL / str(project_id)
+    root = get_settings().storage_root
+    folder = root / _WM_REL / str(project_id)
     folder.mkdir(parents=True, exist_ok=True)
     filename = f"{(original_digest or original_hash)[:16]}_watermark.jpg"
     path = folder / filename
     path.write_bytes(watermarked)
-    relative = str(path.relative_to(REPO_ROOT)).replace("\\", "/")
+    relative = str(path.relative_to(root)).replace("\\", "/")
     return WatermarkResult(
         generated=True,
         original_preserved=sha256_bytes(original) == (original_digest or original_hash),

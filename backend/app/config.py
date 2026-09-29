@@ -17,6 +17,7 @@ class Settings(BaseSettings):
         env_file=REPO_ROOT / ".env",
         env_prefix="SARVSAKSHI_",
         extra="ignore",
+        populate_by_name=True,
     )
 
     env: str = "development"
@@ -27,6 +28,18 @@ class Settings(BaseSettings):
     database_url: str = Field(
         default="",
         validation_alias=AliasChoices("DATABASE_URL", "SARVSAKSHI_DATABASE_URL"),
+    )
+    init_db_on_startup: bool = Field(
+        default=True,
+        validation_alias=AliasChoices("INIT_DB_ON_STARTUP", "SARVSAKSHI_INIT_DB_ON_STARTUP"),
+    )
+    is_serverless: bool = Field(
+        default_factory=lambda: bool(__import__("os").environ.get("VERCEL") or __import__("os").environ.get("AWS_LAMBDA_FUNCTION_NAME")),
+        validation_alias=AliasChoices("VERCEL", "SARVSAKSHI_SERVERLESS"),
+    )
+    upload_dir: str = Field(
+        default="",
+        validation_alias=AliasChoices("UPLOAD_DIR", "SARVSAKSHI_UPLOAD_DIR"),
     )
     database_path: str = "data/processed/sarvsakshi.db"
     llm_enabled: bool = False
@@ -68,6 +81,21 @@ class Settings(BaseSettings):
         if not path.is_absolute():
             path = REPO_ROOT / path
         return path
+
+    @property
+    def storage_root(self) -> Path:
+        """Base root path for file uploads and derived assets.
+
+        In Vercel/serverless environments, falls back to /tmp/sarvsakshi to avoid
+        read-only filesystem errors.
+        """
+        if self.upload_dir:
+            path = Path(self.upload_dir)
+            return path if path.is_absolute() else REPO_ROOT / path
+        if self.is_serverless:
+            import tempfile
+            return Path(tempfile.gettempdir()) / "sarvsakshi"
+        return REPO_ROOT
 
     @property
     def sqlalchemy_url(self) -> str:

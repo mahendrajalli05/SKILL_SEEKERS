@@ -24,7 +24,10 @@ logger = get_logger("sarvsakshi.api")
 async def lifespan(_app: FastAPI):
     settings = get_settings()
     configure_logging(settings.log_level)
-    init_db()
+    if settings.init_db_on_startup:
+        init_db()
+    else:
+        logger.info("database_init_skipped env=%s (SARVSAKSHI_INIT_DB_ON_STARTUP=false)", settings.env)
     logger.info(
         "sarvsakshi_api_started env=%s db=%s llm_enabled=%s",
         settings.env,

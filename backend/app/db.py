@@ -5,6 +5,7 @@ from collections.abc import Generator
 from sqlalchemy import create_engine, event, inspect, text
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.pool import NullPool
 
 from app.config import get_settings
 from app.logging_config import get_logger
@@ -146,6 +147,8 @@ def get_engine() -> Engine:
         if settings.sqlalchemy_url.startswith("sqlite"):
             settings.sqlite_path.parent.mkdir(parents=True, exist_ok=True)
             engine_options["connect_args"] = {"check_same_thread": False, "timeout": 30.0}
+        else:
+            engine_options["poolclass"] = NullPool
         _engine = create_engine(settings.sqlalchemy_url, **engine_options)
 
         if settings.sqlalchemy_url.startswith("sqlite"):
@@ -281,8 +284,12 @@ def ensure_copilot_schema(engine: Engine | None = None) -> None:
     _add_missing_columns(engine, "copilot_turn", _COPILOT_TURN_COLUMNS)
 
 
-def init_db() -> None:
+def init_db(force: bool = False) -> None:
     """Create empty tables. Does not insert any government or demo rows."""
+    settings = get_settings()
+    if not force and not settings.init_db_on_startup:
+        logger.info("database_init_skipped (SARVSAKSHI_INIT_DB_ON_STARTUP=false)")
+        return
     engine = get_engine()
     if schema_is_stale(engine):
         logger.warning("stale database schema detected; existing tables preserved")
@@ -294,7 +301,7 @@ def init_db() -> None:
     ensure_image_schema(engine)
     ensure_citizen_schema(engine)
     ensure_copilot_schema(engine)
-    logger.info("sqlite_tables_ready tables=%s", sorted(Base.metadata.tables.keys()))
+    logger.info("database_tables_ready tables=%s", sorted(Base.metadata.tables.keys()))
 
 
 def check_connection() -> bool:

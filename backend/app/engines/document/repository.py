@@ -9,7 +9,7 @@ from typing import Any
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.config import REPO_ROOT
+from app.config import REPO_ROOT, get_settings
 from app.domain.enums import DataMode
 from app.models.artifacts import Document, PlanArtifact
 from app.models.plan import Plan
@@ -30,11 +30,25 @@ def _load(raw: str | None) -> dict[str, Any]:
 
 
 def save_bytes(project_id: int, filename: str, payload: bytes, digest: str) -> str:
-    folder = REPO_ROOT / "data" / "uploads" / "documents" / str(project_id)
+    root = get_settings().storage_root
+    folder = root / "data" / "uploads" / "documents" / str(project_id)
     folder.mkdir(parents=True, exist_ok=True)
     path = folder / f"{digest[:16]}_{filename}"
     path.write_bytes(payload)
-    return str(path.relative_to(REPO_ROOT)).replace("\\", "/")
+    return str(path.relative_to(root)).replace("\\", "/")
+
+
+def resolve_stored_path(stored: str | None) -> Path | None:
+    if not stored:
+        return None
+    path = Path(stored)
+    if not path.is_absolute():
+        root = get_settings().storage_root
+        candidate = root / path
+        if candidate.is_file():
+            return candidate
+        path = REPO_ROOT / path
+    return path if path.is_file() else None
 
 
 def get_document(session: Session, document_id: int) -> Document | None:
