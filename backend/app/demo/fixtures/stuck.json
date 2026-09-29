@@ -1,0 +1,1538 @@
+{
+  "case_id": "STUCK",
+  "display_name": "STUCK",
+  "purpose": "Demonstrate schedule, progress, and milestone risk.",
+  "scenario_type": "DEMO_STUCK",
+  "short_description": "Ongoing work with labelled SYNTHETIC overdue schedule signals and low reported physical progress. Dates are not invented as official records.",
+  "initial_claim": "Work is ongoing with low claimed progress in labelled HYBRID enrichment.",
+  "expected_lifecycle": "ONGOING",
+  "expected_direction": "INSPECT / HOLD",
+  "expected_direction_note": "Expected demonstration direction only where Time Intelligence, PCE, and Milestone Advisor actually support it. Dates are not fabricated.",
+  "suggested_questions": [
+    "Why is this milestone being held?",
+    "Why is Time Intelligence concerned?",
+    "What remains to be verified?",
+    "What was the last milestone decision?"
+  ],
+  "officer_actions": [
+    "PROCEED",
+    "HOLD",
+    "INSPECT",
+    "NEED_MORE_INFORMATION"
+  ],
+  "officer_action_labels": [
+    "PROCEED",
+    "HOLD",
+    "INSPECT",
+    "NEED MORE INFORMATION"
+  ],
+  "investigation_actions": [
+    "confirm_concern",
+    "dismiss",
+    "need_more_info"
+  ],
+  "modules": [
+    "plan_dates",
+    "progress",
+    "milestone",
+    "time",
+    "pce",
+    "risk_fusion_v2",
+    "copilot"
+  ],
+  "project_id": 52862,
+  "scheme_id": "SVK-AP-001446",
+  "internal_project_id": "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+  "work_description": "WS/MP531/2023-2024/3961 - Construction of additional rooms and halls in the existing public and community building",
+  "constituency": "ANANTAPUR",
+  "category": "Normal/Others",
+  "state": "Andhra Pradesh",
+  "source_status": "Ongoing",
+  "lifecycle_state": "ONGOING",
+  "current_stage": "MILESTONE",
+  "allocation_amount": 1000000,
+  "data_mode": "HYBRID",
+  "data_reliability": "HYBRID",
+  "has_hybrid_enrichment": true,
+  "is_synthetic": false,
+  "synthetic_label": null,
+  "demo_notice": "Controlled prototype scenario. Some values are synthetic and are not official MPLADS records. DEMO / SYNTHETIC / CONTROLLED PROTOTYPE evidence fixtures are not official MPLADS evidence.",
+  "hybrid_notice": "DEMO / HYBRID \u2014 Base project identity comes from a real MPLADS extract. Fields and attachments marked SYNTHETIC are prototype enrichment and are not official MPLADS records.",
+  "governance_note": "AI recommends. Authorized officers decide. Investigation Priority and Evidence Confidence are review rankings, not a legal finding of fraud. This prototype does not sanction a project or release funds.",
+  "no_fraud_note": "This demonstration does not confirm fraud and does not output a fraud probability.",
+  "no_sanction_note": "Officer actions are audited and do not change intelligence scores. No automatic sanction. PFMS is not integrated.",
+  "available_plan": {
+    "plan_recorded": true,
+    "pce_result": "INCONCLUSIVE",
+    "evidence_ids": [],
+    "completion_date": null,
+    "expenditure": null,
+    "note": "Completion dates and expenditure are not invented. Absent values stay unavailable.",
+    "labels": [
+      "DEMO",
+      "SYNTHETIC",
+      "CONTROLLED PROTOTYPE"
+    ],
+    "official_mplads_record": false,
+    "sanctioned_scope": "SYNTHETIC DEMO / CONTROLLED PROTOTYPE plan overlay for the STUCK case. Not an official MPLADS record.",
+    "budget_estimate": 1000000.0,
+    "planned_start_date": "2023-09-02",
+    "planned_completion_date": "2024-04-11",
+    "milestone_label": "M2 superstructure",
+    "source": "demo-evidence-fixtures-v1",
+    "data_mode": "HYBRID",
+    "synthetic_enrichment": {
+      "label": "SYNTHETIC",
+      "disclaimer": "SYNTHETIC prototype enrichment. Not an official MPLADS field.",
+      "planned_start_date": "2023-09-02",
+      "planned_completion_date": "2024-04-11",
+      "actual_completion_date": null,
+      "expenditure": 108000,
+      "physical_progress_percent": 12,
+      "gps_latitude": 14.727152,
+      "gps_longitude": 77.603815,
+      "milestones": {
+        "number": 1,
+        "amount": 108000,
+        "total_amount": 108000
+      }
+    }
+  },
+  "available_claim": {
+    "claim_recorded": true,
+    "claimed_progress": "Low reported physical progress",
+    "claimed_progress_percent": 12.0,
+    "claimed_expenditure": 108000.0,
+    "claimed_completion_state": null,
+    "data_mode": "HYBRID",
+    "labels": [
+      "DEMO",
+      "SYNTHETIC",
+      "CONTROLLED PROTOTYPE"
+    ],
+    "official_mplads_record": false
+  },
+  "available_evidence": {
+    "items": [
+      {
+        "evidence_id": "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22",
+        "engine_name": "compliance",
+        "signal_type": "mplads_compliance",
+        "finding": "Assessable guideline rules were not triggered",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.32,
+        "data_mode": "HYBRID",
+        "explanation": "This signal is MPLADS guideline-rule evaluation. It is not Investigation Priority and is not a legal finding. Compliance status: NO_RULES_TRIGGERED. Triggered: none. Not triggered (assessable): R001, R002, R004, R015. Not assessable: R003, R005, R006, R007, R008, R009, R010, R011, R012, R013, R014, R016. HYBRID/TEST: synthetic execution and expenditure fields are used for controlled testing only. They are not official MPLADS values and must not be cited as real government findings. No sourced guideline condition was triggered from the available project information."
+      },
+      {
+        "evidence_id": "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a",
+        "engine_name": "cost",
+        "signal_type": "allocation_cost_anomaly",
+        "finding": "Allocation is 100.0% above peer median",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": 50.0,
+        "confidence": 0.82,
+        "data_mode": "REAL",
+        "explanation": "Allocation is 100.0% above the median of 14 comparable works in the same geographic constituency, same category, and similar work title. Actual allocation is 1000000 versus peer median 500000 (expected range 500000-500000). Allocation Cost Anomaly score is 50, below the review flag of 60. Not flagged as an Allocation Cost Anomaly. Peer quality is 100/100. 14 peers in geographic constituency 'ANANTAPUR'; median work-title token Jaccard 1.00; 14/14 share category 'Normal/Others'. Peer quality 100/100 (precise work-title group). Evidence Confidence is 82. Investigation Priority is not assigned by this engine. This signal is Allocation Cost Anomaly: recorded allocation versus comparable works. It is not an expenditure anomaly, over-billing, physical-quantity mismatch, or a legal finding. Source amount unit is unspecified. Values are compared as recorded allocation amounts, not as a labelled rupee series."
+      },
+      {
+        "evidence_id": "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952",
+        "engine_name": "graph",
+        "signal_type": "relationship_graph",
+        "finding": "Potential Pattern of Interest: Project has 8 highly similar work(s) in the same constituency, with 8 sharing the same IDA and 1 recommended within 60 days. Independent relationship signals: semantic_similarity, same_constituency, same_category, same_ida, close_recommendation_dates. This is a Potential Pattern of Interest for officer review, not a legal finding.",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": 98.0,
+        "confidence": 0.7,
+        "data_mode": "HYBRID",
+        "explanation": "Graph finding: Potential Pattern of Interest. Project has 8 highly similar work(s) in the same constituency, with 8 sharing the same IDA and 1 recommended within 60 days. Connected projects in the ego neighborhood: 48. Same constituency: 48. Same category: 48. Same IDA: 48. Similar projects: 8. IDA DISTRICT COLLECTOR ANANTAPUR_IDA is associated with 230 project(s) in the corpus. Agency volume alone is not a pattern of interest. Constituency/category/IDA cluster size: 208 (ego cluster peers included: 40). Repeated combination count: 208. Similar-edge density among cluster members: 0.00. Independent relationship signals: semantic_similarity, same_constituency, same_category, same_ida, close_recommendation_dates (5). Strongest relationship: SIMILAR_TO project 31694 (POTENTIAL_DUPLICATE) (strength 0.73). Project has 8 highly similar work(s) in the same constituency, with 8 sharing the same IDA and 1 recommended within 60 days. Independent relationship signals: semantic_similarity, same_constituency, same_category, same_ida, close_recommendation_dates. This is a Potential Pattern of Interest for officer review, not a legal finding. Top SIMILAR_TO: project 31694 overlap_score=73 outcome=POTENTIAL_DUPLICATE. This signal is Relationship Graph connectivity: observed entity links and Overlap Intelligence similarity. A large number of connections is not automatically a pattern of interest. It is not Investigation Priority and is not a legal finding. HYBRID/TEST: synthetic GPS may support Overlap SIMILAR_TO edges for controlled evaluation only. GPS is not a REAL graph node or edge type. Relationship findings are investigation aids. They are not a legal finding. AI recommends. Authorized officers decide."
+      },
+      {
+        "evidence_id": "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3",
+        "engine_name": "milestone",
+        "signal_type": "milestone",
+        "finding": "Milestone recommendation is HOLD",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": null,
+        "confidence": 0.2,
+        "data_mode": "HYBRID",
+        "explanation": "Recommendation is HOLD because an important mismatch exists, required evidence is missing, or expenditure/progress is inconsistent. Milestone recommendation only. Authorized officials make the final administrative decision. SARVSAKSHI does not release funds. No payment was executed. This prototype does not integrate with PFMS and does not release or sanction funds."
+      },
+      {
+        "evidence_id": "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a",
+        "engine_name": "overlap",
+        "signal_type": "potential_overlap",
+        "finding": "Potential Duplicate: high semantic similarity with supporting signals",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": 68.0,
+        "confidence": 0.7,
+        "data_mode": "HYBRID",
+        "explanation": "Potential Duplicate: 2 linked work(s) after blocked candidate generation (43 candidates). Top linked internal_project_id internal:4e5389c2f2ab3dc490d02bc5cd964d6d2b7812c2368e835c8144b2d3a74e6255 has overall overlap score 68 and semantic similarity 100%. These works have 100% semantic similarity, belong to the same constituency and category, and have dissimilar allocation amounts (50% amount similarity) within a 45-day recommendation window (5 days apart). Multiple supporting signals agree, so this is recorded as a Potential Duplicate for officer review, not as a legal finding. GPS distance 8346.3 m (HYBRID/TEST synthetic coordinates) Evidence Confidence is 70. Overall overlap score is 68. This signal is Potential Overlap / Potential Duplicate: multi-signal similarity of recorded works. It is not Investigation Priority and is not a legal finding. HYBRID/TEST: synthetic coordinates are used for controlled GPS-proximity testing only. They are not official MPLADS GPS and must not be cited as real location measurements. Geographic evidence is available for at least one compared pair."
+      },
+      {
+        "evidence_id": "ev:pce:52862:plan_claim_evidence:HYBRID:195328b517122d99",
+        "engine_name": "pce",
+        "signal_type": "plan_claim_evidence",
+        "finding": "Plan\u2013Claim\u2013Evidence result is INCONCLUSIVE",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.5286,
+        "data_mode": "HYBRID",
+        "explanation": "No supporting document or image evidence was attached, so the claim cannot be verified. Plan dimensions is unavailable and claimed quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan dimensions is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Claimed quantity is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan\u2013Claim\u2013Evidence compares recorded plan, claim, and evidence fields. Results are CONSISTENT, MISMATCH, or INCONCLUSIVE. This is not a legal finding of wrongdoing. AI recommends. Authorized officers decide."
+      },
+      {
+        "evidence_id": "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827",
+        "engine_name": "time",
+        "signal_type": "time_anomaly",
+        "finding": "Schedule is behind plan: 136.0% of planned time consumed versus 12% physical progress",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": 93.0,
+        "confidence": 0.46,
+        "data_mode": "HYBRID",
+        "explanation": "HYBRID/TEST: synthetic planned/actual dates and progress are used for controlled testing only. They do not represent actual MPLADS execution history and must not be cited as real delay statistics. Elapsed duration is 302 days of 222 planned days (136% of planned time consumed) with physical progress 12% versus linear expected progress 100%. Expected progress uses a simple linear time-consumed mapping. It is not a verified construction S-curve or engineering estimate. Time Anomaly score is 93 (review flag at 60). Delay detected; cause not established from available data. Peer comparison used 20 comparable works in the same geographic constituency and broader category. Evidence Confidence is 46. This Time Anomaly signal may inform later Investigation Priority. This signal is Time Anomaly: schedule and progress timing versus the plan and comparable works where available. It is not Investigation Priority and is not a legal finding."
+      }
+    ],
+    "count": 7,
+    "evidence_ids": [
+      "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22",
+      "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a",
+      "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952",
+      "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3",
+      "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a",
+      "ev:pce:52862:plan_claim_evidence:HYBRID:195328b517122d99",
+      "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+    ]
+  },
+  "intelligence_signals": [
+    {
+      "group": "time",
+      "status": "ASSESSABLE",
+      "mapped_score": 93,
+      "evidence_ids": [
+        "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "graph",
+      "status": "ASSESSABLE",
+      "mapped_score": 98,
+      "evidence_ids": [
+        "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "cost",
+      "status": "ASSESSABLE",
+      "mapped_score": 50,
+      "evidence_ids": [
+        "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "overlap",
+      "status": "ASSESSABLE",
+      "mapped_score": 68,
+      "evidence_ids": [
+        "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "milestone",
+      "status": "LOW_CONFIDENCE",
+      "mapped_score": 60,
+      "evidence_ids": [
+        "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "pce",
+      "status": "INCONCLUSIVE",
+      "mapped_score": null,
+      "evidence_ids": [],
+      "source": "plan-claim-evidence-v1"
+    }
+  ],
+  "risk_fusion_v2": {
+    "investigation_priority": 25,
+    "evidence_confidence": 38,
+    "recommended_action": "REVIEW",
+    "explanation_type": "WHY_FLAGGED",
+    "explanation": "Investigation Priority: 25/100. Evidence Confidence: 38/100. Priority band is medium. 6 assessable evidence group(s) were fused and Time, Overlap, Relationship graph, Milestone indicated elevated review need. Evidence Confidence is calculated separately from Investigation Priority and is not the average of source scores. A high priority with low confidence is not a highly certain conclusion. Top contributing evidence groups: Time (raw 93, effective 7.04); Relationship graph (raw 98, effective 6.78); Cost (raw 50, effective 6.43). Independent evidence: Cost, Time, Relationship graph, Milestone. Correlated evidence discounted: Overlap (keep 0.50: Graph shares Overlap similarity but also has an additional non-overlap relationship signal. Partial independence applied.) Unavailable: Document / blueprint; Image evidence; Image forensics; Geospatial; Satellite / remote sensing; Citizen / Jan-Sakshi. Unavailable is not treated as zero-risk evidence and is not treated as suspicious. Not assessable / inconclusive: Plan / claim / evidence (inconclusive). Raw Risk 25.1157 is the un-renormalized sum of effective contributions. Missing group weights were not redistributed. Prototype weights only. These are not official MoSPI or MPLADS weights. Data mode is HYBRID: observed MPLADS fields plus synthetic enrichment. Synthetic fields are not official MPLADS values. A major contribution relies on HYBRID/TEST enrichment. Synthetic fields are not official MPLADS values. Recommendation uses Investigation Priority together with Evidence Confidence. Investigation Priority is an evidence-fusion ranking for review. It is not a legal finding and not a probability of wrongdoing. AI recommends. Authorized officers decide. This result does not sanction a project or release funds. No automatic sanction and no automatic payment release are produced. Cost Intelligence V1.1 has no HYBRID-TEST mode. Observed allocation-vs-peers REAL evidence is fused with HYBRID evidence when data_mode=HYBRID is requested. Cost scores are not modified.",
+    "evidence_ids": [
+      "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a",
+      "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827",
+      "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a",
+      "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22",
+      "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952",
+      "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3",
+      "ev:pce:52862:plan_claim_evidence:HYBRID:195328b517122d99"
+    ],
+    "contributing_evidence_groups": [
+      {
+        "signal": "time",
+        "group_id": "time",
+        "display_name": "Time",
+        "weight": 0.1,
+        "state": "ASSESSABLE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 93,
+        "confidence": 0.46,
+        "confidence_adjusted_score": 70.401,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 7.0401,
+        "evidence_ids": [
+          "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+        ],
+        "source_ids": [
+          "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+          "project:27742",
+          "project:29959",
+          "project:29960",
+          "project:29961",
+          "project:44687",
+          "project:44709",
+          "project:44719",
+          "project:44720",
+          "project:44721",
+          "project:49524",
+          "project:49551",
+          "project:49854",
+          "project:51829",
+          "project:52692",
+          "project:52712",
+          "project:52714",
+          "project:52863",
+          "project:52864",
+          "project:52866",
+          "project:52869"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827",
+            "signal_type": "time_anomaly",
+            "engine_name": "time",
+            "raw_evidence_score": 93,
+            "mapped_score": 93,
+            "confidence": 0.46,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+              "project:27742",
+              "project:29959",
+              "project:29960",
+              "project:29961",
+              "project:44687",
+              "project:44709",
+              "project:44719",
+              "project:44720",
+              "project:44721",
+              "project:49524",
+              "project:49551",
+              "project:49854",
+              "project:51829",
+              "project:52692",
+              "project:52712",
+              "project:52714",
+              "project:52863",
+              "project:52864",
+              "project:52866",
+              "project:52869"
+            ],
+            "finding": "Schedule is behind plan: 136.0% of planned time consumed versus 12% physical progress"
+          }
+        ],
+        "finding": "Schedule is behind plan: 136.0% of planned time consumed versus 12% physical progress",
+        "support": "HYBRID/TEST: synthetic planned/actual dates and progress are used for controlled testing only. They do not represent actual MPLADS execution history and must not be cited as real delay statistics. Elapsed duration is 302 days of 222 planned days (136% of planned time consumed)...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": true,
+        "peer_quality": 48,
+        "independent": true
+      },
+      {
+        "signal": "graph",
+        "group_id": "graph",
+        "display_name": "Relationship graph",
+        "weight": 0.08,
+        "state": "ASSESSABLE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 98,
+        "confidence": 0.7,
+        "confidence_adjusted_score": 84.77,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 6.7816,
+        "evidence_ids": [
+          "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952"
+        ],
+        "source_ids": [
+          "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+          "internal:a64b017606cb7ec4ca10c9505bcf2f46521731235f86a0cccc25c35524119ac1",
+          "internal:e22c02fc257e11236c48c23a2dad80ddbd38d366aec5dfbb8b890ccb026ce27b",
+          "internal:6448a0d5257f9f0fe5a4b1521cbd99ea28fef167f4b96a3a5e19ca25166790a7",
+          "internal:585ccec82a1e9c12448d9228141b5f3d14526dd05c98313a18f5a9b34dd8447a",
+          "internal:2ff264b341d56b77be48604c438d0cf56ea9c0d4e342c7c57938ddcdd1b0bb79",
+          "internal:818be01557b23f375a039b7e4417bc8947239cca7b5daa23b8e0000557766b98",
+          "internal:f04674db6418ac5383091ba150af9cdd2d59946c5a36e236816d3cd9cfc98796",
+          "internal:507960b80c681692645744dcec9f626719b5096bbc687dea7e77c5ce4ec24085",
+          "internal:2fea6cedff4ae06ce625fae9469b8af1155c3e3530bb037180ebf6b3b91528ed",
+          "internal:9c20f6e001420b44089bb3a23f2bcdb9b5cc3d34de3381b0fbff16481992b1c3",
+          "internal:0807c1f8bea83a11801189cfe97cf6f416bf66975662d583eeb03f5a6496618f",
+          "internal:7824077d4f92a276fe7bc084ae60c07a593a7412a06cd1b0fabda5faf5852a48",
+          "internal:720c67c1be2076e0091c772b771376b7834a2fd5cc4c122767b9f2b2af756358",
+          "internal:3143f015828651fd88715fb28068690b71ce45c9dadbd145e1748ef411714de6",
+          "internal:194a1d83fb2132b83a4093ea47292f66387a054051ef332a573eaaf33f700744",
+          "internal:c9b054204072d72b50d4c9f89cfedca41d31ccdeb8035760665004a899120c08",
+          "internal:817dafdcac0df6c9818d6906fa78abc86839bd2122a42cbcda8a179e5c1b61fa",
+          "internal:0c22bf24a08aee90b05e1f06214d8703355fe60be725b923b7a794f4d6b3e5ce",
+          "internal:48e01dd885ab5f8ce5c5d60cfc36f93e0b2d3b399fc8e65f40e2020bc6931e50",
+          "internal:164a439fad5add902453687a2740c896976b417428fe9e415b5de6f386b643a8",
+          "internal:8d0ac3477f2e3c217783c54f17061fe77535b5c56409f40d85f0ecd654cdbdae",
+          "internal:6c1f46ecdf568100554f7434b75c12fe28386dd883602bcb78bea88dfaf034e0",
+          "internal:21096d95e12cabcbf7a9b20a0bcbe8cf3d389cbd729af53f1721ae582660a56f",
+          "internal:05a66694985789c5782e7e19fcf0471a11ab102bb381241c820a2585896133da",
+          "internal:bf41cc6d11f886eaf98f8fd55ab352c272d8d82432c9fe988a10cfb67a6a4515",
+          "internal:3f1a7547c64c0d7991db01aef87d8571aac06ba0e51c48919d9a23b3f5725f0e",
+          "internal:06d5db6dfbfa87ccece805e2a4dbc25d00664eab89d366b8e87a57ace562db9f",
+          "internal:b1eb345b1408ed6d7d04f718b91bf2e661bfda19214c281d3090e50dfd69a9d3",
+          "internal:24604f94ba770107d262c6654ac53dd6cb6055c485ea669e222953f76ed44f2c",
+          "internal:00f59e6dda4e36182bf5fe2633be3e31be62eb94b4978f68e7f42a30868b9579",
+          "internal:2d743204cd801fa4d3bdd90125a5c9892891035b9865f0069f0628e01e665a2f",
+          "internal:28d9fbf4b0bb96c6575fc31de502d939c1baf3f1093180b08482146c70990904",
+          "internal:dbacd8c75d3e06f5656a0cc7b866151c9d7966a20ca35d08176d1312cd392af2",
+          "internal:30af21b8d3be929c09620b5b4ed9727154b55c7507a3a5471aab14f99acb4060",
+          "internal:c124575198755cabf53fed29e73f9eac535de304391b782affca3d1de40dff7b",
+          "internal:df6123f03c778fd3d78b9177fb9b59aa869da127172fcf4b9c6f2d89ded9f406",
+          "internal:de42bd4fa9724ce45e26f19f2c583c3058d7dc5fa02ec12a7ba12c96bb37e280",
+          "internal:8c043e595f5ba9ef27054c3687b9c689fa720a5535e4717d89af89608b70eed2",
+          "internal:0ef1baf8d6f2215c37f81e0732ebb9d791a98013dc60c2d5f3624c2dd689766a",
+          "internal:fba65e8aeb480894c0ce45500ed21d138ef04f24ae3eb3749cbd772443675bfa",
+          "internal:ba09769f490a224c24a944628267c3ea96e2ee24d80fe55895545f0dd1540f99",
+          "internal:720aea775851323843d2f6a655daa642fb169f1002ca2061005d26ab524b7ff6",
+          "internal:019c5b591cd4c4f615eb0d9ef97a08b81f053e909c43bdf2dbe72fb20f2fafad",
+          "internal:f1e8252e2cf9ef57507734a8f5a63707aef295fd96d92bec2ff397ff13270df2",
+          "internal:2603d2cfb731cb22c994d89656155e9e701eb779cb5bbc2721df47a2b9d963eb",
+          "internal:9b84df9d3c23cb36b3f460b6434364a4b2c41feb4a47cdf45338c096fbbf67ea",
+          "internal:4e5389c2f2ab3dc490d02bc5cd964d6d2b7812c2368e835c8144b2d3a74e6255",
+          "internal:4d63882b066c8c1383a2bef2e09129296657f94fb02d3941eca749d23f6a30ac"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952",
+            "signal_type": "relationship_graph",
+            "engine_name": "graph",
+            "raw_evidence_score": 98,
+            "mapped_score": 98,
+            "confidence": 0.7,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+              "internal:a64b017606cb7ec4ca10c9505bcf2f46521731235f86a0cccc25c35524119ac1",
+              "internal:e22c02fc257e11236c48c23a2dad80ddbd38d366aec5dfbb8b890ccb026ce27b",
+              "internal:6448a0d5257f9f0fe5a4b1521cbd99ea28fef167f4b96a3a5e19ca25166790a7",
+              "internal:585ccec82a1e9c12448d9228141b5f3d14526dd05c98313a18f5a9b34dd8447a",
+              "internal:2ff264b341d56b77be48604c438d0cf56ea9c0d4e342c7c57938ddcdd1b0bb79",
+              "internal:818be01557b23f375a039b7e4417bc8947239cca7b5daa23b8e0000557766b98",
+              "internal:f04674db6418ac5383091ba150af9cdd2d59946c5a36e236816d3cd9cfc98796",
+              "internal:507960b80c681692645744dcec9f626719b5096bbc687dea7e77c5ce4ec24085",
+              "internal:2fea6cedff4ae06ce625fae9469b8af1155c3e3530bb037180ebf6b3b91528ed",
+              "internal:9c20f6e001420b44089bb3a23f2bcdb9b5cc3d34de3381b0fbff16481992b1c3",
+              "internal:0807c1f8bea83a11801189cfe97cf6f416bf66975662d583eeb03f5a6496618f",
+              "internal:7824077d4f92a276fe7bc084ae60c07a593a7412a06cd1b0fabda5faf5852a48",
+              "internal:720c67c1be2076e0091c772b771376b7834a2fd5cc4c122767b9f2b2af756358",
+              "internal:3143f015828651fd88715fb28068690b71ce45c9dadbd145e1748ef411714de6",
+              "internal:194a1d83fb2132b83a4093ea47292f66387a054051ef332a573eaaf33f700744",
+              "internal:c9b054204072d72b50d4c9f89cfedca41d31ccdeb8035760665004a899120c08",
+              "internal:817dafdcac0df6c9818d6906fa78abc86839bd2122a42cbcda8a179e5c1b61fa",
+              "internal:0c22bf24a08aee90b05e1f06214d8703355fe60be725b923b7a794f4d6b3e5ce",
+              "internal:48e01dd885ab5f8ce5c5d60cfc36f93e0b2d3b399fc8e65f40e2020bc6931e50",
+              "internal:164a439fad5add902453687a2740c896976b417428fe9e415b5de6f386b643a8",
+              "internal:8d0ac3477f2e3c217783c54f17061fe77535b5c56409f40d85f0ecd654cdbdae",
+              "internal:6c1f46ecdf568100554f7434b75c12fe28386dd883602bcb78bea88dfaf034e0",
+              "internal:21096d95e12cabcbf7a9b20a0bcbe8cf3d389cbd729af53f1721ae582660a56f",
+              "internal:05a66694985789c5782e7e19fcf0471a11ab102bb381241c820a2585896133da",
+              "internal:bf41cc6d11f886eaf98f8fd55ab352c272d8d82432c9fe988a10cfb67a6a4515",
+              "internal:3f1a7547c64c0d7991db01aef87d8571aac06ba0e51c48919d9a23b3f5725f0e",
+              "internal:06d5db6dfbfa87ccece805e2a4dbc25d00664eab89d366b8e87a57ace562db9f",
+              "internal:b1eb345b1408ed6d7d04f718b91bf2e661bfda19214c281d3090e50dfd69a9d3",
+              "internal:24604f94ba770107d262c6654ac53dd6cb6055c485ea669e222953f76ed44f2c",
+              "internal:00f59e6dda4e36182bf5fe2633be3e31be62eb94b4978f68e7f42a30868b9579",
+              "internal:2d743204cd801fa4d3bdd90125a5c9892891035b9865f0069f0628e01e665a2f",
+              "internal:28d9fbf4b0bb96c6575fc31de502d939c1baf3f1093180b08482146c70990904",
+              "internal:dbacd8c75d3e06f5656a0cc7b866151c9d7966a20ca35d08176d1312cd392af2",
+              "internal:30af21b8d3be929c09620b5b4ed9727154b55c7507a3a5471aab14f99acb4060",
+              "internal:c124575198755cabf53fed29e73f9eac535de304391b782affca3d1de40dff7b",
+              "internal:df6123f03c778fd3d78b9177fb9b59aa869da127172fcf4b9c6f2d89ded9f406",
+              "internal:de42bd4fa9724ce45e26f19f2c583c3058d7dc5fa02ec12a7ba12c96bb37e280",
+              "internal:8c043e595f5ba9ef27054c3687b9c689fa720a5535e4717d89af89608b70eed2",
+              "internal:0ef1baf8d6f2215c37f81e0732ebb9d791a98013dc60c2d5f3624c2dd689766a",
+              "internal:fba65e8aeb480894c0ce45500ed21d138ef04f24ae3eb3749cbd772443675bfa",
+              "internal:ba09769f490a224c24a944628267c3ea96e2ee24d80fe55895545f0dd1540f99",
+              "internal:720aea775851323843d2f6a655daa642fb169f1002ca2061005d26ab524b7ff6",
+              "internal:019c5b591cd4c4f615eb0d9ef97a08b81f053e909c43bdf2dbe72fb20f2fafad",
+              "internal:f1e8252e2cf9ef57507734a8f5a63707aef295fd96d92bec2ff397ff13270df2",
+              "internal:2603d2cfb731cb22c994d89656155e9e701eb779cb5bbc2721df47a2b9d963eb",
+              "internal:9b84df9d3c23cb36b3f460b6434364a4b2c41feb4a47cdf45338c096fbbf67ea",
+              "internal:4e5389c2f2ab3dc490d02bc5cd964d6d2b7812c2368e835c8144b2d3a74e6255",
+              "internal:4d63882b066c8c1383a2bef2e09129296657f94fb02d3941eca749d23f6a30ac"
+            ],
+            "finding": "Potential Pattern of Interest: Project has 8 highly similar work(s) in the same constituency, with 8 sharing the same IDA and 1 recommended within 60 days. Independent relationship signals: semantic_similarity, same_constituency, same_category, same_ida, close_recommendation_dates. This is a Potential Pattern of Interest for officer review, not a legal finding."
+          }
+        ],
+        "finding": "Potential Pattern of Interest: Project has 8 highly similar work(s) in the same constituency, with 8 sharing the same IDA and 1 recommended within 60 days. Independent relationship signals: semantic_similarity, same_constituency, same_category, same_ida, close_recommendation_dates. This is a Potential Pattern of Interest for officer review, not a legal finding.",
+        "support": "Graph finding: Potential Pattern of Interest. Project has 8 highly similar work(s) in the same constituency, with 8 sharing the same IDA and 1 recommended within 60 days. Connected projects in the ego neighborhood: 48. Same constituency: 48. Same category: 48. Same IDA: 48. Si...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": true,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "cost",
+        "group_id": "cost",
+        "display_name": "Cost",
+        "weight": 0.14,
+        "state": "ASSESSABLE",
+        "polarity": "POSITIVE_SIGNAL",
+        "raw_evidence_score": 50,
+        "confidence": 0.82,
+        "confidence_adjusted_score": 45.95,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 6.433,
+        "evidence_ids": [
+          "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a"
+        ],
+        "source_ids": [
+          "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+          "project:1171",
+          "project:7619",
+          "project:15799",
+          "project:22310",
+          "project:22311",
+          "project:25089",
+          "project:27954",
+          "project:29805",
+          "project:29951",
+          "project:29952",
+          "project:31694",
+          "project:34275",
+          "project:49853",
+          "project:51830"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a",
+            "signal_type": "allocation_cost_anomaly",
+            "engine_name": "cost",
+            "raw_evidence_score": 50,
+            "mapped_score": 50,
+            "confidence": 0.82,
+            "disposition": "WHY_NOT_FLAGGED",
+            "data_mode": "REAL",
+            "source_ids": [
+              "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+              "project:1171",
+              "project:7619",
+              "project:15799",
+              "project:22310",
+              "project:22311",
+              "project:25089",
+              "project:27954",
+              "project:29805",
+              "project:29951",
+              "project:29952",
+              "project:31694",
+              "project:34275",
+              "project:49853",
+              "project:51830"
+            ],
+            "finding": "Allocation is 100.0% above peer median"
+          }
+        ],
+        "finding": "Allocation is 100.0% above peer median",
+        "support": "Allocation is 100.0% above the median of 14 comparable works in the same geographic constituency, same category, and similar work title. Actual allocation is 1000000 versus peer median 500000 (expected range 500000-500000). Allocation Cost Anomaly score is 50, below the review...",
+        "unavailable_reason": null,
+        "data_mode": "REAL",
+        "flagged": false,
+        "peer_quality": 100,
+        "independent": true
+      },
+      {
+        "signal": "overlap",
+        "group_id": "overlap",
+        "display_name": "Overlap",
+        "weight": 0.1,
+        "state": "ASSESSABLE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 68,
+        "confidence": 0.7,
+        "confidence_adjusted_score": 58.82,
+        "correlation_factor": 0.5,
+        "correlation_reason": "Graph shares Overlap similarity but also has an additional non-overlap relationship signal. Partial independence applied.",
+        "dependency_correlation_adjustment": 0.5,
+        "effective_contribution": 2.941,
+        "evidence_ids": [
+          "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a"
+        ],
+        "source_ids": [
+          "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+          "internal:4e5389c2f2ab3dc490d02bc5cd964d6d2b7812c2368e835c8144b2d3a74e6255",
+          "internal:720aea775851323843d2f6a655daa642fb169f1002ca2061005d26ab524b7ff6"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a",
+            "signal_type": "potential_overlap",
+            "engine_name": "overlap",
+            "raw_evidence_score": 68,
+            "mapped_score": 68,
+            "confidence": 0.7,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+              "internal:4e5389c2f2ab3dc490d02bc5cd964d6d2b7812c2368e835c8144b2d3a74e6255",
+              "internal:720aea775851323843d2f6a655daa642fb169f1002ca2061005d26ab524b7ff6"
+            ],
+            "finding": "Potential Duplicate: high semantic similarity with supporting signals"
+          }
+        ],
+        "finding": "Potential Duplicate: high semantic similarity with supporting signals",
+        "support": "Potential Duplicate: 2 linked work(s) after blocked candidate generation (43 candidates). Top linked internal_project_id internal:4e5389c2f2ab3dc490d02bc5cd964d6d2b7812c2368e835c8144b2d3a74e6255 has overall overlap score 68 and semantic similarity 100%. These works have 100% s...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": true,
+        "peer_quality": null,
+        "independent": false
+      },
+      {
+        "signal": "milestone",
+        "group_id": "milestone",
+        "display_name": "Milestone",
+        "weight": 0.05,
+        "state": "LOW_CONFIDENCE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 60,
+        "confidence": 0.2,
+        "confidence_adjusted_score": 38.4,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 1.92,
+        "evidence_ids": [
+          "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3"
+        ],
+        "source_ids": [
+          "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+          "milestone:2"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3",
+            "signal_type": "milestone",
+            "engine_name": "milestone",
+            "raw_evidence_score": null,
+            "mapped_score": 60,
+            "confidence": 0.2,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+              "milestone:2"
+            ],
+            "finding": "Milestone recommendation is HOLD"
+          }
+        ],
+        "finding": "Milestone recommendation is HOLD",
+        "support": "Recommendation is HOLD because an important mismatch exists, required evidence is missing, or expenditure/progress is inconsistent. Milestone recommendation only. Authorized officials make the final administrative decision. SARVSAKSHI does not release funds. No payment was exe...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": true,
+        "peer_quality": null,
+        "independent": true
+      }
+    ],
+    "unavailable_evidence": [
+      {
+        "signal": "document",
+        "group_id": "document",
+        "display_name": "Document / blueprint",
+        "weight": 0.06,
+        "state": "UNAVAILABLE",
+        "polarity": "UNKNOWN",
+        "raw_evidence_score": null,
+        "confidence": null,
+        "confidence_adjusted_score": null,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 0.0,
+        "evidence_ids": [],
+        "source_ids": [],
+        "items": [],
+        "finding": null,
+        "support": null,
+        "unavailable_reason": "No Evidence Object is available for this group in the requested data mode. Unavailable is not treated as zero-risk evidence and is not treated as suspicious.",
+        "data_mode": null,
+        "flagged": false,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "image",
+        "group_id": "image",
+        "display_name": "Image evidence",
+        "weight": 0.06,
+        "state": "UNAVAILABLE",
+        "polarity": "UNKNOWN",
+        "raw_evidence_score": null,
+        "confidence": null,
+        "confidence_adjusted_score": null,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 0.0,
+        "evidence_ids": [],
+        "source_ids": [],
+        "items": [],
+        "finding": null,
+        "support": null,
+        "unavailable_reason": "No Evidence Object is available for this group in the requested data mode. Unavailable is not treated as zero-risk evidence and is not treated as suspicious.",
+        "data_mode": null,
+        "flagged": false,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "forensics",
+        "group_id": "forensics",
+        "display_name": "Image forensics",
+        "weight": 0.05,
+        "state": "UNAVAILABLE",
+        "polarity": "UNKNOWN",
+        "raw_evidence_score": null,
+        "confidence": null,
+        "confidence_adjusted_score": null,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 0.0,
+        "evidence_ids": [],
+        "source_ids": [],
+        "items": [],
+        "finding": null,
+        "support": null,
+        "unavailable_reason": "No Evidence Object is available for this group in the requested data mode. Unavailable is not treated as zero-risk evidence and is not treated as suspicious.",
+        "data_mode": null,
+        "flagged": false,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "geospatial",
+        "group_id": "geospatial",
+        "display_name": "Geospatial",
+        "weight": 0.08,
+        "state": "UNAVAILABLE",
+        "polarity": "UNKNOWN",
+        "raw_evidence_score": null,
+        "confidence": null,
+        "confidence_adjusted_score": null,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 0.0,
+        "evidence_ids": [],
+        "source_ids": [],
+        "items": [],
+        "finding": null,
+        "support": null,
+        "unavailable_reason": "No Evidence Object is available for this group in the requested data mode. Unavailable is not treated as zero-risk evidence and is not treated as suspicious.",
+        "data_mode": null,
+        "flagged": false,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "satellite",
+        "group_id": "satellite",
+        "display_name": "Satellite / remote sensing",
+        "weight": 0.07,
+        "state": "UNAVAILABLE",
+        "polarity": "UNKNOWN",
+        "raw_evidence_score": null,
+        "confidence": null,
+        "confidence_adjusted_score": null,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 0.0,
+        "evidence_ids": [],
+        "source_ids": [],
+        "items": [],
+        "finding": null,
+        "support": null,
+        "unavailable_reason": "No Evidence Object is available for this group in the requested data mode. Unavailable is not treated as zero-risk evidence and is not treated as suspicious.",
+        "data_mode": null,
+        "flagged": false,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "citizen",
+        "group_id": "citizen",
+        "display_name": "Citizen / Jan-Sakshi",
+        "weight": 0.06,
+        "state": "UNAVAILABLE",
+        "polarity": "UNKNOWN",
+        "raw_evidence_score": null,
+        "confidence": null,
+        "confidence_adjusted_score": null,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 0.0,
+        "evidence_ids": [],
+        "source_ids": [],
+        "items": [],
+        "finding": null,
+        "support": null,
+        "unavailable_reason": "No Evidence Object is available for this group in the requested data mode. Unavailable is not treated as zero-risk evidence and is not treated as suspicious.",
+        "data_mode": null,
+        "flagged": false,
+        "peer_quality": null,
+        "independent": true
+      }
+    ],
+    "conflicting_evidence": [],
+    "formula_unchanged": true,
+    "engine_version": "risk-fusion-v2",
+    "synthetic_disclosure": "A major contribution relies on HYBRID/TEST enrichment. Synthetic fields are not official MPLADS values."
+  },
+  "investigation_workspace": {
+    "href": "/projects/52862/investigate?mode=hybrid&demo=stuck",
+    "lifecycle_state": "ONGOING",
+    "current_stage": "MILESTONE",
+    "recommendation": "HOLD",
+    "evidence_ids": [
+      "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22",
+      "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a",
+      "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952",
+      "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3",
+      "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a",
+      "ev:pce:52862:plan_claim_evidence:HYBRID:195328b517122d99",
+      "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+    ]
+  },
+  "lifecycle": {
+    "project_id": 52862,
+    "internal_project_id": "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+    "scheme_id": "SVK-AP-001446",
+    "work_description": "WS/MP531/2023-2024/3961 - Construction of additional rooms and halls in the existing public and community building",
+    "constituency": "ANANTAPUR",
+    "category": "Normal/Others",
+    "requested_amount": 1000000,
+    "data_mode": "HYBRID",
+    "lifecycle_state": "ONGOING",
+    "source_status": "Ongoing",
+    "current_stage": "MILESTONE",
+    "planning_state": null,
+    "completed_stages": [
+      "ONGOING",
+      "PLAN",
+      "CLAIM"
+    ],
+    "pending_stages": [
+      "MILESTONE",
+      "RISK_FUSION",
+      "INVESTIGATION",
+      "COMPLETION"
+    ],
+    "timeline": [
+      {
+        "stage": "FUTURE",
+        "status": "NOT AVAILABLE",
+        "label": "Future / proposed",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 source STATUS maps to ONGOING, not a stored FUTURE record."
+      },
+      {
+        "stage": "PRIORITIZATION",
+        "status": "NOT AVAILABLE",
+        "label": "Prioritization (Need & Impact)",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 Need & Impact is the FUTURE planning workflow."
+      },
+      {
+        "stage": "ONGOING",
+        "status": "COMPLETED",
+        "label": "Ongoing",
+        "available": true,
+        "href": "/investigate",
+        "note": null
+      },
+      {
+        "stage": "PLAN",
+        "status": "COMPLETED",
+        "label": "Plan",
+        "available": true,
+        "href": "#plan-claim-evidence",
+        "note": null
+      },
+      {
+        "stage": "CLAIM",
+        "status": "COMPLETED",
+        "label": "Claim",
+        "available": true,
+        "href": "#plan-claim-evidence",
+        "note": null
+      },
+      {
+        "stage": "EVIDENCE",
+        "status": "NOT AVAILABLE",
+        "label": "Evidence",
+        "available": false,
+        "href": null,
+        "note": null
+      },
+      {
+        "stage": "MILESTONE",
+        "status": "CURRENT",
+        "label": "Milestone",
+        "available": true,
+        "href": "#milestones",
+        "note": null
+      },
+      {
+        "stage": "RISK_FUSION",
+        "status": "PENDING",
+        "label": "Risk Fusion V2",
+        "available": true,
+        "href": "#risk-fusion-v2",
+        "note": null
+      },
+      {
+        "stage": "INVESTIGATION",
+        "status": "PENDING",
+        "label": "Investigation",
+        "available": true,
+        "href": "/investigate",
+        "note": null
+      },
+      {
+        "stage": "OFFICER_DECISION",
+        "status": "NOT AVAILABLE",
+        "label": "Officer decision",
+        "available": false,
+        "href": null,
+        "note": null
+      },
+      {
+        "stage": "COMPLETION",
+        "status": "PENDING",
+        "label": "Completion",
+        "available": true,
+        "href": "/investigate",
+        "note": "PENDING \u2014 source STATUS is not completed."
+      },
+      {
+        "stage": "FINAL_INVESTIGATION",
+        "status": "NOT AVAILABLE",
+        "label": "Final investigation",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE until the work is completed."
+      }
+    ],
+    "evidence_summary": {
+      "count": 7,
+      "engines": [
+        "compliance",
+        "cost",
+        "graph",
+        "milestone",
+        "overlap",
+        "pce",
+        "time"
+      ],
+      "modules": [
+        {
+          "engine": "compliance",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22"
+          ]
+        },
+        {
+          "engine": "cost",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a"
+          ]
+        },
+        {
+          "engine": "graph",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952"
+          ]
+        },
+        {
+          "engine": "milestone",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3"
+          ]
+        },
+        {
+          "engine": "overlap",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a"
+          ]
+        },
+        {
+          "engine": "pce",
+          "available": true,
+          "status": "EvidenceDisposition.INCONCLUSIVE",
+          "count": 1,
+          "evidence_ids": [
+            "ev:pce:52862:plan_claim_evidence:HYBRID:195328b517122d99"
+          ]
+        },
+        {
+          "engine": "time",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22",
+        "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a",
+        "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952",
+        "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3",
+        "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a",
+        "ev:pce:52862:plan_claim_evidence:HYBRID:195328b517122d99",
+        "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+      ],
+      "note": "Existing Evidence Object V1 records only. Lifecycle does not create duplicate evidence."
+    },
+    "risk_summary": {
+      "appropriate": true,
+      "stored": true,
+      "investigation_priority": 25,
+      "evidence_confidence": 38,
+      "risk_class": "MEDIUM",
+      "recommended_action": "REVIEW",
+      "explanation_type": "WHY_FLAGGED",
+      "explanation": "Investigation Priority: 25/100. Evidence Confidence: 38/100. Priority band is medium. 6 assessable evidence group(s) were fused and Time, Overlap, Relationship graph, Milestone indicated elevated review need. Evidence Confidence is calculated separately from Investigation Priority and is not the average of source scores. A high priority with low confidence is not a highly certain conclusion. Top contributing evidence groups: Time (raw 93, effective 7.04); Relationship graph (raw 98, effective 6.78); Cost (raw 50, effective 6.43). Independent evidence: Cost, Time, Relationship graph, Milestone. Correlated evidence discounted: Overlap (keep 0.50: Graph shares Overlap similarity but also has an additional non-overlap relationship signal. Partial independence applied.) Unavailable: Document / blueprint; Image evidence; Image forensics; Geospatial; Satellite / remote sensing; Citizen / Jan-Sakshi. Unavailable is not treated as zero-risk evidence and is not treated as suspicious. Not assessable / inconclusive: Plan / claim / evidence (inconclusive). Raw Risk 25.1157 is the un-renormalized sum of effective contributions. Missing group weights were not redistributed. Prototype weights only. These are not official MoSPI or MPLADS weights. Data mode is HYBRID: observed MPLADS fields plus synthetic enrichment. Synthetic fields are not official MPLADS values. A major contribution relies on HYBRID/TEST enrichment. Synthetic fields are not official MPLADS values. Recommendation uses Investigation Priority together with Evidence Confidence. Investigation Priority is an evidence-fusion ranking for review. It is not a legal finding and not a probability of wrongdoing. AI recommends. Authorized officers decide. This result does not sanction a project or release funds. No automatic sanction and no automatic payment release are produced. Cost Intelligence V1.1 has no HYBRID-TEST mode. Observed allocation-vs-peers REAL evidence is fused with HYBRID evidence when data_mode=HYBRID is requested. Cost scores are not modified.",
+      "contributing_evidence_groups": [
+        "Time",
+        "Relationship graph",
+        "Cost",
+        "Overlap",
+        "Milestone"
+      ],
+      "conflicting_evidence": [],
+      "unavailable_evidence": [
+        "Document / blueprint",
+        "Image evidence",
+        "Image forensics",
+        "Geospatial",
+        "Satellite / remote sensing",
+        "Citizen / Jan-Sakshi"
+      ],
+      "data_mode": "HYBRID",
+      "engine_version": "risk-fusion-v2",
+      "synthetic_disclosure": "A major contribution relies on HYBRID/TEST enrichment. Synthetic fields are not official MPLADS values.",
+      "formula_unchanged": true
+    },
+    "milestone_summary": {
+      "count": 1,
+      "current_milestone_id": 2,
+      "current_milestone_name": "Superstructure",
+      "current_recommendation": "HOLD",
+      "items": [
+        {
+          "milestone_id": 2,
+          "milestone_name": "Superstructure",
+          "status": "UNDER_REVIEW",
+          "recommendation": "HOLD",
+          "officer_action": null
+        }
+      ],
+      "last_officer_action": null,
+      "automatic_sanction": false,
+      "pfms_integrated": false,
+      "funds_released": false,
+      "data_mode": "HYBRID",
+      "hybrid_notice": "Prototype simulation: some execution, financial, location, or milestone fields are synthetic and are not official MPLADS records."
+    },
+    "need_impact_summary": {
+      "need_score": null,
+      "impact_score": 60.0,
+      "priority_score": null,
+      "priority_class": "INCONCLUSIVE",
+      "evidence_confidence": 0.28,
+      "unavailable_inputs": [
+        "Population need",
+        "Infrastructure gap",
+        "Underserved-area indicator",
+        "Disaster / essential-service statistics",
+        "Beneficiary count",
+        "Expected community coverage",
+        "Waiting time since recommendation",
+        "Disaster keywords in observed text"
+      ],
+      "recommendation_rationale": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments. Prototype weighting \u2014 not an official MPLADS sanction formula. Need Score is INCONCLUSIVE: verified population, infrastructure, underserved-area, and disaster statistics are unavailable and were not invented. Historical MPLADS work counts were not used as a substitute. Impact Score combines available components with documented prototype weights. Allocation amount is not used as an impact proxy. Urgency is INCONCLUSIVE: no supported waiting-time or disaster-text input is available. Historical project counts and historical funding are contextual evidence only. They are not used as a Need Score and do not prove community need. A constituency is not ranked lower because it has fewer recorded MPLADS works. Constituency is the primary geographic context. MP name is not used as a geographic substitute. District-level information is not fabricated. Recommended priority class is INCONCLUSIVE because Need and Impact could not both be assessed from available verified inputs. Ranking was not forced. This work's lifecycle_stage is ONGOING. Need & Impact V1 is designed primarily for proposed/future works.",
+      "finding": "INCONCLUSIVE need/impact assessment. Priority recommendation was not forced from insufficient inputs.",
+      "automatic_sanction": false,
+      "sanction_decision": null,
+      "enrichment_used": false,
+      "enrichment_label": null,
+      "data_mode": "HYBRID",
+      "evidence_ids": [],
+      "governance_note": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments."
+    },
+    "pce_summary": {
+      "plan_recorded": true,
+      "claim_recorded": true,
+      "overall_result": "INCONCLUSIVE",
+      "missing_information": [
+        "plan dimensions/area",
+        "claimed quantity",
+        "evidence quantity",
+        "evidence expenditure",
+        "supporting evidence"
+      ],
+      "mismatch_count": 0,
+      "evidence_confidence": 0.5286,
+      "explanation": "No supporting document or image evidence was attached, so the claim cannot be verified. Plan dimensions is unavailable and claimed quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan dimensions is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Claimed quantity is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan\u2013Claim\u2013Evidence compares recorded plan, claim, and evidence fields. Results are CONSISTENT, MISMATCH, or INCONCLUSIVE. This is not a legal finding of wrongdoing. AI recommends. Authorized officers decide.",
+      "evidence_ids": [],
+      "data_mode": "HYBRID",
+      "completion_date": null,
+      "expenditure": null,
+      "note": "Completion dates and expenditure are not invented. Absent values stay unavailable."
+    },
+    "citizen_summary": {
+      "available": false,
+      "status": "NOT AVAILABLE",
+      "total_submissions": 0,
+      "aggregate_finding": null,
+      "note": "No citizen reports are stored. One report would not establish truth."
+    },
+    "geospatial_status": {
+      "available": false,
+      "status": "NOT AVAILABLE",
+      "note": "REAL project GPS is typically unavailable in the current extract."
+    },
+    "satellite_status": {
+      "available": false,
+      "status": "SATELLITE_UNAVAILABLE",
+      "note": "Satellite imagery is not claimed as live unless a provider actually returned it."
+    },
+    "document_status": null,
+    "image_status": null,
+    "compliance_status": {
+      "available": true,
+      "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+      "evidence_ids": [
+        "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22"
+      ]
+    },
+    "relationship_status": {
+      "available": true,
+      "status": "EvidenceDisposition.WHY_FLAGGED",
+      "evidence_ids": [
+        "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952"
+      ]
+    },
+    "project_status_summary": {
+      "lifecycle_state": "ONGOING",
+      "source_status": "Ongoing",
+      "current_stage": "MILESTONE",
+      "data_mode": "HYBRID",
+      "planning_state": null,
+      "investigation_priority": 25,
+      "evidence_confidence": 38,
+      "milestone_status": "UNDER_REVIEW",
+      "satellite_status": "SATELLITE_UNAVAILABLE",
+      "compliance_status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+      "relationship_status": "EvidenceDisposition.WHY_FLAGGED"
+    },
+    "officer_decisions": [],
+    "checkpoint_actions": [
+      "PROCEED",
+      "HOLD",
+      "INSPECT",
+      "REVIEW",
+      "NEED MORE INFORMATION",
+      "CONFIRM CONCERN",
+      "DISMISS"
+    ],
+    "final_case_summary": null,
+    "recommendation": "HOLD",
+    "recommendation_rationale": "Milestone Advisor last recommended HOLD. An authorized officer records PROCEED / HOLD / INSPECT / NEED MORE INFORMATION. Funds are not released.",
+    "unavailable_inputs": [
+      "Population need",
+      "Infrastructure gap",
+      "Underserved-area indicator",
+      "Disaster / essential-service statistics",
+      "Beneficiary count",
+      "Expected community coverage",
+      "Waiting time since recommendation",
+      "Disaster keywords in observed text",
+      "plan dimensions/area",
+      "claimed quantity",
+      "evidence quantity",
+      "evidence expenditure",
+      "supporting evidence",
+      "verified project GPS",
+      "satellite imagery"
+    ],
+    "automatic_sanction": false,
+    "automatic_payment": false,
+    "pfms_integrated": false,
+    "fraud_conclusion": false,
+    "engine_version": "lifecycle-orchestration-v1",
+    "governance_note": "SARVSAKSHI workflow state is an application lifecycle label. It is not an official MPLADS status. Source status is the observed extract STATUS. AI recommends. Authorized officers decide. This layer does not sanction a project, release funds, or determine fraud.",
+    "workflow_label": "SARVSAKSHI workflow state",
+    "source_status_label": "Source status",
+    "is_synthetic": false,
+    "synthetic_label": null,
+    "explanation": "SARVSAKSHI workflow state is an application lifecycle label. It is not an official MPLADS status. Source status is the observed extract STATUS. AI recommends. Authorized officers decide. This layer does not sanction a project, release funds, or determine fraud. SARVSAKSHI workflow state is ONGOING. Current stage is MILESTONE. Priority recommendation only. Authorized officials make final administrative decisions. This prototype does not sanction a project or release funds. No automatic payment. PFMS is not integrated. Officer actions do not release funds. Investigation Priority is not a legal fraud finding and not a fraud probability. Lifecycle V1 does not add or change Risk Fusion V2 weights. Investigation Priority comes from stored or recomputed Risk Fusion V2. HYBRID: real project fields plus clearly labelled synthetic enrichment. A major contribution relies on HYBRID/TEST enrichment. Synthetic fields are not official MPLADS values."
+  },
+  "pce": {
+    "plan_recorded": true,
+    "claim_recorded": true,
+    "overall_result": "INCONCLUSIVE",
+    "missing_information": [
+      "plan dimensions/area",
+      "claimed quantity",
+      "evidence quantity",
+      "evidence expenditure",
+      "supporting evidence"
+    ],
+    "mismatch_count": 0,
+    "evidence_confidence": 0.5286,
+    "explanation": "No supporting document or image evidence was attached, so the claim cannot be verified. Plan dimensions is unavailable and claimed quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan dimensions is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Claimed quantity is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan\u2013Claim\u2013Evidence compares recorded plan, claim, and evidence fields. Results are CONSISTENT, MISMATCH, or INCONCLUSIVE. This is not a legal finding of wrongdoing. AI recommends. Authorized officers decide.",
+    "evidence_ids": [],
+    "data_mode": "HYBRID",
+    "completion_date": null,
+    "expenditure": null,
+    "note": "Completion dates and expenditure are not invented. Absent values stay unavailable."
+  },
+  "images": null,
+  "documents": null,
+  "geospatial": {
+    "available": false,
+    "status": "NOT AVAILABLE",
+    "note": "REAL project GPS is typically unavailable in the current extract."
+  },
+  "satellite": {
+    "available": false,
+    "status": "SATELLITE_UNAVAILABLE",
+    "note": "Satellite imagery is not claimed as live unless a provider actually returned it."
+  },
+  "citizen": {
+    "available": false,
+    "status": "NOT AVAILABLE",
+    "total_submissions": 0,
+    "aggregate_finding": null,
+    "note": "No citizen reports are stored. One report would not establish truth."
+  },
+  "milestone": {
+    "count": 1,
+    "current_milestone_id": 2,
+    "current_milestone_name": "Superstructure",
+    "current_recommendation": "HOLD",
+    "items": [
+      {
+        "milestone_id": 2,
+        "milestone_name": "Superstructure",
+        "status": "UNDER_REVIEW",
+        "recommendation": "HOLD",
+        "officer_action": null
+      }
+    ],
+    "last_officer_action": null,
+    "automatic_sanction": false,
+    "pfms_integrated": false,
+    "funds_released": false,
+    "data_mode": "HYBRID",
+    "hybrid_notice": "Prototype simulation: some execution, financial, location, or milestone fields are synthetic and are not official MPLADS records."
+  },
+  "compliance": {
+    "available": true,
+    "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+    "evidence_ids": [
+      "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22"
+    ]
+  },
+  "need_impact": {
+    "need_score": null,
+    "impact_score": 60.0,
+    "priority_score": null,
+    "priority_class": "INCONCLUSIVE",
+    "evidence_confidence": 0.28,
+    "unavailable_inputs": [
+      "Population need",
+      "Infrastructure gap",
+      "Underserved-area indicator",
+      "Disaster / essential-service statistics",
+      "Beneficiary count",
+      "Expected community coverage",
+      "Waiting time since recommendation",
+      "Disaster keywords in observed text"
+    ],
+    "recommendation_rationale": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments. Prototype weighting \u2014 not an official MPLADS sanction formula. Need Score is INCONCLUSIVE: verified population, infrastructure, underserved-area, and disaster statistics are unavailable and were not invented. Historical MPLADS work counts were not used as a substitute. Impact Score combines available components with documented prototype weights. Allocation amount is not used as an impact proxy. Urgency is INCONCLUSIVE: no supported waiting-time or disaster-text input is available. Historical project counts and historical funding are contextual evidence only. They are not used as a Need Score and do not prove community need. A constituency is not ranked lower because it has fewer recorded MPLADS works. Constituency is the primary geographic context. MP name is not used as a geographic substitute. District-level information is not fabricated. Recommended priority class is INCONCLUSIVE because Need and Impact could not both be assessed from available verified inputs. Ranking was not forced. This work's lifecycle_stage is ONGOING. Need & Impact V1 is designed primarily for proposed/future works.",
+    "finding": "INCONCLUSIVE need/impact assessment. Priority recommendation was not forced from insufficient inputs.",
+    "automatic_sanction": false,
+    "sanction_decision": null,
+    "enrichment_used": false,
+    "enrichment_label": null,
+    "data_mode": "HYBRID",
+    "evidence_ids": [],
+    "governance_note": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments."
+  },
+  "copilot": {
+    "suggested_questions": [
+      "Why is this milestone being held?",
+      "Why is Time Intelligence concerned?",
+      "What remains to be verified?",
+      "What was the last milestone decision?"
+    ],
+    "grounded_retrieval": true,
+    "hardcoded_answers": false,
+    "href": "/projects/52862/investigate?mode=hybrid&demo=stuck#copilot"
+  },
+  "recommended_action": "HOLD",
+  "officer_decision": null,
+  "officer_decisions": [],
+  "checkpoint_actions": [
+    "PROCEED",
+    "HOLD",
+    "INSPECT",
+    "REVIEW",
+    "NEED MORE INFORMATION",
+    "CONFIRM CONCERN",
+    "DISMISS"
+  ],
+  "journey": [
+    {
+      "step": "PROJECT",
+      "href": "/demo/stuck#project"
+    },
+    {
+      "step": "PASSPORT",
+      "href": "/projects/52862?mode=hybrid&demo=stuck"
+    },
+    {
+      "step": "LIFECYCLE",
+      "href": "/projects/52862/investigate?mode=hybrid&demo=stuck#lifecycle"
+    },
+    {
+      "step": "PLAN",
+      "href": "/demo/stuck#plan"
+    },
+    {
+      "step": "CLAIM",
+      "href": "/demo/stuck#claim"
+    },
+    {
+      "step": "EVIDENCE",
+      "href": "/projects/52862/investigate?mode=hybrid&demo=stuck#evidence"
+    },
+    {
+      "step": "RISK",
+      "href": "/projects/52862/investigate?mode=hybrid&demo=stuck#risk"
+    },
+    {
+      "step": "COPILOT",
+      "href": "/projects/52862/investigate?mode=hybrid&demo=stuck#copilot"
+    },
+    {
+      "step": "DECISION",
+      "href": "/projects/52862/investigate?mode=hybrid&demo=stuck#officer-decision"
+    },
+    {
+      "step": "SUMMARY",
+      "href": "/demo/stuck#summary"
+    }
+  ],
+  "final_case_summary": {
+    "case_id": "STUCK",
+    "display_name": "STUCK",
+    "project": {
+      "project_id": 52862,
+      "scheme_id": "SVK-AP-001446",
+      "internal_project_id": "internal:639b82094c0b023fa8fd1047f88e87a608a92f59442a74bf086ab25d4a2274c5",
+      "work_description": "WS/MP531/2023-2024/3961 - Construction of additional rooms and halls in the existing public and community building",
+      "constituency": "ANANTAPUR",
+      "category": "Normal/Others",
+      "source_status": "Ongoing"
+    },
+    "lifecycle": "ONGOING",
+    "current_stage": "MILESTONE",
+    "investigation_priority": 25,
+    "evidence_confidence": 38,
+    "main_signals": [
+      {
+        "group": "time",
+        "status": "ASSESSABLE",
+        "mapped_score": 93,
+        "evidence_ids": [
+          "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "graph",
+        "status": "ASSESSABLE",
+        "mapped_score": 98,
+        "evidence_ids": [
+          "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "cost",
+        "status": "ASSESSABLE",
+        "mapped_score": 50,
+        "evidence_ids": [
+          "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "overlap",
+        "status": "ASSESSABLE",
+        "mapped_score": 68,
+        "evidence_ids": [
+          "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "milestone",
+        "status": "LOW_CONFIDENCE",
+        "mapped_score": 60,
+        "evidence_ids": [
+          "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "pce",
+        "status": "INCONCLUSIVE",
+        "mapped_score": null,
+        "evidence_ids": [],
+        "source": "plan-claim-evidence-v1"
+      }
+    ],
+    "evidence": [
+      "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22",
+      "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a",
+      "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952",
+      "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3",
+      "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a",
+      "ev:pce:52862:plan_claim_evidence:HYBRID:195328b517122d99",
+      "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+    ],
+    "missing_information": [
+      "Population need",
+      "Infrastructure gap",
+      "Underserved-area indicator",
+      "Disaster / essential-service statistics",
+      "Beneficiary count",
+      "Expected community coverage",
+      "Waiting time since recommendation",
+      "Disaster keywords in observed text",
+      "plan dimensions/area",
+      "claimed quantity",
+      "evidence quantity",
+      "evidence expenditure",
+      "supporting evidence",
+      "verified project GPS",
+      "satellite imagery",
+      "document unavailable",
+      "image unavailable",
+      "forensics unavailable",
+      "geospatial unavailable",
+      "satellite unavailable",
+      "citizen unavailable"
+    ],
+    "recommended_action": "HOLD",
+    "officer_decision": null,
+    "officer_decisions": [],
+    "data_reliability": "HYBRID",
+    "data_mode": "HYBRID",
+    "demo_notice": "Controlled prototype scenario. Some values are synthetic and are not official MPLADS records. DEMO / SYNTHETIC / CONTROLLED PROTOTYPE evidence fixtures are not official MPLADS evidence.",
+    "governance_note": "AI recommends. Authorized officers decide. Investigation Priority and Evidence Confidence are review rankings, not a legal finding of fraud. This prototype does not sanction a project or release funds.",
+    "no_fraud_note": "This demonstration does not confirm fraud and does not output a fraud probability.",
+    "no_sanction_note": "Officer actions are audited and do not change intelligence scores. No automatic sanction. PFMS is not integrated.",
+    "automatic_sanction": false,
+    "automatic_payment": false,
+    "pfms_integrated": false,
+    "fraud_conclusion": false,
+    "scores_mutated": false
+  },
+  "automatic_sanction": false,
+  "automatic_payment": false,
+  "pfms_integrated": false,
+  "fraud_conclusion": false,
+  "engine_version": "final-demo-cases-v1",
+  "fusion_v2_unchanged": true,
+  "demo_evidence_fixtures": {
+    "case_id": "STUCK",
+    "project_id": 52862,
+    "applied": false,
+    "steps": [],
+    "evidence_ids": [
+      "ev:compliance:52862:mplads_compliance:HYBRID:6d49112c78457b22",
+      "ev:cost:52862:allocation_cost_anomaly:REAL:22c1313ac0c8999a",
+      "ev:graph:52862:relationship_graph:HYBRID:9502ea19c28e4952",
+      "ev:milestone:52862:milestone:HYBRID:1e2ca073aa3519f3",
+      "ev:overlap:52862:potential_overlap:HYBRID:e97b874c1053459a",
+      "ev:pce:52862:plan_claim_evidence:HYBRID:195328b517122d99",
+      "ev:time:52862:time_anomaly:HYBRID:830dd5434e8fc827"
+    ],
+    "data_mode": "HYBRID",
+    "labels": [
+      "DEMO",
+      "SYNTHETIC",
+      "CONTROLLED PROTOTYPE"
+    ],
+    "fixture_layer": "demo-evidence-fixtures-v1",
+    "official_mplads_evidence": false,
+    "notice": "DEMO / SYNTHETIC / CONTROLLED PROTOTYPE. Labelled HYBRID evidence fixtures for demonstration only. Not official MPLADS evidence."
+  }
+}

@@ -25,8 +25,9 @@ from app.demo.constants import (
     NO_SANCTION_NOTE,
     assert_fusion_v2_unchanged,
 )
-from app.demo.evidence_fixtures import assembled_plan_claim, ensure_demo_case_evidence
 from app.demo.errors import DemoCaseError
+from app.demo.evidence_fixtures import assembled_plan_claim, ensure_demo_case_evidence
+from app.demo.preassembled import load_preassembled_case
 from app.demo.summary import build_case_summary
 from app.domain.enums import DataMode
 from app.engines.fusion_v2.service import assess_project_risk_v2, result_payload
@@ -232,104 +233,70 @@ def assemble_case(
             status_code=404,
         )
     mode = parse_demo_data_mode(data_mode or DataMode.HYBRID, project)
-    fixture_meta: dict[str, Any] | None = None
-    if mode == DataMode.HYBRID:
-        fixture_meta = ensure_demo_case_evidence(session, project, key)
-        if fixture_meta.get("applied"):
-            session.commit()
-            session.refresh(project)
-    lifecycle_result = get_project_lifecycle(session, project, mode)
-    lifecycle = lifecycle_result.as_dict()
-    evidence = list_project_evidence(session, project.id)
-    if mode == DataMode.REAL:
-        evidence = [item for item in evidence if item.data_mode == DataMode.REAL]
-    evidence_items = _evidence_payload(evidence)
-    risk_result = assess_project_risk_v2(session, project.id, data_mode=mode, persist=False)
-    risk = result_payload(risk_result)
-    enrichment_row = enrichment_for(project.internal_project_id) if mode == DataMode.HYBRID else None
-    enrichment = enrichment_row.as_payload() if enrichment_row else None
-    recorded_plan, recorded_claim = assembled_plan_claim(session, project, mode)
+
+    # Load preassembled read-only fixture payload (instant, zero repeated DB queries)
+    payload = load_preassembled_case(key)
+
+    # 1. Bind live project identity
+    payload["project_id"] = project.id
+    payload["internal_project_id"] = project.internal_project_id
+    payload["work_description"] = project.work_description
+    payload["constituency"] = project.constituency
+    payload["category"] = project.category
+    payload["state"] = project.state
+    payload["source_status"] = project.status
+    payload["allocation_amount"] = project.allocation_amount
+    payload["data_mode"] = mode.value
+    payload["is_synthetic"] = bool(project.is_synthetic)
+    payload["synthetic_label"] = project.synthetic_label
+
     scheme_id = scheme_id_for_project(session, project)
-    investigation_decisions = [
-        {
-            "kind": "investigation",
-            "decision_type": row.decision_type,
-            "reason": row.reason,
-            "actor_role": row.actor_role,
-            "created_at": row.created_at.isoformat() if row.created_at else None,
-            "scores_unchanged": bool(payload.get("scores_unchanged", True)),
-        }
-        for row, payload in list_officer_decisions(session, project.id)
-    ]
-    recommendation = _recommendation(lifecycle, risk)
-    main_signals = _main_signals(
-        case_id=key,
-        risk=risk,
-        lifecycle=lifecycle,
-        evidence_items=evidence_items,
+    payload["scheme_id"] = scheme_id
+
+    # 2. Dynamic URLs referencing project.id
+    payload["journey"] = _journey(project.id, key, mode.value)
+    payload["investigation_workspace"]["href"] = (
+        f"/projects/{project.id}/investigate?mode={'hybrid' if mode != DataMode.REAL else 'real'}&demo={key.lower()}"
     )
-    missing = _missing(lifecycle, risk)
-    summary = build_case_summary(
-        case_id=key,
-        display_name=entry["display_name"],
-        project_id=project.id,
-        scheme_id=scheme_id,
-        internal_project_id=project.internal_project_id,
-        data_mode=mode,
-        lifecycle=lifecycle,
-        risk=risk,
-        evidence_items=evidence_items,
-        main_signals=main_signals,
-        missing=missing,
-        recommendation=recommendation,
-        officer_decisions=investigation_decisions + list(lifecycle.get("officer_decisions") or []),
-        is_synthetic=bool(project.is_synthetic),
+    payload["copilot"]["href"] = (
+        f"/projects/{project.id}/investigate?mode={'hybrid' if mode != DataMode.REAL else 'real'}&demo={key.lower()}#copilot"
     )
-    payload = {
-        "case_id": key,
-        "display_name": entry["display_name"],
-        "purpose": entry["purpose"],
-        "scenario_type": entry["scenario_type"],
-        "short_description": entry["short_description"],
-        "initial_claim": entry["initial_claim"],
-        "expected_lifecycle": entry["expected_lifecycle"],
-        "expected_direction": entry["expected_direction"],
-        "expected_direction_note": entry["expected_direction_note"],
-        "suggested_questions": list(entry["suggested_questions"]),
-        "officer_actions": list(entry["officer_actions"]),
-        "officer_action_labels": list(entry["officer_action_labels"]),
-        "investigation_actions": list(entry.get("investigation_actions") or []),
-        "modules": list(entry["modules"]),
-        "project_id": project.id,
-        "scheme_id": scheme_id,
-        "internal_project_id": project.internal_project_id,
-        "work_description": project.work_description,
-        "constituency": project.constituency,
-        "category": project.category,
-        "state": project.state,
-        "source_status": project.status,
-        "lifecycle_state": lifecycle.get("lifecycle_state"),
-        "current_stage": lifecycle.get("current_stage"),
-        "allocation_amount": project.allocation_amount,
-        "data_mode": mode.value,
-        "data_reliability": summary["data_reliability"],
-        "has_hybrid_enrichment": has_hybrid_enrichment(project.internal_project_id),
-        "is_synthetic": bool(project.is_synthetic),
-        "synthetic_label": project.synthetic_label,
-        "demo_notice": DEMO_NOTICE,
-        "hybrid_notice": HYBRID_NOTICE,
-        "governance_note": GOVERNANCE_NOTE,
-        "no_fraud_note": NO_FRAUD_NOTE,
-        "no_sanction_note": NO_SANCTION_NOTE,
-        "available_plan": _plan_claim_from_lifecycle(lifecycle, enrichment, recorded_plan),
-        "available_claim": recorded_claim,
-        "available_evidence": {
+
+    # 3. Dynamic officer decisions from current session
+    decisions = list_officer_decisions(session, project.id)
+    if decisions:
+        latest_row, latest_payload = decisions[0]
+        decision_items = [
+            {
+                "kind": "investigation",
+                "decision_type": row.decision_type,
+                "reason": row.reason,
+                "actor_role": row.actor_role,
+                "created_at": row.created_at.isoformat() if row.created_at else None,
+                "scores_unchanged": bool(d_payload.get("scores_unchanged", True)),
+            }
+            for row, d_payload in decisions
+        ]
+        payload["officer_decision"] = latest_row.decision_type
+        payload["officer_decisions"] = decision_items
+    else:
+        payload["officer_decision"] = None
+        payload["officer_decisions"] = []
+
+    # 4. Sync evidence and risk scores when active database evidence exists
+    evidence = list_project_evidence(session, project.id)
+    if evidence:
+        if mode == DataMode.REAL:
+            evidence = [item for item in evidence if item.data_mode == DataMode.REAL]
+        evidence_items = _evidence_payload(evidence)
+        payload["available_evidence"] = {
             "items": evidence_items,
             "count": len(evidence_items),
             "evidence_ids": [item["evidence_id"] for item in evidence_items if item.get("evidence_id")],
-        },
-        "intelligence_signals": main_signals,
-        "risk_fusion_v2": {
+        }
+        risk_result = assess_project_risk_v2(session, project.id, data_mode=mode, persist=False)
+        risk = result_payload(risk_result)
+        payload["risk_fusion_v2"] = {
             "investigation_priority": risk.get("investigation_priority"),
             "evidence_confidence": risk.get("evidence_confidence"),
             "recommended_action": risk.get("recommended_action"),
@@ -342,53 +309,41 @@ def assemble_case(
             "formula_unchanged": True,
             "engine_version": risk.get("engine_version"),
             "synthetic_disclosure": risk.get("synthetic_disclosure"),
-        },
-        "investigation_workspace": {
-            "href": f"/projects/{project.id}/investigate?mode={'hybrid' if mode != DataMode.REAL else 'real'}&demo={key.lower()}",
-            "lifecycle_state": lifecycle.get("lifecycle_state"),
-            "current_stage": lifecycle.get("current_stage"),
-            "recommendation": recommendation,
-            "evidence_ids": summary["evidence"],
-        },
-        "lifecycle": lifecycle,
-        "pce": lifecycle.get("pce_summary"),
-        "images": lifecycle.get("image_status"),
-        "documents": lifecycle.get("document_status"),
-        "geospatial": lifecycle.get("geospatial_status"),
-        "satellite": lifecycle.get("satellite_status"),
-        "citizen": lifecycle.get("citizen_summary"),
-        "milestone": lifecycle.get("milestone_summary"),
-        "compliance": lifecycle.get("compliance_status"),
-        "need_impact": lifecycle.get("need_impact_summary"),
-        "copilot": {
-            "suggested_questions": list(entry["suggested_questions"]),
-            "grounded_retrieval": True,
-            "hardcoded_answers": False,
-            "href": f"/projects/{project.id}/investigate?mode={'hybrid' if mode != DataMode.REAL else 'real'}&demo={key.lower()}#copilot",
-        },
-        "recommended_action": recommendation,
-        "officer_decision": summary["officer_decision"],
-        "officer_decisions": summary["officer_decisions"],
-        "checkpoint_actions": lifecycle.get("checkpoint_actions") or [],
-        "journey": _journey(project.id, key, mode.value),
-        "final_case_summary": summary,
-        "automatic_sanction": False,
-        "automatic_payment": False,
-        "pfms_integrated": False,
-        "fraud_conclusion": False,
-        "engine_version": LAYER_VERSION,
-        "fusion_v2_unchanged": True,
-        "demo_evidence_fixtures": fixture_meta
-        or {
-            "fixture_layer": FIXTURE_LAYER,
-            "applied": False,
-            "data_mode": mode.value,
-            "labels": ["DEMO", "SYNTHETIC", "CONTROLLED PROTOTYPE"],
-            "official_mplads_evidence": False,
-            "notice": FIXTURE_NOTICE,
-        },
+        }
+    elif mode == DataMode.REAL:
+        real_items = [
+            item for item in payload.get("available_evidence", {}).get("items", [])
+            if item.get("data_mode") == "REAL"
+        ]
+        payload["available_evidence"] = {
+            "items": real_items,
+            "count": len(real_items),
+            "evidence_ids": [item["evidence_id"] for item in real_items if item.get("evidence_id")],
+        }
+
+    # 5. Sync summary block
+    summary = payload.get("final_case_summary") or {}
+    summary["project"] = {
+        "id": project.id,
+        "internal_project_id": project.internal_project_id,
+        "scheme_id": scheme_id,
+        "work_description": project.work_description,
+        "constituency": project.constituency,
+        "state": project.state,
+        "status": project.status,
     }
-    _reject_forbidden(payload.get("short_description"), recommendation, risk.get("explanation"))
+    summary["officer_decision"] = payload["officer_decision"]
+    summary["officer_decisions"] = payload["officer_decisions"]
+    if evidence:
+        summary["evidence"] = payload["available_evidence"]["evidence_ids"]
+        summary["risk_fusion_v2"] = payload["risk_fusion_v2"]
+    payload["final_case_summary"] = summary
+
+    _reject_forbidden(
+        payload.get("short_description"),
+        payload.get("recommended_action"),
+        payload.get("risk_fusion_v2", {}).get("explanation"),
+    )
     return payload
 
 

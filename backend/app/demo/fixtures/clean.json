@@ -1,0 +1,2365 @@
+{
+  "case_id": "CLEAN",
+  "display_name": "CLEAN",
+  "purpose": "Demonstrate that SARVSAKSHI does not flag every project.",
+  "scenario_type": "DEMO_CLEAN",
+  "short_description": "Proposed/sanctioned work with internally consistent labelled SYNTHETIC enrichment. Investigation Priority is not forced to zero.",
+  "initial_claim": "Ordinary sanctioned work with supporting plan, claim, and evidence when recorded.",
+  "expected_lifecycle": "FUTURE",
+  "expected_direction": "MONITOR / PROCEED",
+  "expected_direction_note": "Expected demonstration direction only where Need & Impact, Risk Fusion V2, and PCE actually support it. Score is not forced to zero.",
+  "suggested_questions": [
+    "Why was this project not escalated?",
+    "What evidence supports this?",
+    "What information is missing?",
+    "Why is this project not flagged?"
+  ],
+  "officer_actions": [
+    "PRIORITIZE",
+    "DEFER",
+    "NEED_MORE_INFORMATION"
+  ],
+  "officer_action_labels": [
+    "PRIORITIZE",
+    "DEFER",
+    "NEED MORE INFORMATION"
+  ],
+  "investigation_actions": [
+    "confirm_concern",
+    "dismiss",
+    "need_more_info"
+  ],
+  "modules": [
+    "plan",
+    "claim",
+    "evidence",
+    "image",
+    "geospatial",
+    "citizen",
+    "milestone",
+    "risk_fusion_v2",
+    "copilot"
+  ],
+  "project_id": 26946,
+  "scheme_id": "SVK-AP-003286",
+  "internal_project_id": "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+  "work_description": "WS/MP526/2023-2024/42089 - Construction of culverts and bridges",
+  "constituency": "KADAPA",
+  "category": "Normal/Others",
+  "state": "Andhra Pradesh",
+  "source_status": "Sanctioned",
+  "lifecycle_state": "FUTURE",
+  "current_stage": "PRIORITIZATION",
+  "allocation_amount": 3500000,
+  "data_mode": "HYBRID",
+  "data_reliability": "HYBRID",
+  "has_hybrid_enrichment": true,
+  "is_synthetic": false,
+  "synthetic_label": null,
+  "demo_notice": "Controlled prototype scenario. Some values are synthetic and are not official MPLADS records. DEMO / SYNTHETIC / CONTROLLED PROTOTYPE evidence fixtures are not official MPLADS evidence.",
+  "hybrid_notice": "DEMO / HYBRID \u2014 Base project identity comes from a real MPLADS extract. Fields and attachments marked SYNTHETIC are prototype enrichment and are not official MPLADS records.",
+  "governance_note": "AI recommends. Authorized officers decide. Investigation Priority and Evidence Confidence are review rankings, not a legal finding of fraud. This prototype does not sanction a project or release funds.",
+  "no_fraud_note": "This demonstration does not confirm fraud and does not output a fraud probability.",
+  "no_sanction_note": "Officer actions are audited and do not change intelligence scores. No automatic sanction. PFMS is not integrated.",
+  "available_plan": {
+    "plan_recorded": true,
+    "pce_result": "INCONCLUSIVE",
+    "evidence_ids": [],
+    "completion_date": null,
+    "expenditure": null,
+    "note": "Completion dates and expenditure are not invented. Absent values stay unavailable.",
+    "labels": [
+      "DEMO",
+      "SYNTHETIC",
+      "CONTROLLED PROTOTYPE"
+    ],
+    "official_mplads_record": false,
+    "sanctioned_scope": "SYNTHETIC DEMO / CONTROLLED PROTOTYPE plan overlay for the CLEAN case. Not an official MPLADS record.",
+    "budget_estimate": 3500000.0,
+    "planned_start_date": "2024-06-23",
+    "planned_completion_date": "2024-12-24",
+    "milestone_label": "Planning",
+    "source": "demo-evidence-fixtures-v1",
+    "data_mode": "HYBRID",
+    "synthetic_enrichment": {
+      "label": "SYNTHETIC",
+      "disclaimer": "SYNTHETIC prototype enrichment. Not an official MPLADS field.",
+      "planned_start_date": "2024-06-23",
+      "planned_completion_date": "2024-12-24",
+      "actual_completion_date": null,
+      "expenditure": 0,
+      "physical_progress_percent": 0,
+      "gps_latitude": 14.451364,
+      "gps_longitude": 78.831066,
+      "milestones": {
+        "number": null,
+        "amount": null,
+        "total_amount": null
+      }
+    }
+  },
+  "available_claim": {
+    "claim_recorded": true,
+    "claimed_progress": "Work not started; planning consistent",
+    "claimed_progress_percent": 0.0,
+    "claimed_expenditure": null,
+    "claimed_completion_state": null,
+    "data_mode": "HYBRID",
+    "labels": [
+      "DEMO",
+      "SYNTHETIC",
+      "CONTROLLED PROTOTYPE"
+    ],
+    "official_mplads_record": false
+  },
+  "available_evidence": {
+    "items": [
+      {
+        "evidence_id": "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083",
+        "engine_name": "citizen",
+        "signal_type": "CITIZEN_LOCATION",
+        "finding": "Citizen location verification is LOCATION_VERIFIED",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.34,
+        "data_mode": "HYBRID",
+        "explanation": "Citizen GPS is 0.0 metres from the supplied project location, within the configured 500 metre prototype threshold."
+      },
+      {
+        "evidence_id": "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+        "engine_name": "citizen",
+        "signal_type": "CITIZEN_FEEDBACK",
+        "finding": "Citizen feedback recorded. Sentiment is neutral. Sentiment is not proof of project quality.",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.34,
+        "data_mode": "HYBRID",
+        "explanation": "Structured analysis grounded in the submitted text. Sentiment is neutral. Sentiment is not proof of project quality. No complaint was fabricated. CLAIM: Work not started; planning consistent Citizen evidence: Proposed work location is consistent with the labelled plan description. Supporting citizen observation only. Not official verification. Citizen reports remain supporting evidence. Citizen evidence of concern is supporting evidence only. The recorded claim is not marked false automatically."
+      },
+      {
+        "evidence_id": "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+        "engine_name": "citizen",
+        "signal_type": "CITIZEN_IMAGE",
+        "finding": "Citizen photograph stored as supporting evidence using Image Evidence V1.",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.28,
+        "data_mode": "HYBRID",
+        "explanation": "Citizen image stored on the existing photo table. EXIF is reported metadata from the uploaded file. The original image is not altered. Jan-Sakshi citizen submissions are supporting field evidence only. One citizen report does not establish truth. The system does not determine a legal finding of wrongdoing, poor quality, or project failure. AI recommends. Authorized officers decide."
+      },
+      {
+        "evidence_id": "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+        "engine_name": "citizen",
+        "signal_type": "CITIZEN_AGGREGATE",
+        "finding": "Citizen aggregate: INCONCLUSIVE. Insufficient citizen sample.",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.18,
+        "data_mode": "HYBRID",
+        "explanation": "One citizen report is recorded. A single report does not dominate the project conclusion and is not treated as truth."
+      },
+      {
+        "evidence_id": "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604",
+        "engine_name": "compliance",
+        "signal_type": "mplads_compliance",
+        "finding": "Guideline rules triggered for review: R003",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": null,
+        "confidence": 0.35,
+        "data_mode": "HYBRID",
+        "explanation": "This signal is MPLADS guideline-rule evaluation. It is not Investigation Priority and is not a legal finding. Compliance status: RULES_TRIGGERED. Triggered: R003. Not triggered (assessable): R001, R002, R004, R015. Not assessable: R005, R006, R007, R008, R009, R010, R011, R012, R013, R014, R016. HYBRID/TEST: synthetic execution and expenditure fields are used for controlled testing only. They are not official MPLADS values and must not be cited as real government findings. R003. Status: TRIGGERED. Required condition is not satisfied based on the available project information. Evidence: as_of_date=2024-06-30; days=227; expenditure_amount=0.0; sanction_date=2023-11-16; threshold_days=90. Source: Guidelines on MPLADS, 2023 (monitoring described by MoSPI). LS-SQ-44-2026-07-22."
+      },
+      {
+        "evidence_id": "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2",
+        "engine_name": "cost",
+        "signal_type": "allocation_cost_anomaly",
+        "finding": "Allocation is 617.9% above peer median",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": 100.0,
+        "confidence": 0.42,
+        "data_mode": "REAL",
+        "explanation": "Allocation is 617.9% above the median of 110 comparable works in the same geographic constituency and broader category. Actual allocation is 3500000 versus peer median 487500 (expected range 400000-500000). Allocation Cost Anomaly score is 100 (review flag at 60 on the 0-100 log-robust mapping). Peer quality is 48/100. 110 peers in geographic constituency 'KADAPA'; median work-title token Jaccard 0.14; 110/110 share category 'Normal/Others'. Peer quality 48/100 (broader/looser work-title mix). Evidence Confidence is 42. This Allocation Cost Anomaly signal may inform later Investigation Priority. This signal is Allocation Cost Anomaly: recorded allocation versus comparable works. It is not an expenditure anomaly, over-billing, physical-quantity mismatch, or a legal finding. Source amount unit is unspecified. Values are compared as recorded allocation amounts, not as a labelled rupee series."
+      },
+      {
+        "evidence_id": "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+        "engine_name": "forensics",
+        "signal_type": "IMAGE_FORENSIC_MANIPULATION",
+        "finding": "POTENTIAL_MANIPULATION: 32 identical 16px block pair(s) were found at separated locations. This is a possible copy-move indicator for review, not proof of manipulation.",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": null,
+        "confidence": 0.4,
+        "data_mode": "HYBRID",
+        "explanation": "Image Forensics V1 is a decision-support layer for submitted project images. Signals may indicate possible manipulation, possible AI-generation, suspicious metadata, or inconsistent transformations. They are not a legal finding and not a validated authenticity decision. Missing EXIF is not proof of manipulation. AI recommends. Authorized officers decide. Prototype forensic assessment \u2014 not a validated authenticity decision. Overall forensic assessment: REVIEW_REQUIRED. manipulation_signal=POTENTIAL_MANIPULATION (confidence LOW). 32 identical 16px block pair(s) were found at separated locations. This is a possible copy-move indicator for review, not proof of manipulation. ai_generation_signal=AI_GENERATION_ANALYSIS_UNAVAILABLE (confidence INCONCLUSIVE). No suitable open-source AI-generated-image detector is bundled or justified in Image Forensics V1. Arbitrary pixel heuristics are not used. Result: AI_GENERATION_ANALYSIS_UNAVAILABLE. metadata_signal=NO_STRONG_FORENSIC_SIGNAL (confidence LOW). A capture timestamp is present in reported EXIF. reuse_signal=POTENTIAL_IMAGE_REUSE (confidence LOW). Perceptual near-duplicate from Image Evidence V1. Not a legal finding. quality_signal=QUALITY_WARNING (confidence LOW). Resolution is below a useful size for site evidence. This is a technical warning, not a legal finding. Integrity: INTEGRITY_OK. Original bytes unmodified: True. overall = REVIEW_REQUIRED if manipulation_signal is POTENTIAL_MANIPULATION or reuse_signal is EXACT_DUPLICATE or POTENTIAL_IMAGE_REUSE or metadata_signal is METADATA_ANOMALY; else INCONCLUSIVE if every independent signal is INCONCLUSIVE or UNAVAILABLE; else NO_STRONG_FORENSIC_SIGNAL. No combined authenticity probability is produced. This forensic run uses labelled TEST/SYNTHETIC image context and is not real field evidence. 32 identical 16px block pair(s) were found at separated locations. This is a possible copy-move indicator for review, not proof of manipulation. Manipulation analysis is a prototype assistance layer. It does not claim that an image is manipulated. POTENTIAL_MANIPULATION is a review signal, not a finding that the image is manipulated."
+      },
+      {
+        "evidence_id": "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+        "engine_name": "forensics",
+        "signal_type": "IMAGE_FORENSIC_AI_GENERATION",
+        "finding": "AI_GENERATION_ANALYSIS_UNAVAILABLE: No suitable open-source AI-generated-image detector is bundled or justified in Image Forensics V1. Arbitrary pixel heuristics are not used. Result: AI_GENERATION_ANALYSIS_UNAVAILABLE.",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.0,
+        "data_mode": "HYBRID",
+        "explanation": "Image Forensics V1 is a decision-support layer for submitted project images. Signals may indicate possible manipulation, possible AI-generation, suspicious metadata, or inconsistent transformations. They are not a legal finding and not a validated authenticity decision. Missing EXIF is not proof of manipulation. AI recommends. Authorized officers decide. Prototype forensic assessment \u2014 not a validated authenticity decision. Overall forensic assessment: REVIEW_REQUIRED. manipulation_signal=POTENTIAL_MANIPULATION (confidence LOW). 32 identical 16px block pair(s) were found at separated locations. This is a possible copy-move indicator for review, not proof of manipulation. ai_generation_signal=AI_GENERATION_ANALYSIS_UNAVAILABLE (confidence INCONCLUSIVE). No suitable open-source AI-generated-image detector is bundled or justified in Image Forensics V1. Arbitrary pixel heuristics are not used. Result: AI_GENERATION_ANALYSIS_UNAVAILABLE. metadata_signal=NO_STRONG_FORENSIC_SIGNAL (confidence LOW). A capture timestamp is present in reported EXIF. reuse_signal=POTENTIAL_IMAGE_REUSE (confidence LOW). Perceptual near-duplicate from Image Evidence V1. Not a legal finding. quality_signal=QUALITY_WARNING (confidence LOW). Resolution is below a useful size for site evidence. This is a technical warning, not a legal finding. Integrity: INTEGRITY_OK. Original bytes unmodified: True. overall = REVIEW_REQUIRED if manipulation_signal is POTENTIAL_MANIPULATION or reuse_signal is EXACT_DUPLICATE or POTENTIAL_IMAGE_REUSE or metadata_signal is METADATA_ANOMALY; else INCONCLUSIVE if every independent signal is INCONCLUSIVE or UNAVAILABLE; else NO_STRONG_FORENSIC_SIGNAL. No combined authenticity probability is produced. This forensic run uses labelled TEST/SYNTHETIC image context and is not real field evidence. No suitable open-source AI-generated-image detector is bundled or justified in Image Forensics V1. Arbitrary pixel heuristics are not used. Result: AI_GENERATION_ANALYSIS_UNAVAILABLE. Project images are processed locally. They are not sent to external services by default."
+      },
+      {
+        "evidence_id": "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497",
+        "engine_name": "forensics",
+        "signal_type": "IMAGE_FORENSIC_METADATA",
+        "finding": "NO_STRONG_FORENSIC_SIGNAL: A capture timestamp is present in reported EXIF.",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.4,
+        "data_mode": "HYBRID",
+        "explanation": "Image Forensics V1 is a decision-support layer for submitted project images. Signals may indicate possible manipulation, possible AI-generation, suspicious metadata, or inconsistent transformations. They are not a legal finding and not a validated authenticity decision. Missing EXIF is not proof of manipulation. AI recommends. Authorized officers decide. Prototype forensic assessment \u2014 not a validated authenticity decision. Overall forensic assessment: REVIEW_REQUIRED. manipulation_signal=POTENTIAL_MANIPULATION (confidence LOW). 32 identical 16px block pair(s) were found at separated locations. This is a possible copy-move indicator for review, not proof of manipulation. ai_generation_signal=AI_GENERATION_ANALYSIS_UNAVAILABLE (confidence INCONCLUSIVE). No suitable open-source AI-generated-image detector is bundled or justified in Image Forensics V1. Arbitrary pixel heuristics are not used. Result: AI_GENERATION_ANALYSIS_UNAVAILABLE. metadata_signal=NO_STRONG_FORENSIC_SIGNAL (confidence LOW). A capture timestamp is present in reported EXIF. reuse_signal=POTENTIAL_IMAGE_REUSE (confidence LOW). Perceptual near-duplicate from Image Evidence V1. Not a legal finding. quality_signal=QUALITY_WARNING (confidence LOW). Resolution is below a useful size for site evidence. This is a technical warning, not a legal finding. Integrity: INTEGRITY_OK. Original bytes unmodified: True. overall = REVIEW_REQUIRED if manipulation_signal is POTENTIAL_MANIPULATION or reuse_signal is EXACT_DUPLICATE or POTENTIAL_IMAGE_REUSE or metadata_signal is METADATA_ANOMALY; else INCONCLUSIVE if every independent signal is INCONCLUSIVE or UNAVAILABLE; else NO_STRONG_FORENSIC_SIGNAL. No combined authenticity probability is produced. This forensic run uses labelled TEST/SYNTHETIC image context and is not real field evidence. A capture timestamp is present in reported EXIF. EXIF values are reported metadata from the uploaded file. Missing EXIF is not proof of manipulation. reported metadata from uploaded file"
+      },
+      {
+        "evidence_id": "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+        "engine_name": "geo",
+        "signal_type": "GEOSPATIAL_LOCATION_CONSISTENCY",
+        "finding": "LOCATION_CONSISTENT",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": 0.0,
+        "confidence": 0.35,
+        "data_mode": "HYBRID",
+        "explanation": "Uploaded image GPS is 0 meters from the supplied project location, within the configured 500 meter prototype threshold. This does not prove the photograph depicts the claimed work or that work was completed. Project coordinates are SYNTHETIC and are not official MPLADS GPS. Geospatial Consistency V1 is a location consistency check. It is not proof of project authenticity, physical completion, or that a photograph depicts the claimed work. Image GPS is reported metadata from the uploaded file. SYNTHETIC hybrid coordinates are not official MPLADS GPS. Missing GPS is not treated as a location mismatch. AI recommends. Authorized officers decide."
+      },
+      {
+        "evidence_id": "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+        "engine_name": "geo",
+        "signal_type": "GEOSPATIAL_LOCATION_CONSISTENCY",
+        "finding": "LOCATION_CONSISTENT",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": 0.0,
+        "confidence": 0.35,
+        "data_mode": "HYBRID",
+        "explanation": "Uploaded image GPS is 0 meters from the supplied project location, within the configured 500 meter prototype threshold. This is a location consistency check and does not prove authenticity or that the photograph depicts the claimed work. Project coordinates are SYNTHETIC hybrid enrichment, not official MPLADS GPS. Prototype/business-rule setting only. This is not a claim that MPLADS officially uses a 500 metre verification radius."
+      },
+      {
+        "evidence_id": "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf",
+        "engine_name": "geo",
+        "signal_type": "GEOSPATIAL_LOCATION_CONSISTENCY",
+        "finding": "LOCATION_CONSISTENT",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": 0.0,
+        "confidence": 0.35,
+        "data_mode": "HYBRID",
+        "explanation": "Uploaded image GPS is 0 meters from the supplied project location, within the configured 500 meter prototype threshold. This is a location consistency check and does not prove authenticity or that the photograph depicts the claimed work. Project coordinates are SYNTHETIC hybrid enrichment, not official MPLADS GPS. Prototype/business-rule setting only. This is not a claim that MPLADS officially uses a 500 metre verification radius."
+      },
+      {
+        "evidence_id": "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531",
+        "engine_name": "graph",
+        "signal_type": "relationship_graph",
+        "finding": "High Connectivity: Project has 2 highly similar work(s) in the same constituency, with 2 sharing the same IDA. High connectivity reflects volume of similar or clustered works. A large number of connections is not automatically a pattern of interest.",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": 43.0,
+        "confidence": 0.7,
+        "data_mode": "HYBRID",
+        "explanation": "Graph finding: High Connectivity. Project has 2 highly similar work(s) in the same constituency, with 2 sharing the same IDA. Connected projects in the ego neighborhood: 42. Same constituency: 42. Same category: 42. Same IDA: 42. Similar projects: 2. IDA DISTRICT COLLECTOR CUDDAPAH_IDA is associated with 211 project(s) in the corpus. Agency volume alone is not a pattern of interest. Constituency/category/IDA cluster size: 110 (ego cluster peers included: 40). Repeated combination count: 110. Similar-edge density among cluster members: 0.00. Independent relationship signals: semantic_similarity, same_constituency, same_category, same_ida, similar_allocation (5). Strongest relationship: SIMILAR_TO project 47354 (POTENTIAL_DUPLICATE) (strength 0.8). Project has 2 highly similar work(s) in the same constituency, with 2 sharing the same IDA. High connectivity reflects volume of similar or clustered works. A large number of connections is not automatically a pattern of interest. Top SIMILAR_TO: project 47354 overlap_score=80 outcome=POTENTIAL_DUPLICATE. This signal is Relationship Graph connectivity: observed entity links and Overlap Intelligence similarity. A large number of connections is not automatically a pattern of interest. It is not Investigation Priority and is not a legal finding. HYBRID/TEST: synthetic GPS may support Overlap SIMILAR_TO edges for controlled evaluation only. GPS is not a REAL graph node or edge type. Relationship findings are investigation aids. They are not a legal finding. AI recommends. Authorized officers decide."
+      },
+      {
+        "evidence_id": "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+        "engine_name": "image",
+        "signal_type": "IMAGE_POTENTIAL_REUSE",
+        "finding": "POTENTIAL_IMAGE_REUSE: perceptual hash is visually similar to another stored image",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": null,
+        "confidence": 0.58,
+        "data_mode": "HYBRID",
+        "explanation": "POTENTIAL_IMAGE_REUSE: Perceptual dhash distance is 8 of 64 bits versus image 1. POTENTIAL_IMAGE_REUSE. High visual similarity alone is not proof of wrongdoing. This photograph is supporting evidence only. It does not prove that physical work was completed."
+      },
+      {
+        "evidence_id": "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+        "engine_name": "image",
+        "signal_type": "IMAGE_METADATA",
+        "finding": "Reported image metadata present: capture timestamp and GPS",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.45,
+        "data_mode": "HYBRID",
+        "explanation": "Reported metadata from the uploaded file was extracted where present. EXIF GPS and timestamps are not independently verified and were not compared to satellite imagery. Missing fields were not inferred."
+      },
+      {
+        "evidence_id": "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+        "engine_name": "image",
+        "signal_type": "IMAGE_QUALITY",
+        "finding": "Image quality warning recorded",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.7,
+        "data_mode": "HYBRID",
+        "explanation": "Basic technical quality checks ran. Dimensions 96\u00d796. Resolution is below a useful size for site evidence. This is a technical warning, not a legal finding. Poor image quality is not treated as wrongdoing. Advanced AI-generated or manipulated-image detection is not implemented in Image Evidence V1. The capability state is NOT_IMPLEMENTED and the result is INCONCLUSIVE. No manipulation score was produced."
+      },
+      {
+        "evidence_id": "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+        "engine_name": "image",
+        "signal_type": "IMAGE_POTENTIAL_REUSE",
+        "finding": "No exact duplicate or potential image reuse was detected",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.2,
+        "data_mode": "HYBRID",
+        "explanation": "No exact duplicate file and no near-duplicate perceptual-hash match was found among stored images in the same data mode. This is not a finding of authenticity."
+      },
+      {
+        "evidence_id": "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+        "engine_name": "image",
+        "signal_type": "IMAGE_METADATA",
+        "finding": "Reported image metadata present: capture timestamp and GPS",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.45,
+        "data_mode": "HYBRID",
+        "explanation": "Reported metadata from the uploaded file was extracted where present. EXIF GPS and timestamps are not independently verified and were not compared to satellite imagery. Missing fields were not inferred."
+      },
+      {
+        "evidence_id": "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970",
+        "engine_name": "image",
+        "signal_type": "IMAGE_QUALITY",
+        "finding": "Image quality warning recorded",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.7,
+        "data_mode": "HYBRID",
+        "explanation": "Basic technical quality checks ran. Dimensions 96\u00d796. Resolution is below a useful size for site evidence. This is a technical warning, not a legal finding. Poor image quality is not treated as wrongdoing. Advanced AI-generated or manipulated-image detection is not implemented in Image Evidence V1. The capability state is NOT_IMPLEMENTED and the result is INCONCLUSIVE. No manipulation score was produced."
+      },
+      {
+        "evidence_id": "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312",
+        "engine_name": "milestone",
+        "signal_type": "milestone",
+        "finding": "Milestone recommendation is INSPECT",
+        "disposition": "EvidenceDisposition.WHY_FLAGGED",
+        "score": null,
+        "confidence": 0.62,
+        "data_mode": "HYBRID",
+        "explanation": "Recommendation is INSPECT because of strong conflicting evidence, location inconsistency, potential reused evidence, or multiple independent concerns. Milestone recommendation only. Authorized officials make the final administrative decision. SARVSAKSHI does not release funds. No payment was executed. This prototype does not integrate with PFMS and does not release or sanction funds."
+      },
+      {
+        "evidence_id": "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c",
+        "engine_name": "overlap",
+        "signal_type": "potential_overlap",
+        "finding": "Not linked: best overlap score 43 is below the Potential Overlap / Potential Duplicate threshold",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": 43.0,
+        "confidence": 0.7,
+        "data_mode": "HYBRID",
+        "explanation": "Not linked: 16 blocked candidate(s) were scored and none met Potential Overlap or Potential Duplicate thresholds. These works were not linked as a Potential Duplicate or Potential Overlap: semantic similarity is 26%, supporting signals are category, constituency, amount, and overall overlap score is 43. GPS distance 5449.6 m (HYBRID/TEST synthetic coordinates) Evidence Confidence is 70. This signal is Potential Overlap / Potential Duplicate: multi-signal similarity of recorded works. It is not Investigation Priority and is not a legal finding. HYBRID/TEST: synthetic coordinates are used for controlled GPS-proximity testing only. They are not official MPLADS GPS and must not be cited as real location measurements. Geographic evidence is available for at least one compared pair."
+      },
+      {
+        "evidence_id": "ev:pce:26946:plan_claim_evidence:HYBRID:e593b191a9c3d5f0",
+        "engine_name": "pce",
+        "signal_type": "plan_claim_evidence",
+        "finding": "Plan\u2013Claim\u2013Evidence result is INCONCLUSIVE",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.12,
+        "data_mode": "HYBRID",
+        "explanation": "Plan dimensions is unavailable and claimed quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan dimensions is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Claimed quantity is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan\u2013Claim\u2013Evidence compares recorded plan, claim, and evidence fields. Results are CONSISTENT, MISMATCH, or INCONCLUSIVE. This is not a legal finding of wrongdoing. AI recommends. Authorized officers decide."
+      },
+      {
+        "evidence_id": "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+        "engine_name": "satellite",
+        "signal_type": "SATELLITE_AVAILABILITY",
+        "finding": "SATELLITE_AVAILABILITY: available",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.34,
+        "data_mode": "HYBRID",
+        "explanation": "TEST/SYNTHETIC mocked provider response. Not official government or commercial satellite imagery."
+      },
+      {
+        "evidence_id": "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+        "engine_name": "satellite",
+        "signal_type": "SATELLITE_LOCATION",
+        "finding": "Available imagery covers the claimed site.",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.34,
+        "data_mode": "HYBRID",
+        "explanation": "Consistent with available imagery for site coverage. Coverage does not prove that the claimed work exists or is complete."
+      },
+      {
+        "evidence_id": "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+        "engine_name": "satellite",
+        "signal_type": "SATELLITE_CHANGE",
+        "finding": "No before/after pair or change observation is available.",
+        "disposition": "EvidenceDisposition.INCONCLUSIVE",
+        "score": null,
+        "confidence": 0.34,
+        "data_mode": "HYBRID",
+        "explanation": "Insufficient imagery evidence for change detection. Exact building dimensions, floor count, and expenditure were not inferred."
+      },
+      {
+        "evidence_id": "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3",
+        "engine_name": "satellite",
+        "signal_type": "SATELLITE_TEMPORAL",
+        "finding": "Imagery acquisition dates are compatible with the claimed or planned window.",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": null,
+        "confidence": 0.34,
+        "data_mode": "HYBRID",
+        "explanation": "Imagery dates are on or after the claimed/planned date window. This is not proof that construction was completed."
+      },
+      {
+        "evidence_id": "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3",
+        "engine_name": "time",
+        "signal_type": "time_anomaly",
+        "finding": "Schedule is within the mapped review flag versus the available plan",
+        "disposition": "EvidenceDisposition.WHY_NOT_FLAGGED",
+        "score": 5.0,
+        "confidence": 0.48,
+        "data_mode": "HYBRID",
+        "explanation": "HYBRID/TEST: synthetic planned/actual dates and progress are used for controlled testing only. They do not represent actual MPLADS execution history and must not be cited as real delay statistics. Elapsed duration is 7 days of 184 planned days (3.8% of planned time consumed) with physical progress 0% versus linear expected progress 3.8%. Expected progress uses a simple linear time-consumed mapping. It is not a verified construction S-curve or engineering estimate. Time Anomaly score is 5, below the review flag of 60. Not flagged as a Time Anomaly. Schedule and progress are aligned on the linear test mapping. Evidence Confidence is 48. Investigation Priority is not assigned by this engine. This signal is Time Anomaly: schedule and progress timing versus the plan and comparable works where available. It is not Investigation Priority and is not a legal finding."
+      }
+    ],
+    "count": 27,
+    "evidence_ids": [
+      "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083",
+      "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+      "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+      "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+      "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604",
+      "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2",
+      "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+      "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+      "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf",
+      "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970",
+      "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312",
+      "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c",
+      "ev:pce:26946:plan_claim_evidence:HYBRID:e593b191a9c3d5f0",
+      "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+      "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+      "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+      "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3",
+      "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+    ]
+  },
+  "intelligence_signals": [
+    {
+      "group": "cost",
+      "status": "ASSESSABLE",
+      "mapped_score": 100,
+      "evidence_ids": [
+        "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "compliance",
+      "status": "ASSESSABLE",
+      "mapped_score": 60,
+      "evidence_ids": [
+        "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "overlap",
+      "status": "ASSESSABLE",
+      "mapped_score": 43,
+      "evidence_ids": [
+        "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "image",
+      "status": "ASSESSABLE",
+      "mapped_score": 72,
+      "evidence_ids": [
+        "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+        "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+        "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+        "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+        "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+        "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "milestone",
+      "status": "ASSESSABLE",
+      "mapped_score": 60,
+      "evidence_ids": [
+        "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "graph",
+      "status": "ASSESSABLE",
+      "mapped_score": 43,
+      "evidence_ids": [
+        "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "forensics",
+      "status": "ASSESSABLE",
+      "mapped_score": 80,
+      "evidence_ids": [
+        "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+        "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+        "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "time",
+      "status": "ASSESSABLE",
+      "mapped_score": 5,
+      "evidence_ids": [
+        "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+      ],
+      "source": "risk-fusion-v2"
+    },
+    {
+      "group": "pce",
+      "status": "INCONCLUSIVE",
+      "mapped_score": null,
+      "evidence_ids": [],
+      "source": "plan-claim-evidence-v1"
+    }
+  ],
+  "risk_fusion_v2": {
+    "investigation_priority": 28,
+    "evidence_confidence": 26,
+    "recommended_action": "NEED_MORE_INFORMATION",
+    "explanation_type": "CONFLICTING_EVIDENCE",
+    "explanation": "Investigation Priority: 28/100. Evidence Confidence: 26/100. Priority band is medium. CONFLICTING_EVIDENCE: sources disagree. No single conclusion is forced. Disagreeing groups: Citizen / Jan-Sakshi indicates positive_signal while Milestone indicates negative_signal. Evidence disagrees; no single conclusion is forced.; Milestone indicates negative_signal while Satellite / remote sensing indicates positive_signal. Evidence disagrees; no single conclusion is forced.. Evidence Confidence is calculated separately from Investigation Priority and is not the average of source scores. A high priority with low confidence is not a highly certain conclusion. Top contributing evidence groups: Cost (raw 100, effective 10.35); Compliance (raw 60, effective 4.25); Overlap (raw 43, effective 3.72). Independent evidence: Cost, Time, Overlap, Compliance, Image evidence, Milestone. Correlated evidence discounted: Relationship graph (keep 0.50: Graph shares Overlap similarity but also has an additional non-overlap relationship signal. Partial independence applied.); Image forensics (keep 0.50: Image evidence and image forensics both flagged on the same photo family (IMAGE_FAMILY). Weaker group discounted.) Unavailable: Document / blueprint. Unavailable is not treated as zero-risk evidence and is not treated as suspicious. Not assessable / inconclusive: Plan / claim / evidence (inconclusive). Raw Risk 27.6318 is the un-renormalized sum of effective contributions. Missing group weights were not redistributed. Prototype weights only. These are not official MoSPI or MPLADS weights. Data mode is HYBRID: observed MPLADS fields plus synthetic enrichment. Synthetic fields are not official MPLADS values. A major contribution relies on HYBRID/TEST enrichment. Synthetic fields are not official MPLADS values. Recommendation uses Investigation Priority together with Evidence Confidence. Investigation Priority is an evidence-fusion ranking for review. It is not a legal finding and not a probability of wrongdoing. AI recommends. Authorized officers decide. This result does not sanction a project or release funds. No automatic sanction and no automatic payment release are produced. Cost Intelligence V1.1 has no HYBRID-TEST mode. Observed allocation-vs-peers REAL evidence is fused with HYBRID evidence when data_mode=HYBRID is requested. Cost scores are not modified.",
+    "evidence_ids": [
+      "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2",
+      "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3",
+      "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c",
+      "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604",
+      "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970",
+      "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+      "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+      "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf",
+      "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+      "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+      "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+      "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3",
+      "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083",
+      "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+      "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+      "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+      "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312",
+      "ev:pce:26946:plan_claim_evidence:HYBRID:e593b191a9c3d5f0"
+    ],
+    "contributing_evidence_groups": [
+      {
+        "signal": "cost",
+        "group_id": "cost",
+        "display_name": "Cost",
+        "weight": 0.14,
+        "state": "ASSESSABLE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 100,
+        "confidence": 0.42,
+        "confidence_adjusted_score": 73.9,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 10.346,
+        "evidence_ids": [
+          "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2"
+        ],
+        "source_ids": [
+          "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+          "project:4565",
+          "project:4566",
+          "project:4567",
+          "project:7762",
+          "project:7765",
+          "project:9700",
+          "project:11156",
+          "project:11157",
+          "project:13919",
+          "project:14014",
+          "project:14019",
+          "project:14020",
+          "project:14022",
+          "project:14023",
+          "project:14024",
+          "project:14025",
+          "project:26884",
+          "project:26888",
+          "project:26889",
+          "project:26890",
+          "project:26937",
+          "project:26938",
+          "project:26939",
+          "project:26940",
+          "project:26941",
+          "project:26942",
+          "project:26943",
+          "project:26944",
+          "project:26945",
+          "project:26947",
+          "project:26948",
+          "project:38908",
+          "project:38958",
+          "project:38959",
+          "project:39018",
+          "project:39019",
+          "project:39020",
+          "project:39021",
+          "project:39022",
+          "project:39023",
+          "project:39024",
+          "project:39025",
+          "project:39026",
+          "project:39027",
+          "project:39028",
+          "project:39029",
+          "project:39030",
+          "project:39032",
+          "project:39037",
+          "project:39038",
+          "project:39039",
+          "project:39046",
+          "project:39047",
+          "project:39049",
+          "project:39060",
+          "project:39061",
+          "project:39062",
+          "project:39063",
+          "project:39064",
+          "project:39065",
+          "project:39066",
+          "project:39067",
+          "project:39068",
+          "project:39069",
+          "project:39070",
+          "project:39071",
+          "project:45176",
+          "project:45177",
+          "project:45183",
+          "project:45186",
+          "project:45188",
+          "project:45207",
+          "project:45208",
+          "project:45209",
+          "project:45232",
+          "project:45234",
+          "project:45235",
+          "project:45236",
+          "project:45237",
+          "project:45238",
+          "project:45239",
+          "project:45241",
+          "project:45242",
+          "project:45243",
+          "project:45244",
+          "project:45245",
+          "project:45253",
+          "project:45254",
+          "project:45273",
+          "project:45282",
+          "project:47344",
+          "project:47354",
+          "project:47363",
+          "project:47364",
+          "project:47365",
+          "project:47366",
+          "project:47375",
+          "project:47376",
+          "project:47377",
+          "project:47378",
+          "project:47379",
+          "project:47380",
+          "project:47385",
+          "project:47391",
+          "project:47392",
+          "project:47393",
+          "project:47394",
+          "project:47395",
+          "project:47396",
+          "project:47398"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2",
+            "signal_type": "allocation_cost_anomaly",
+            "engine_name": "cost",
+            "raw_evidence_score": 100,
+            "mapped_score": 100,
+            "confidence": 0.42,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "REAL",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "project:4565",
+              "project:4566",
+              "project:4567",
+              "project:7762",
+              "project:7765",
+              "project:9700",
+              "project:11156",
+              "project:11157",
+              "project:13919",
+              "project:14014",
+              "project:14019",
+              "project:14020",
+              "project:14022",
+              "project:14023",
+              "project:14024",
+              "project:14025",
+              "project:26884",
+              "project:26888",
+              "project:26889",
+              "project:26890",
+              "project:26937",
+              "project:26938",
+              "project:26939",
+              "project:26940",
+              "project:26941",
+              "project:26942",
+              "project:26943",
+              "project:26944",
+              "project:26945",
+              "project:26947",
+              "project:26948",
+              "project:38908",
+              "project:38958",
+              "project:38959",
+              "project:39018",
+              "project:39019",
+              "project:39020",
+              "project:39021",
+              "project:39022",
+              "project:39023",
+              "project:39024",
+              "project:39025",
+              "project:39026",
+              "project:39027",
+              "project:39028",
+              "project:39029",
+              "project:39030",
+              "project:39032",
+              "project:39037",
+              "project:39038",
+              "project:39039",
+              "project:39046",
+              "project:39047",
+              "project:39049",
+              "project:39060",
+              "project:39061",
+              "project:39062",
+              "project:39063",
+              "project:39064",
+              "project:39065",
+              "project:39066",
+              "project:39067",
+              "project:39068",
+              "project:39069",
+              "project:39070",
+              "project:39071",
+              "project:45176",
+              "project:45177",
+              "project:45183",
+              "project:45186",
+              "project:45188",
+              "project:45207",
+              "project:45208",
+              "project:45209",
+              "project:45232",
+              "project:45234",
+              "project:45235",
+              "project:45236",
+              "project:45237",
+              "project:45238",
+              "project:45239",
+              "project:45241",
+              "project:45242",
+              "project:45243",
+              "project:45244",
+              "project:45245",
+              "project:45253",
+              "project:45254",
+              "project:45273",
+              "project:45282",
+              "project:47344",
+              "project:47354",
+              "project:47363",
+              "project:47364",
+              "project:47365",
+              "project:47366",
+              "project:47375",
+              "project:47376",
+              "project:47377",
+              "project:47378",
+              "project:47379",
+              "project:47380",
+              "project:47385",
+              "project:47391",
+              "project:47392",
+              "project:47393",
+              "project:47394",
+              "project:47395",
+              "project:47396",
+              "project:47398"
+            ],
+            "finding": "Allocation is 617.9% above peer median"
+          }
+        ],
+        "finding": "Allocation is 617.9% above peer median",
+        "support": "Allocation is 617.9% above the median of 110 comparable works in the same geographic constituency and broader category. Actual allocation is 3500000 versus peer median 487500 (expected range 400000-500000). Allocation Cost Anomaly score is 100 (review flag at 60 on the 0-100 l...",
+        "unavailable_reason": null,
+        "data_mode": "REAL",
+        "flagged": true,
+        "peer_quality": 48,
+        "independent": true
+      },
+      {
+        "signal": "compliance",
+        "group_id": "compliance",
+        "display_name": "Compliance",
+        "weight": 0.1,
+        "state": "ASSESSABLE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 60,
+        "confidence": 0.35,
+        "confidence_adjusted_score": 42.45,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 4.245,
+        "evidence_ids": [
+          "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604"
+        ],
+        "source_ids": [
+          "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+          "R003",
+          "Guidelines on MPLADS, 2023 para 3.2.4",
+          "Guidelines on MPLADS, 2023 para 3.2.12",
+          "Guidelines on MPLADS, 2023 (monitoring described by MoSPI)",
+          "Guidelines on MPLADS, 2023 (MoSPI public summary)",
+          "Guidelines on MPLADS, 2023 para 5.4.1",
+          "Guidelines on MPLADS, 2023 (MoSPI public summary of notable 2023 changes)",
+          "Guidelines on MPLADS, 2023 (quoted by MoSPI in Lok Sabha)",
+          "Guidelines on MPLADS, 2023 (MoSPI public summary) and official MPLADS portal",
+          "Official MPLADS / eSAKSHI landing page"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604",
+            "signal_type": "mplads_compliance",
+            "engine_name": "compliance",
+            "raw_evidence_score": null,
+            "mapped_score": 60,
+            "confidence": 0.35,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "R003",
+              "Guidelines on MPLADS, 2023 para 3.2.4",
+              "Guidelines on MPLADS, 2023 para 3.2.12",
+              "Guidelines on MPLADS, 2023 (monitoring described by MoSPI)",
+              "Guidelines on MPLADS, 2023 (MoSPI public summary)",
+              "Guidelines on MPLADS, 2023 para 5.4.1",
+              "Guidelines on MPLADS, 2023 (MoSPI public summary of notable 2023 changes)",
+              "Guidelines on MPLADS, 2023 (quoted by MoSPI in Lok Sabha)",
+              "Guidelines on MPLADS, 2023 (MoSPI public summary) and official MPLADS portal",
+              "Official MPLADS / eSAKSHI landing page"
+            ],
+            "finding": "Guideline rules triggered for review: R003"
+          }
+        ],
+        "finding": "Guideline rules triggered for review: R003",
+        "support": "This signal is MPLADS guideline-rule evaluation. It is not Investigation Priority and is not a legal finding. Compliance status: RULES_TRIGGERED. Triggered: R003. Not triggered (assessable): R001, R002, R004, R015. Not assessable: R005, R006, R007, R008, R009, R010, R011, R012...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": true,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "overlap",
+        "group_id": "overlap",
+        "display_name": "Overlap",
+        "weight": 0.1,
+        "state": "ASSESSABLE",
+        "polarity": "POSITIVE_SIGNAL",
+        "raw_evidence_score": 43,
+        "confidence": 0.7,
+        "confidence_adjusted_score": 37.195,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 3.7195,
+        "evidence_ids": [
+          "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c"
+        ],
+        "source_ids": [
+          "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c",
+            "signal_type": "potential_overlap",
+            "engine_name": "overlap",
+            "raw_evidence_score": 43,
+            "mapped_score": 43,
+            "confidence": 0.7,
+            "disposition": "WHY_NOT_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9"
+            ],
+            "finding": "Not linked: best overlap score 43 is below the Potential Overlap / Potential Duplicate threshold"
+          }
+        ],
+        "finding": "Not linked: best overlap score 43 is below the Potential Overlap / Potential Duplicate threshold",
+        "support": "Not linked: 16 blocked candidate(s) were scored and none met Potential Overlap or Potential Duplicate thresholds. These works were not linked as a Potential Duplicate or Potential Overlap: semantic similarity is 26%, supporting signals are category, constituency, amount, and o...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": false,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "image",
+        "group_id": "image",
+        "display_name": "Image evidence",
+        "weight": 0.06,
+        "state": "ASSESSABLE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 72,
+        "confidence": 0.58,
+        "confidence_adjusted_score": 58.392,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 3.5035,
+        "evidence_ids": [
+          "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+          "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+          "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+          "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+          "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+          "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970"
+        ],
+        "source_ids": [
+          "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+          "image:2",
+          "image:1",
+          "image:3"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+            "signal_type": "IMAGE_POTENTIAL_REUSE",
+            "engine_name": "image",
+            "raw_evidence_score": null,
+            "mapped_score": 72,
+            "confidence": 0.58,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:2",
+              "image:1"
+            ],
+            "finding": "POTENTIAL_IMAGE_REUSE: perceptual hash is visually similar to another stored image"
+          },
+          {
+            "evidence_id": "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+            "signal_type": "IMAGE_METADATA",
+            "engine_name": "image",
+            "raw_evidence_score": null,
+            "mapped_score": null,
+            "confidence": 0.45,
+            "disposition": "INCONCLUSIVE",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:2",
+              "image:1"
+            ],
+            "finding": "Reported image metadata present: capture timestamp and GPS"
+          },
+          {
+            "evidence_id": "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+            "signal_type": "IMAGE_QUALITY",
+            "engine_name": "image",
+            "raw_evidence_score": null,
+            "mapped_score": null,
+            "confidence": 0.7,
+            "disposition": "INCONCLUSIVE",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:2",
+              "image:1"
+            ],
+            "finding": "Image quality warning recorded"
+          },
+          {
+            "evidence_id": "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+            "signal_type": "IMAGE_POTENTIAL_REUSE",
+            "engine_name": "image",
+            "raw_evidence_score": null,
+            "mapped_score": 0,
+            "confidence": 0.2,
+            "disposition": "WHY_NOT_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:3"
+            ],
+            "finding": "No exact duplicate or potential image reuse was detected"
+          },
+          {
+            "evidence_id": "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+            "signal_type": "IMAGE_METADATA",
+            "engine_name": "image",
+            "raw_evidence_score": null,
+            "mapped_score": null,
+            "confidence": 0.45,
+            "disposition": "INCONCLUSIVE",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:3"
+            ],
+            "finding": "Reported image metadata present: capture timestamp and GPS"
+          },
+          {
+            "evidence_id": "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970",
+            "signal_type": "IMAGE_QUALITY",
+            "engine_name": "image",
+            "raw_evidence_score": null,
+            "mapped_score": null,
+            "confidence": 0.7,
+            "disposition": "INCONCLUSIVE",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:3"
+            ],
+            "finding": "Image quality warning recorded"
+          }
+        ],
+        "finding": "POTENTIAL_IMAGE_REUSE: perceptual hash is visually similar to another stored image",
+        "support": "POTENTIAL_IMAGE_REUSE: Perceptual dhash distance is 8 of 64 bits versus image 1. POTENTIAL_IMAGE_REUSE. High visual similarity alone is not proof of wrongdoing. This photograph is supporting evidence only. It does not prove that physical work was completed.",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": true,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "milestone",
+        "group_id": "milestone",
+        "display_name": "Milestone",
+        "weight": 0.05,
+        "state": "ASSESSABLE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 60,
+        "confidence": 0.62,
+        "confidence_adjusted_score": 49.74,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 2.487,
+        "evidence_ids": [
+          "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312"
+        ],
+        "source_ids": [
+          "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+          "milestone:3"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312",
+            "signal_type": "milestone",
+            "engine_name": "milestone",
+            "raw_evidence_score": null,
+            "mapped_score": 60,
+            "confidence": 0.62,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "milestone:3"
+            ],
+            "finding": "Milestone recommendation is INSPECT"
+          }
+        ],
+        "finding": "Milestone recommendation is INSPECT",
+        "support": "Recommendation is INSPECT because of strong conflicting evidence, location inconsistency, potential reused evidence, or multiple independent concerns. Milestone recommendation only. Authorized officials make the final administrative decision. SARVSAKSHI does not release funds....",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": true,
+        "peer_quality": null,
+        "independent": true
+      },
+      {
+        "signal": "graph",
+        "group_id": "graph",
+        "display_name": "Relationship graph",
+        "weight": 0.08,
+        "state": "ASSESSABLE",
+        "polarity": "POSITIVE_SIGNAL",
+        "raw_evidence_score": 43,
+        "confidence": 0.7,
+        "confidence_adjusted_score": 37.195,
+        "correlation_factor": 0.5,
+        "correlation_reason": "Graph shares Overlap similarity but also has an additional non-overlap relationship signal. Partial independence applied.",
+        "dependency_correlation_adjustment": 0.5,
+        "effective_contribution": 1.4878,
+        "evidence_ids": [
+          "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531"
+        ],
+        "source_ids": [
+          "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+          "internal:c8c0b6455ced468dbddc2f4972134ec8b7af177be2e5150c9949182443aff765",
+          "internal:d14e6d54c9ec71dc514fe15c548bbb84b6e2ab3d43cf67bc5dc405d36d097bd9",
+          "internal:6832260f7ac9a527c77742a39124afb6176e3bffc9d44baddc704586891834e3",
+          "internal:a14edb0b3f06b703e1c173ef9eaf61fc8ca88f659c58cc3a95de2ecd5b71c3df",
+          "internal:47a3b303e8ca591bdb6a69019a9d639aecb3b5328a985dda4019dcd0bede266d",
+          "internal:6ee61b3c93b81986f2e3a61acbf95af7fbd7d293ca780bc1cdc3fad9e027716b",
+          "internal:d97d3cdd747fdb2739afe875d4c678589b853b0969302ddc38a206c55c6823ae",
+          "internal:e9e0e3b5118cca87692e634718c945d9b1b0c89f88d811c62ad16d4e0a0d9a84",
+          "internal:d543b85949df557a6dae30d29aca12090cb4f2d41b5ce05a73af10d207735f27",
+          "internal:2d077df1273f3cb7b653f5449e9d588a8c832f9c2d35180ebb2364a1a1062830",
+          "internal:13a92f6e27e7fed23397dc7181c34417fabb536919cefdec11733a56c404e1c5",
+          "internal:8329e90a1246fad2e70f022e1af248832c299a8fdc45682bd6955196bba464d1",
+          "internal:f36bc3e7b166f9e88128f4133090f2b05aa5fbd7bcaf0908c76d7edb73a6c620",
+          "internal:904c0a1ec7f775e0b9423b4bcb63429edbb38dc1f220240b46a624c1ceab7674",
+          "internal:645031138bdcafded2ebe5e5969e234b69f286d2949c86f23685e11424c4c560",
+          "internal:e42553bbf05dd41b94886be3d8156eebc50aff095bb714e60b1efe0b0d6300d9",
+          "internal:f250faa5804709877b815590ebb7ec66802c5f7ffd4c303f0c36815abccf042e",
+          "internal:d8656bc975d0ae95836cfa0ce4f73b43c6aedd655f5da4d5c40a9c60aacac538",
+          "internal:d7500c120fbe76621640f86c7dd880e37ceb4c393f57f43a581b3ae3ef2e0fe9",
+          "internal:2e999a769b162fda207747e66e19b4ec0233092db5f8babdb76c1a7ab117f060",
+          "internal:cec175ea5c18485475ec230faf50015cddb48dcf974112ba648e6bf7afd75cf5",
+          "internal:a99c050e10d37948cbb872a7d7fd1c60669317df713f0f83be6400f1852782c4",
+          "internal:9eb51b73da8dc5a3646fdaac7b9c23af038977daa6c47b1eacf6df9797014d38",
+          "internal:753377324e7f438333047661e6bd71073c2a165d224df0b0f4cf8754f9f942d1",
+          "internal:09d7cde96f2861e3d758d8f6371b20934e40e5093bfeb0e3223c7519010bd8fa",
+          "internal:4cd50a3270685bdc287643a203f85121ddbb0de03b7c150f840c61c10174da2c",
+          "internal:ce335760e79338a0bbc0df999de2782d6523a4c8f8164f3dfdb3a910ffada6af",
+          "internal:a9caea8a1263dfeb21094521a6b7864e52e470abc33fc83267550790c6ec9c3f",
+          "internal:407fd079a5199dfbe1522769a28cc238f45df895f995b13cdf023c25de12dc1a",
+          "internal:b28a0844c395d7483142e0538ae71c84c5f3ffcd06b5788fafdb0e0ecfca431c",
+          "internal:40e768148ec7f0f575f22d46dcc245961442217e69803424ad888bd99404ceac",
+          "internal:4ad5650122ecc13f7e1e7b70b7f390fb1586dad9a8e381c8a58d21be07f64e67",
+          "internal:2ff3aeb44091cf0e9f9f94ef880358baaf244a970f937be98945c101e2f7cf3c",
+          "internal:075508ca6e7f9b8de07dc526e70543e454394127bacd93d3539fe1ccac6a3873",
+          "internal:0eddadf692979627f41c5ce5d0837ad4230e1206a04cd677a26946fa602ce768",
+          "internal:ffc9071522a3c3a436187f720b4372add1fb752f382b54ebe14292bfd0d230bc",
+          "internal:d54b8780b11ccbd3eba51184adb334716e9ad033e833893fe539ce7324b6ee1d",
+          "internal:616f4dce55e0a340a9da12dac47d80fd221846415e1a5e4d98634fd825a25621",
+          "internal:6e448b9e1ed94e9d18b4db96650f48588b87e6bb8850ea74da9e3531a6afdb6b",
+          "internal:ebb7a9178a8dccb6707767bbc0547cf58210ebed3bd85f57959b9fa62b0c9280",
+          "internal:2beb4931a645047736568555c3b56607871fc9a287abc8d618f99495247c2e33",
+          "internal:2d859358cc71a67a0d0e0ee1c73c9f3ffd3d58643667557d18ea3647dd0b6568"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531",
+            "signal_type": "relationship_graph",
+            "engine_name": "graph",
+            "raw_evidence_score": 43,
+            "mapped_score": 43,
+            "confidence": 0.7,
+            "disposition": "WHY_NOT_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "internal:c8c0b6455ced468dbddc2f4972134ec8b7af177be2e5150c9949182443aff765",
+              "internal:d14e6d54c9ec71dc514fe15c548bbb84b6e2ab3d43cf67bc5dc405d36d097bd9",
+              "internal:6832260f7ac9a527c77742a39124afb6176e3bffc9d44baddc704586891834e3",
+              "internal:a14edb0b3f06b703e1c173ef9eaf61fc8ca88f659c58cc3a95de2ecd5b71c3df",
+              "internal:47a3b303e8ca591bdb6a69019a9d639aecb3b5328a985dda4019dcd0bede266d",
+              "internal:6ee61b3c93b81986f2e3a61acbf95af7fbd7d293ca780bc1cdc3fad9e027716b",
+              "internal:d97d3cdd747fdb2739afe875d4c678589b853b0969302ddc38a206c55c6823ae",
+              "internal:e9e0e3b5118cca87692e634718c945d9b1b0c89f88d811c62ad16d4e0a0d9a84",
+              "internal:d543b85949df557a6dae30d29aca12090cb4f2d41b5ce05a73af10d207735f27",
+              "internal:2d077df1273f3cb7b653f5449e9d588a8c832f9c2d35180ebb2364a1a1062830",
+              "internal:13a92f6e27e7fed23397dc7181c34417fabb536919cefdec11733a56c404e1c5",
+              "internal:8329e90a1246fad2e70f022e1af248832c299a8fdc45682bd6955196bba464d1",
+              "internal:f36bc3e7b166f9e88128f4133090f2b05aa5fbd7bcaf0908c76d7edb73a6c620",
+              "internal:904c0a1ec7f775e0b9423b4bcb63429edbb38dc1f220240b46a624c1ceab7674",
+              "internal:645031138bdcafded2ebe5e5969e234b69f286d2949c86f23685e11424c4c560",
+              "internal:e42553bbf05dd41b94886be3d8156eebc50aff095bb714e60b1efe0b0d6300d9",
+              "internal:f250faa5804709877b815590ebb7ec66802c5f7ffd4c303f0c36815abccf042e",
+              "internal:d8656bc975d0ae95836cfa0ce4f73b43c6aedd655f5da4d5c40a9c60aacac538",
+              "internal:d7500c120fbe76621640f86c7dd880e37ceb4c393f57f43a581b3ae3ef2e0fe9",
+              "internal:2e999a769b162fda207747e66e19b4ec0233092db5f8babdb76c1a7ab117f060",
+              "internal:cec175ea5c18485475ec230faf50015cddb48dcf974112ba648e6bf7afd75cf5",
+              "internal:a99c050e10d37948cbb872a7d7fd1c60669317df713f0f83be6400f1852782c4",
+              "internal:9eb51b73da8dc5a3646fdaac7b9c23af038977daa6c47b1eacf6df9797014d38",
+              "internal:753377324e7f438333047661e6bd71073c2a165d224df0b0f4cf8754f9f942d1",
+              "internal:09d7cde96f2861e3d758d8f6371b20934e40e5093bfeb0e3223c7519010bd8fa",
+              "internal:4cd50a3270685bdc287643a203f85121ddbb0de03b7c150f840c61c10174da2c",
+              "internal:ce335760e79338a0bbc0df999de2782d6523a4c8f8164f3dfdb3a910ffada6af",
+              "internal:a9caea8a1263dfeb21094521a6b7864e52e470abc33fc83267550790c6ec9c3f",
+              "internal:407fd079a5199dfbe1522769a28cc238f45df895f995b13cdf023c25de12dc1a",
+              "internal:b28a0844c395d7483142e0538ae71c84c5f3ffcd06b5788fafdb0e0ecfca431c",
+              "internal:40e768148ec7f0f575f22d46dcc245961442217e69803424ad888bd99404ceac",
+              "internal:4ad5650122ecc13f7e1e7b70b7f390fb1586dad9a8e381c8a58d21be07f64e67",
+              "internal:2ff3aeb44091cf0e9f9f94ef880358baaf244a970f937be98945c101e2f7cf3c",
+              "internal:075508ca6e7f9b8de07dc526e70543e454394127bacd93d3539fe1ccac6a3873",
+              "internal:0eddadf692979627f41c5ce5d0837ad4230e1206a04cd677a26946fa602ce768",
+              "internal:ffc9071522a3c3a436187f720b4372add1fb752f382b54ebe14292bfd0d230bc",
+              "internal:d54b8780b11ccbd3eba51184adb334716e9ad033e833893fe539ce7324b6ee1d",
+              "internal:616f4dce55e0a340a9da12dac47d80fd221846415e1a5e4d98634fd825a25621",
+              "internal:6e448b9e1ed94e9d18b4db96650f48588b87e6bb8850ea74da9e3531a6afdb6b",
+              "internal:ebb7a9178a8dccb6707767bbc0547cf58210ebed3bd85f57959b9fa62b0c9280",
+              "internal:2beb4931a645047736568555c3b56607871fc9a287abc8d618f99495247c2e33",
+              "internal:2d859358cc71a67a0d0e0ee1c73c9f3ffd3d58643667557d18ea3647dd0b6568"
+            ],
+            "finding": "High Connectivity: Project has 2 highly similar work(s) in the same constituency, with 2 sharing the same IDA. High connectivity reflects volume of similar or clustered works. A large number of connections is not automatically a pattern of interest."
+          }
+        ],
+        "finding": "High Connectivity: Project has 2 highly similar work(s) in the same constituency, with 2 sharing the same IDA. High connectivity reflects volume of similar or clustered works. A large number of connections is not automatically a pattern of interest.",
+        "support": "Graph finding: High Connectivity. Project has 2 highly similar work(s) in the same constituency, with 2 sharing the same IDA. Connected projects in the ego neighborhood: 42. Same constituency: 42. Same category: 42. Same IDA: 42. Similar projects: 2. IDA DISTRICT COLLECTOR CUD...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": false,
+        "peer_quality": null,
+        "independent": false
+      },
+      {
+        "signal": "forensics",
+        "group_id": "forensics",
+        "display_name": "Image forensics",
+        "weight": 0.05,
+        "state": "ASSESSABLE",
+        "polarity": "NEGATIVE_SIGNAL",
+        "raw_evidence_score": 80,
+        "confidence": 0.4,
+        "confidence_adjusted_score": 58.4,
+        "correlation_factor": 0.5,
+        "correlation_reason": "Image evidence and image forensics both flagged on the same photo family (IMAGE_FAMILY). Weaker group discounted.",
+        "dependency_correlation_adjustment": 0.5,
+        "effective_contribution": 1.46,
+        "evidence_ids": [
+          "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+          "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+          "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497"
+        ],
+        "source_ids": [
+          "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+          "image:2"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+            "signal_type": "IMAGE_FORENSIC_MANIPULATION",
+            "engine_name": "forensics",
+            "raw_evidence_score": null,
+            "mapped_score": 80,
+            "confidence": 0.4,
+            "disposition": "WHY_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:2"
+            ],
+            "finding": "POTENTIAL_MANIPULATION: 32 identical 16px block pair(s) were found at separated locations. This is a possible copy-move indicator for review, not proof of manipulation."
+          },
+          {
+            "evidence_id": "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+            "signal_type": "IMAGE_FORENSIC_AI_GENERATION",
+            "engine_name": "forensics",
+            "raw_evidence_score": null,
+            "mapped_score": null,
+            "confidence": 0.0,
+            "disposition": "INCONCLUSIVE",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:2"
+            ],
+            "finding": "AI_GENERATION_ANALYSIS_UNAVAILABLE: No suitable open-source AI-generated-image detector is bundled or justified in Image Forensics V1. Arbitrary pixel heuristics are not used. Result: AI_GENERATION_ANALYSIS_UNAVAILABLE."
+          },
+          {
+            "evidence_id": "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497",
+            "signal_type": "IMAGE_FORENSIC_METADATA",
+            "engine_name": "forensics",
+            "raw_evidence_score": null,
+            "mapped_score": 0,
+            "confidence": 0.4,
+            "disposition": "WHY_NOT_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+              "image:2"
+            ],
+            "finding": "NO_STRONG_FORENSIC_SIGNAL: A capture timestamp is present in reported EXIF."
+          }
+        ],
+        "finding": "POTENTIAL_MANIPULATION: 32 identical 16px block pair(s) were found at separated locations. This is a possible copy-move indicator for review, not proof of manipulation.",
+        "support": "Image Forensics V1 is a decision-support layer for submitted project images. Signals may indicate possible manipulation, possible AI-generation, suspicious metadata, or inconsistent transformations. They are not a legal finding and not a validated authenticity decision. Missin...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": true,
+        "peer_quality": null,
+        "independent": false
+      },
+      {
+        "signal": "time",
+        "group_id": "time",
+        "display_name": "Time",
+        "weight": 0.1,
+        "state": "ASSESSABLE",
+        "polarity": "POSITIVE_SIGNAL",
+        "raw_evidence_score": 5,
+        "confidence": 0.48,
+        "confidence_adjusted_score": 3.83,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 0.383,
+        "evidence_ids": [
+          "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+        ],
+        "source_ids": [
+          "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9"
+        ],
+        "items": [
+          {
+            "evidence_id": "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3",
+            "signal_type": "time_anomaly",
+            "engine_name": "time",
+            "raw_evidence_score": 5,
+            "mapped_score": 5,
+            "confidence": 0.48,
+            "disposition": "WHY_NOT_FLAGGED",
+            "data_mode": "HYBRID",
+            "source_ids": [
+              "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9"
+            ],
+            "finding": "Schedule is within the mapped review flag versus the available plan"
+          }
+        ],
+        "finding": "Schedule is within the mapped review flag versus the available plan",
+        "support": "HYBRID/TEST: synthetic planned/actual dates and progress are used for controlled testing only. They do not represent actual MPLADS execution history and must not be cited as real delay statistics. Elapsed duration is 7 days of 184 planned days (3.8% of planned time consumed) w...",
+        "unavailable_reason": null,
+        "data_mode": "HYBRID",
+        "flagged": false,
+        "peer_quality": 0,
+        "independent": true
+      }
+    ],
+    "unavailable_evidence": [
+      {
+        "signal": "document",
+        "group_id": "document",
+        "display_name": "Document / blueprint",
+        "weight": 0.06,
+        "state": "UNAVAILABLE",
+        "polarity": "UNKNOWN",
+        "raw_evidence_score": null,
+        "confidence": null,
+        "confidence_adjusted_score": null,
+        "correlation_factor": 1.0,
+        "correlation_reason": null,
+        "dependency_correlation_adjustment": 1.0,
+        "effective_contribution": 0.0,
+        "evidence_ids": [],
+        "source_ids": [],
+        "items": [],
+        "finding": null,
+        "support": null,
+        "unavailable_reason": "No Evidence Object is available for this group in the requested data mode. Unavailable is not treated as zero-risk evidence and is not treated as suspicious.",
+        "data_mode": null,
+        "flagged": false,
+        "peer_quality": null,
+        "independent": true
+      }
+    ],
+    "conflicting_evidence": [
+      {
+        "left_group": "Citizen / Jan-Sakshi",
+        "right_group": "Milestone",
+        "left_polarity": "POSITIVE_SIGNAL",
+        "right_polarity": "NEGATIVE_SIGNAL",
+        "summary": "Citizen / Jan-Sakshi indicates positive_signal while Milestone indicates negative_signal. Evidence disagrees; no single conclusion is forced."
+      },
+      {
+        "left_group": "Milestone",
+        "right_group": "Satellite / remote sensing",
+        "left_polarity": "NEGATIVE_SIGNAL",
+        "right_polarity": "POSITIVE_SIGNAL",
+        "summary": "Milestone indicates negative_signal while Satellite / remote sensing indicates positive_signal. Evidence disagrees; no single conclusion is forced."
+      }
+    ],
+    "formula_unchanged": true,
+    "engine_version": "risk-fusion-v2",
+    "synthetic_disclosure": "A major contribution relies on HYBRID/TEST enrichment. Synthetic fields are not official MPLADS values."
+  },
+  "investigation_workspace": {
+    "href": "/projects/26946/investigate?mode=hybrid&demo=clean",
+    "lifecycle_state": "FUTURE",
+    "current_stage": "PRIORITIZATION",
+    "recommendation": "NEED MORE INFORMATION",
+    "evidence_ids": [
+      "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083",
+      "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+      "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+      "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+      "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604",
+      "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2",
+      "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+      "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+      "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf",
+      "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970",
+      "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312",
+      "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c",
+      "ev:pce:26946:plan_claim_evidence:HYBRID:e593b191a9c3d5f0",
+      "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+      "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+      "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+      "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3",
+      "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+    ]
+  },
+  "lifecycle": {
+    "project_id": 26946,
+    "internal_project_id": "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+    "scheme_id": "SVK-AP-003286",
+    "work_description": "WS/MP526/2023-2024/42089 - Construction of culverts and bridges",
+    "constituency": "KADAPA",
+    "category": "Normal/Others",
+    "requested_amount": 3500000,
+    "data_mode": "HYBRID",
+    "lifecycle_state": "FUTURE",
+    "source_status": "Sanctioned",
+    "current_stage": "PRIORITIZATION",
+    "planning_state": "PLANNING",
+    "completed_stages": [
+      "FUTURE"
+    ],
+    "pending_stages": [],
+    "timeline": [
+      {
+        "stage": "FUTURE",
+        "status": "COMPLETED",
+        "label": "Future / proposed",
+        "available": true,
+        "href": "",
+        "note": null
+      },
+      {
+        "stage": "PRIORITIZATION",
+        "status": "INCONCLUSIVE",
+        "label": "Prioritization (Need & Impact)",
+        "available": true,
+        "href": "#need-impact",
+        "note": "Need & Impact is INCONCLUSIVE until unavailable inputs are sourced."
+      },
+      {
+        "stage": "ONGOING",
+        "status": "NOT AVAILABLE",
+        "label": "Ongoing",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "PLAN",
+        "status": "NOT AVAILABLE",
+        "label": "Plan",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "CLAIM",
+        "status": "NOT AVAILABLE",
+        "label": "Claim",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "EVIDENCE",
+        "status": "NOT AVAILABLE",
+        "label": "Evidence",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "MILESTONE",
+        "status": "NOT AVAILABLE",
+        "label": "Milestone",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "RISK_FUSION",
+        "status": "NOT AVAILABLE",
+        "label": "Risk Fusion V2",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "INVESTIGATION",
+        "status": "NOT AVAILABLE",
+        "label": "Investigation",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "OFFICER_DECISION",
+        "status": "NOT AVAILABLE",
+        "label": "Officer decision",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "COMPLETION",
+        "status": "NOT AVAILABLE",
+        "label": "Completion",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      },
+      {
+        "stage": "FINAL_INVESTIGATION",
+        "status": "NOT AVAILABLE",
+        "label": "Final investigation",
+        "available": false,
+        "href": null,
+        "note": "NOT AVAILABLE \u2014 this work is in the FUTURE / proposed workflow."
+      }
+    ],
+    "evidence_summary": {
+      "count": 27,
+      "engines": [
+        "citizen",
+        "compliance",
+        "cost",
+        "forensics",
+        "geo",
+        "graph",
+        "image",
+        "milestone",
+        "overlap",
+        "pce",
+        "satellite",
+        "time"
+      ],
+      "modules": [
+        {
+          "engine": "citizen",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+          "count": 4,
+          "evidence_ids": [
+            "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083",
+            "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+            "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+            "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3"
+          ]
+        },
+        {
+          "engine": "compliance",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604"
+          ]
+        },
+        {
+          "engine": "cost",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2"
+          ]
+        },
+        {
+          "engine": "forensics",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 3,
+          "evidence_ids": [
+            "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+            "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+            "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497"
+          ]
+        },
+        {
+          "engine": "geo",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+          "count": 3,
+          "evidence_ids": [
+            "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+            "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+            "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf"
+          ]
+        },
+        {
+          "engine": "graph",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531"
+          ]
+        },
+        {
+          "engine": "image",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 6,
+          "evidence_ids": [
+            "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+            "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+            "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+            "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+            "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+            "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970"
+          ]
+        },
+        {
+          "engine": "milestone",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312"
+          ]
+        },
+        {
+          "engine": "overlap",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c"
+          ]
+        },
+        {
+          "engine": "pce",
+          "available": true,
+          "status": "EvidenceDisposition.INCONCLUSIVE",
+          "count": 1,
+          "evidence_ids": [
+            "ev:pce:26946:plan_claim_evidence:HYBRID:e593b191a9c3d5f0"
+          ]
+        },
+        {
+          "engine": "satellite",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+          "count": 4,
+          "evidence_ids": [
+            "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+            "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+            "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+            "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3"
+          ]
+        },
+        {
+          "engine": "time",
+          "available": true,
+          "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+          "count": 1,
+          "evidence_ids": [
+            "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083",
+        "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+        "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+        "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+        "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604",
+        "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2",
+        "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+        "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+        "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497",
+        "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+        "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+        "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf",
+        "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531",
+        "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+        "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+        "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+        "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+        "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+        "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970",
+        "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312",
+        "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c",
+        "ev:pce:26946:plan_claim_evidence:HYBRID:e593b191a9c3d5f0",
+        "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+        "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+        "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+        "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3",
+        "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+      ],
+      "note": "Existing Evidence Object V1 records only. Lifecycle does not create duplicate evidence."
+    },
+    "risk_summary": {
+      "appropriate": false,
+      "stored": false,
+      "reason": "Need & Impact is the primary FUTURE workflow. Risk Fusion V2 is used for ONGOING and COMPLETED investigation.",
+      "investigation_priority": null,
+      "evidence_confidence": null,
+      "formula_unchanged": true,
+      "engine_version": "risk-fusion-v2"
+    },
+    "milestone_summary": {
+      "count": 1,
+      "current_milestone_id": 3,
+      "current_milestone_name": "Planning",
+      "current_recommendation": "INSPECT",
+      "items": [
+        {
+          "milestone_id": 3,
+          "milestone_name": "Planning",
+          "status": "UNDER_REVIEW",
+          "recommendation": "INSPECT",
+          "officer_action": null
+        }
+      ],
+      "last_officer_action": null,
+      "automatic_sanction": false,
+      "pfms_integrated": false,
+      "funds_released": false,
+      "data_mode": "HYBRID",
+      "hybrid_notice": "Prototype simulation: some execution, financial, location, or milestone fields are synthetic and are not official MPLADS records."
+    },
+    "need_impact_summary": {
+      "need_score": null,
+      "impact_score": 60.0,
+      "priority_score": null,
+      "priority_class": "INCONCLUSIVE",
+      "evidence_confidence": 0.2975,
+      "unavailable_inputs": [
+        "Population need",
+        "Infrastructure gap",
+        "Underserved-area indicator",
+        "Disaster / essential-service statistics",
+        "Beneficiary count",
+        "Expected community coverage",
+        "Disaster keywords in observed text"
+      ],
+      "recommendation_rationale": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments. Prototype weighting \u2014 not an official MPLADS sanction formula. Need Score is INCONCLUSIVE: verified population, infrastructure, underserved-area, and disaster statistics are unavailable and were not invented. Historical MPLADS work counts were not used as a substitute. Impact Score combines available components with documented prototype weights. Allocation amount is not used as an impact proxy. Urgency uses only supported waiting-time and observed-text or labelled TEST/SYNTHETIC inputs. Historical project counts and historical funding are contextual evidence only. They are not used as a Need Score and do not prove community need. A constituency is not ranked lower because it has fewer recorded MPLADS works. Constituency is the primary geographic context. MP name is not used as a geographic substitute. District-level information is not fabricated. Recommended priority class is INCONCLUSIVE because Need and Impact could not both be assessed from available verified inputs. Ranking was not forced.",
+      "finding": "INCONCLUSIVE need/impact assessment. Priority recommendation was not forced from insufficient inputs.",
+      "automatic_sanction": false,
+      "sanction_decision": null,
+      "enrichment_used": false,
+      "enrichment_label": null,
+      "data_mode": "HYBRID",
+      "evidence_ids": [],
+      "governance_note": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments."
+    },
+    "pce_summary": {
+      "plan_recorded": true,
+      "claim_recorded": true,
+      "overall_result": "INCONCLUSIVE",
+      "missing_information": [
+        "plan dimensions/area",
+        "claimed quantity",
+        "evidence quantity",
+        "claimed expenditure",
+        "evidence expenditure",
+        "milestone amount",
+        "expenditure",
+        "plan dimensions"
+      ],
+      "mismatch_count": 0,
+      "evidence_confidence": 0.12,
+      "explanation": "Plan dimensions is unavailable and claimed quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan dimensions is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Claimed quantity is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan\u2013Claim\u2013Evidence compares recorded plan, claim, and evidence fields. Results are CONSISTENT, MISMATCH, or INCONCLUSIVE. This is not a legal finding of wrongdoing. AI recommends. Authorized officers decide.",
+      "evidence_ids": [],
+      "data_mode": "HYBRID",
+      "completion_date": null,
+      "expenditure": null,
+      "note": "Completion dates and expenditure are not invented. Absent values stay unavailable."
+    },
+    "citizen_summary": {
+      "available": true,
+      "status": "Insufficient citizen sample",
+      "total_submissions": 1,
+      "verified_location_submissions": 1,
+      "aggregate_finding": "INCONCLUSIVE",
+      "citizen_evidence_confidence": 0.18,
+      "evidence_ids": [
+        "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+        "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+        "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+        "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083"
+      ],
+      "data_mode": "HYBRID",
+      "note": "Citizen evidence is supporting only. A single report does not establish truth."
+    },
+    "geospatial_status": {
+      "available": true,
+      "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+      "evidence_ids": [
+        "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+        "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+        "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf"
+      ]
+    },
+    "satellite_status": {
+      "available": true,
+      "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+      "evidence_ids": [
+        "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+        "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+        "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+        "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3"
+      ]
+    },
+    "document_status": null,
+    "image_status": {
+      "available": true,
+      "status": "EvidenceDisposition.WHY_FLAGGED",
+      "images_submitted": 2,
+      "exact_duplicates": 0,
+      "potential_reuse": 1,
+      "evidence_ids": [
+        "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+        "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+        "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+        "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+        "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+        "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970"
+      ],
+      "authenticity_capability": "NOT_IMPLEMENTED"
+    },
+    "compliance_status": {
+      "available": true,
+      "status": "EvidenceDisposition.WHY_FLAGGED",
+      "evidence_ids": [
+        "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604"
+      ]
+    },
+    "relationship_status": {
+      "available": true,
+      "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+      "evidence_ids": [
+        "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531"
+      ]
+    },
+    "project_status_summary": {
+      "lifecycle_state": "FUTURE",
+      "source_status": "Sanctioned",
+      "current_stage": "PRIORITIZATION",
+      "data_mode": "HYBRID",
+      "planning_state": "PLANNING",
+      "need_score": null,
+      "impact_score": 60.0,
+      "priority": "INCONCLUSIVE",
+      "need_evidence_confidence": 0.2975,
+      "milestone_status": "UNDER_REVIEW",
+      "citizen_evidence": "Insufficient citizen sample",
+      "geospatial_status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+      "satellite_status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+      "image_status": "EvidenceDisposition.WHY_FLAGGED",
+      "compliance_status": "EvidenceDisposition.WHY_FLAGGED",
+      "relationship_status": "EvidenceDisposition.WHY_NOT_FLAGGED"
+    },
+    "officer_decisions": [
+      {
+        "kind": "investigation",
+        "action": "need_more_info",
+        "reason": "AP pilot UI verification",
+        "actor_role": "officer",
+        "created_at": "2026-09-10T05:18:50+00:00",
+        "scores_unchanged": true,
+        "investigation_priority_snapshot": 58,
+        "evidence_confidence_snapshot": 60
+      },
+      {
+        "kind": "investigation",
+        "action": "need_more_info",
+        "reason": "Need field inspection of supporting records.",
+        "actor_role": "officer",
+        "created_at": "2026-09-10T00:01:57+00:00",
+        "scores_unchanged": true,
+        "investigation_priority_snapshot": 59,
+        "evidence_confidence_snapshot": 71
+      }
+    ],
+    "checkpoint_actions": [
+      "PRIORITIZE",
+      "DEFER",
+      "NEED_MORE_INFORMATION"
+    ],
+    "final_case_summary": null,
+    "recommendation": "NEED MORE INFORMATION",
+    "recommendation_rationale": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments. Prototype weighting \u2014 not an official MPLADS sanction formula. Need Score is INCONCLUSIVE: verified population, infrastructure, underserved-area, and disaster statistics are unavailable and were not invented. Historical MPLADS work counts were not used as a substitute. Impact Score combines available components with documented prototype weights. Allocation amount is not used as an impact proxy. Urgency uses only supported waiting-time and observed-text or labelled TEST/SYNTHETIC inputs. Historical project counts and historical funding are contextual evidence only. They are not used as a Need Score and do not prove community need. A constituency is not ranked lower because it has fewer recorded MPLADS works. Constituency is the primary geographic context. MP name is not used as a geographic substitute. District-level information is not fabricated. Recommended priority class is INCONCLUSIVE because Need and Impact could not both be assessed from available verified inputs. Ranking was not forced.",
+    "unavailable_inputs": [
+      "Population need",
+      "Infrastructure gap",
+      "Underserved-area indicator",
+      "Disaster / essential-service statistics",
+      "Beneficiary count",
+      "Expected community coverage",
+      "Disaster keywords in observed text",
+      "plan dimensions/area",
+      "claimed quantity",
+      "evidence quantity",
+      "claimed expenditure",
+      "evidence expenditure",
+      "milestone amount",
+      "expenditure",
+      "plan dimensions"
+    ],
+    "automatic_sanction": false,
+    "automatic_payment": false,
+    "pfms_integrated": false,
+    "fraud_conclusion": false,
+    "engine_version": "lifecycle-orchestration-v1",
+    "governance_note": "SARVSAKSHI workflow state is an application lifecycle label. It is not an official MPLADS status. Source status is the observed extract STATUS. AI recommends. Authorized officers decide. This layer does not sanction a project, release funds, or determine fraud.",
+    "workflow_label": "SARVSAKSHI workflow state",
+    "source_status_label": "Source status",
+    "is_synthetic": false,
+    "synthetic_label": null,
+    "explanation": "SARVSAKSHI workflow state is an application lifecycle label. It is not an official MPLADS status. Source status is the observed extract STATUS. AI recommends. Authorized officers decide. This layer does not sanction a project, release funds, or determine fraud. SARVSAKSHI workflow state is FUTURE. Current stage is PRIORITIZATION. Priority recommendation only. Authorized officials make final administrative decisions. This prototype does not sanction a project or release funds. No automatic payment. PFMS is not integrated. Officer actions do not release funds. Investigation Priority is not a legal fraud finding and not a fraud probability. Lifecycle V1 does not add or change Risk Fusion V2 weights. Investigation Priority comes from stored or recomputed Risk Fusion V2. HYBRID: real project fields plus clearly labelled synthetic enrichment."
+  },
+  "pce": {
+    "plan_recorded": true,
+    "claim_recorded": true,
+    "overall_result": "INCONCLUSIVE",
+    "missing_information": [
+      "plan dimensions/area",
+      "claimed quantity",
+      "evidence quantity",
+      "claimed expenditure",
+      "evidence expenditure",
+      "milestone amount",
+      "expenditure",
+      "plan dimensions"
+    ],
+    "mismatch_count": 0,
+    "evidence_confidence": 0.12,
+    "explanation": "Plan dimensions is unavailable and claimed quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan dimensions is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Claimed quantity is unavailable and evidence quantity is unavailable. Required values are unavailable, so this comparison is INCONCLUSIVE. Plan\u2013Claim\u2013Evidence compares recorded plan, claim, and evidence fields. Results are CONSISTENT, MISMATCH, or INCONCLUSIVE. This is not a legal finding of wrongdoing. AI recommends. Authorized officers decide.",
+    "evidence_ids": [],
+    "data_mode": "HYBRID",
+    "completion_date": null,
+    "expenditure": null,
+    "note": "Completion dates and expenditure are not invented. Absent values stay unavailable."
+  },
+  "images": {
+    "available": true,
+    "status": "EvidenceDisposition.WHY_FLAGGED",
+    "images_submitted": 2,
+    "exact_duplicates": 0,
+    "potential_reuse": 1,
+    "evidence_ids": [
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970"
+    ],
+    "authenticity_capability": "NOT_IMPLEMENTED"
+  },
+  "documents": null,
+  "geospatial": {
+    "available": true,
+    "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+    "evidence_ids": [
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf"
+    ]
+  },
+  "satellite": {
+    "available": true,
+    "status": "EvidenceDisposition.WHY_NOT_FLAGGED",
+    "evidence_ids": [
+      "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+      "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+      "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+      "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3"
+    ]
+  },
+  "citizen": {
+    "available": true,
+    "status": "Insufficient citizen sample",
+    "total_submissions": 1,
+    "verified_location_submissions": 1,
+    "aggregate_finding": "INCONCLUSIVE",
+    "citizen_evidence_confidence": 0.18,
+    "evidence_ids": [
+      "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+      "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+      "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+      "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083"
+    ],
+    "data_mode": "HYBRID",
+    "note": "Citizen evidence is supporting only. A single report does not establish truth."
+  },
+  "milestone": {
+    "count": 1,
+    "current_milestone_id": 3,
+    "current_milestone_name": "Planning",
+    "current_recommendation": "INSPECT",
+    "items": [
+      {
+        "milestone_id": 3,
+        "milestone_name": "Planning",
+        "status": "UNDER_REVIEW",
+        "recommendation": "INSPECT",
+        "officer_action": null
+      }
+    ],
+    "last_officer_action": null,
+    "automatic_sanction": false,
+    "pfms_integrated": false,
+    "funds_released": false,
+    "data_mode": "HYBRID",
+    "hybrid_notice": "Prototype simulation: some execution, financial, location, or milestone fields are synthetic and are not official MPLADS records."
+  },
+  "compliance": {
+    "available": true,
+    "status": "EvidenceDisposition.WHY_FLAGGED",
+    "evidence_ids": [
+      "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604"
+    ]
+  },
+  "need_impact": {
+    "need_score": null,
+    "impact_score": 60.0,
+    "priority_score": null,
+    "priority_class": "INCONCLUSIVE",
+    "evidence_confidence": 0.2975,
+    "unavailable_inputs": [
+      "Population need",
+      "Infrastructure gap",
+      "Underserved-area indicator",
+      "Disaster / essential-service statistics",
+      "Beneficiary count",
+      "Expected community coverage",
+      "Disaster keywords in observed text"
+    ],
+    "recommendation_rationale": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments. Prototype weighting \u2014 not an official MPLADS sanction formula. Need Score is INCONCLUSIVE: verified population, infrastructure, underserved-area, and disaster statistics are unavailable and were not invented. Historical MPLADS work counts were not used as a substitute. Impact Score combines available components with documented prototype weights. Allocation amount is not used as an impact proxy. Urgency uses only supported waiting-time and observed-text or labelled TEST/SYNTHETIC inputs. Historical project counts and historical funding are contextual evidence only. They are not used as a Need Score and do not prove community need. A constituency is not ranked lower because it has fewer recorded MPLADS works. Constituency is the primary geographic context. MP name is not used as a geographic substitute. District-level information is not fabricated. Recommended priority class is INCONCLUSIVE because Need and Impact could not both be assessed from available verified inputs. Ranking was not forced.",
+    "finding": "INCONCLUSIVE need/impact assessment. Priority recommendation was not forced from insufficient inputs.",
+    "automatic_sanction": false,
+    "sanction_decision": null,
+    "enrichment_used": false,
+    "enrichment_label": null,
+    "data_mode": "HYBRID",
+    "evidence_ids": [],
+    "governance_note": "Priority recommendation only. Authorized officials make final administrative decisions. Prototype weighting \u2014 not an official MPLADS sanction formula. This is a planning simulation only. It does not sanction a project, approve funds, or release payments."
+  },
+  "copilot": {
+    "suggested_questions": [
+      "Why was this project not escalated?",
+      "What evidence supports this?",
+      "What information is missing?",
+      "Why is this project not flagged?"
+    ],
+    "grounded_retrieval": true,
+    "hardcoded_answers": false,
+    "href": "/projects/26946/investigate?mode=hybrid&demo=clean#copilot"
+  },
+  "recommended_action": "NEED MORE INFORMATION",
+  "officer_decision": null,
+  "officer_decisions": [],
+  "checkpoint_actions": [
+    "PRIORITIZE",
+    "DEFER",
+    "NEED_MORE_INFORMATION"
+  ],
+  "journey": [
+    {
+      "step": "PROJECT",
+      "href": "/demo/clean#project"
+    },
+    {
+      "step": "PASSPORT",
+      "href": "/projects/26946?mode=hybrid&demo=clean"
+    },
+    {
+      "step": "LIFECYCLE",
+      "href": "/projects/26946/investigate?mode=hybrid&demo=clean#lifecycle"
+    },
+    {
+      "step": "PLAN",
+      "href": "/demo/clean#plan"
+    },
+    {
+      "step": "CLAIM",
+      "href": "/demo/clean#claim"
+    },
+    {
+      "step": "EVIDENCE",
+      "href": "/projects/26946/investigate?mode=hybrid&demo=clean#evidence"
+    },
+    {
+      "step": "RISK",
+      "href": "/projects/26946/investigate?mode=hybrid&demo=clean#risk"
+    },
+    {
+      "step": "COPILOT",
+      "href": "/projects/26946/investigate?mode=hybrid&demo=clean#copilot"
+    },
+    {
+      "step": "DECISION",
+      "href": "/projects/26946/investigate?mode=hybrid&demo=clean#officer-decision"
+    },
+    {
+      "step": "SUMMARY",
+      "href": "/demo/clean#summary"
+    }
+  ],
+  "final_case_summary": {
+    "case_id": "CLEAN",
+    "display_name": "CLEAN",
+    "project": {
+      "project_id": 26946,
+      "scheme_id": "SVK-AP-003286",
+      "internal_project_id": "internal:e714d635eb46ac65589489b3972d8cf896f9c2b7baaaeb753bf3e312929fc3b9",
+      "work_description": "WS/MP526/2023-2024/42089 - Construction of culverts and bridges",
+      "constituency": "KADAPA",
+      "category": "Normal/Others",
+      "source_status": "Sanctioned"
+    },
+    "lifecycle": "FUTURE",
+    "current_stage": "PRIORITIZATION",
+    "investigation_priority": 28,
+    "evidence_confidence": 26,
+    "main_signals": [
+      {
+        "group": "cost",
+        "status": "ASSESSABLE",
+        "mapped_score": 100,
+        "evidence_ids": [
+          "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "compliance",
+        "status": "ASSESSABLE",
+        "mapped_score": 60,
+        "evidence_ids": [
+          "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "overlap",
+        "status": "ASSESSABLE",
+        "mapped_score": 43,
+        "evidence_ids": [
+          "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "image",
+        "status": "ASSESSABLE",
+        "mapped_score": 72,
+        "evidence_ids": [
+          "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+          "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+          "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+          "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+          "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+          "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "milestone",
+        "status": "ASSESSABLE",
+        "mapped_score": 60,
+        "evidence_ids": [
+          "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "graph",
+        "status": "ASSESSABLE",
+        "mapped_score": 43,
+        "evidence_ids": [
+          "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "forensics",
+        "status": "ASSESSABLE",
+        "mapped_score": 80,
+        "evidence_ids": [
+          "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+          "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+          "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "time",
+        "status": "ASSESSABLE",
+        "mapped_score": 5,
+        "evidence_ids": [
+          "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+        ],
+        "source": "risk-fusion-v2"
+      },
+      {
+        "group": "pce",
+        "status": "INCONCLUSIVE",
+        "mapped_score": null,
+        "evidence_ids": [],
+        "source": "plan-claim-evidence-v1"
+      }
+    ],
+    "evidence": [
+      "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083",
+      "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+      "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+      "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+      "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604",
+      "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2",
+      "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+      "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+      "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf",
+      "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970",
+      "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312",
+      "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c",
+      "ev:pce:26946:plan_claim_evidence:HYBRID:e593b191a9c3d5f0",
+      "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+      "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+      "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+      "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3",
+      "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+    ],
+    "missing_information": [
+      "Population need",
+      "Infrastructure gap",
+      "Underserved-area indicator",
+      "Disaster / essential-service statistics",
+      "Beneficiary count",
+      "Expected community coverage",
+      "Disaster keywords in observed text",
+      "plan dimensions/area",
+      "claimed quantity",
+      "evidence quantity",
+      "claimed expenditure",
+      "evidence expenditure",
+      "milestone amount",
+      "expenditure",
+      "plan dimensions",
+      "document unavailable"
+    ],
+    "recommended_action": "NEED MORE INFORMATION",
+    "officer_decision": null,
+    "officer_decisions": [],
+    "data_reliability": "HYBRID",
+    "data_mode": "HYBRID",
+    "demo_notice": "Controlled prototype scenario. Some values are synthetic and are not official MPLADS records. DEMO / SYNTHETIC / CONTROLLED PROTOTYPE evidence fixtures are not official MPLADS evidence.",
+    "governance_note": "AI recommends. Authorized officers decide. Investigation Priority and Evidence Confidence are review rankings, not a legal finding of fraud. This prototype does not sanction a project or release funds.",
+    "no_fraud_note": "This demonstration does not confirm fraud and does not output a fraud probability.",
+    "no_sanction_note": "Officer actions are audited and do not change intelligence scores. No automatic sanction. PFMS is not integrated.",
+    "automatic_sanction": false,
+    "automatic_payment": false,
+    "pfms_integrated": false,
+    "fraud_conclusion": false,
+    "scores_mutated": false
+  },
+  "automatic_sanction": false,
+  "automatic_payment": false,
+  "pfms_integrated": false,
+  "fraud_conclusion": false,
+  "engine_version": "final-demo-cases-v1",
+  "fusion_v2_unchanged": true,
+  "demo_evidence_fixtures": {
+    "case_id": "CLEAN",
+    "project_id": 26946,
+    "applied": false,
+    "steps": [],
+    "evidence_ids": [
+      "ev:citizen:26946:CITIZEN_LOCATION:HYBRID:af1a460ea0e05083",
+      "ev:citizen:26946:CITIZEN_FEEDBACK:HYBRID:4e145182272ac6d4",
+      "ev:citizen:26946:CITIZEN_IMAGE:HYBRID:e79ee34d738b95fe",
+      "ev:citizen:26946:CITIZEN_AGGREGATE:HYBRID:03851910503e84d3",
+      "ev:compliance:26946:mplads_compliance:HYBRID:4a1f407e96a7f604",
+      "ev:cost:26946:allocation_cost_anomaly:REAL:4805ffc568af91e2",
+      "ev:forensics:26946:IMAGE_FORENSIC_MANIPULATION:HYBRID:73fb5e50c594d325",
+      "ev:forensics:26946:IMAGE_FORENSIC_AI_GENERATION:HYBRID:3944e16686305062",
+      "ev:forensics:26946:IMAGE_FORENSIC_METADATA:HYBRID:2457be3490cd7497",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:62b44a089291b106",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:1bdcb9bb50ca6e51",
+      "ev:geo:26946:GEOSPATIAL_LOCATION_CONSISTENCY:HYBRID:dbcbbedc39eb04cf",
+      "ev:graph:26946:relationship_graph:HYBRID:788e1243c78a8531",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:236c02014d3d3954",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:903c210e6c82efe7",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:559c4c110b8a5372",
+      "ev:image:26946:IMAGE_POTENTIAL_REUSE:HYBRID:4d26d12511aec30b",
+      "ev:image:26946:IMAGE_METADATA:HYBRID:ab62668f3543f114",
+      "ev:image:26946:IMAGE_QUALITY:HYBRID:1c5e623f30f8d970",
+      "ev:milestone:26946:milestone:HYBRID:ecd9a4560290c312",
+      "ev:overlap:26946:potential_overlap:HYBRID:feadf0c6b767d54c",
+      "ev:pce:26946:plan_claim_evidence:HYBRID:e593b191a9c3d5f0",
+      "ev:satellite:26946:SATELLITE_AVAILABILITY:HYBRID:ad1c9de2616d70e1",
+      "ev:satellite:26946:SATELLITE_LOCATION:HYBRID:658fedd620e80072",
+      "ev:satellite:26946:SATELLITE_CHANGE:HYBRID:43e0efdba20bda5c",
+      "ev:satellite:26946:SATELLITE_TEMPORAL:HYBRID:129ba66eeffdbbf3",
+      "ev:time:26946:time_anomaly:HYBRID:697f5232915a32e3"
+    ],
+    "data_mode": "HYBRID",
+    "labels": [
+      "DEMO",
+      "SYNTHETIC",
+      "CONTROLLED PROTOTYPE"
+    ],
+    "fixture_layer": "demo-evidence-fixtures-v1",
+    "official_mplads_evidence": false,
+    "notice": "DEMO / SYNTHETIC / CONTROLLED PROTOTYPE. Labelled HYBRID evidence fixtures for demonstration only. Not official MPLADS evidence."
+  }
+}
