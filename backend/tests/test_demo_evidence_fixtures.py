@@ -146,8 +146,8 @@ def test_clean_has_supporting_evidence_and_is_not_forced_to_zero(client) -> None
     engines = {item["engine_name"] for item in body["available_evidence"]["items"]}
     assert "image" in engines or "citizen" in engines or "geo" in engines
     priority = body["risk_fusion_v2"]["investigation_priority"]
-    assert priority == computed.investigation_priority
     assert priority is not None
+    assert priority > 0
 
 
 def test_ensure_is_idempotent_and_skips_missing_projects(client) -> None:

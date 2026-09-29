@@ -13,6 +13,7 @@ from app.models.project import Project
 
 CASE_META = {
     "GHOST": {
+        "id": 53637,
         "lifecycle_stage": LifecycleStage.COMPLETED.value,
         "status": "Completed",
         "constituency": "VIZIANAGARAM",
@@ -22,6 +23,7 @@ CASE_META = {
         "ida": "Vizianagaram",
     },
     "OVERBILL": {
+        "id": 22177,
         "lifecycle_stage": LifecycleStage.COMPLETED.value,
         "status": "Completed",
         "constituency": "ELURU",
@@ -31,6 +33,7 @@ CASE_META = {
         "ida": "Eluru",
     },
     "STUCK": {
+        "id": 52862,
         "lifecycle_stage": LifecycleStage.ONGOING.value,
         "status": "Ongoing",
         "constituency": "ANANTAPUR",
@@ -40,6 +43,7 @@ CASE_META = {
         "ida": "Anantapur",
     },
     "CLEAN": {
+        "id": 26946,
         "lifecycle_stage": LifecycleStage.FUTURE.value,
         "status": "Sanctioned",
         "constituency": "KADAPA",

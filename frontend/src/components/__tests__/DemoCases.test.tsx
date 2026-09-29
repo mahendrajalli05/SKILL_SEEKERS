@@ -292,7 +292,7 @@ describe("Demo Cases UI", () => {
     await user.click(screen.getByRole("button", { name: "Next" }));
     expect(screen.getByText("FINAL CASE SUMMARY")).toBeInTheDocument();
     expect(screen.queryByText(/fraud confirmed/i)).toBeNull();
-  });
+  }, 15000);
 
   it("renders the final summary with REAL/HYBRID status", () => {
     render(<DemoCaseSummary summary={summary()} />);

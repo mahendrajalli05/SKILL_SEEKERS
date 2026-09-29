@@ -26,9 +26,7 @@ from app.demo.constants import (
     assert_fusion_v2_unchanged,
 )
 from app.demo.errors import DemoCaseError
-from app.demo.evidence_fixtures import assembled_plan_claim, ensure_demo_case_evidence
-from app.demo.preassembled import load_preassembled_case
-from app.demo.summary import build_case_summary
+from app.demo.preassembled import has_preassembled_case, load_preassembled_case
 from app.domain.enums import DataMode
 from app.engines.fusion_v2.service import assess_project_risk_v2, result_payload
 from app.engines.lifecycle.service import get_project_lifecycle, parse_lifecycle_data_mode
@@ -225,6 +223,30 @@ def assemble_case(
     assert_fusion_v2_unchanged()
     entry = catalog_entry(case_id)
     key = entry["case_id"]
+    # When requesting one of the fixed prototype demo cases (CLEAN, GHOST, OVERBILL, STUCK),
+    # return the cached preassembled fixture directly with ZERO database queries.
+    if has_preassembled_case(key):
+        payload = load_preassembled_case(key)
+        mode = str(data_mode or payload.get("data_mode") or "HYBRID").upper()
+        if mode == "REAL":
+            payload["data_mode"] = "REAL"
+            payload["data_reliability"] = "REAL"
+            real_items = [
+                item for item in payload.get("available_evidence", {}).get("items", [])
+                if item.get("data_mode") == "REAL"
+            ]
+            payload["available_evidence"] = {
+                "items": real_items,
+                "count": len(real_items),
+                "evidence_ids": [item["evidence_id"] for item in real_items if item.get("evidence_id")],
+            }
+        _reject_forbidden(
+            payload.get("short_description"),
+            payload.get("recommended_action"),
+            payload.get("risk_fusion_v2", {}).get("explanation"),
+        )
+        return payload
+
     project = _lookup_project(session, entry["internal_project_id"])
     if project is None:
         raise DemoCaseError(
@@ -234,7 +256,7 @@ def assemble_case(
         )
     mode = parse_demo_data_mode(data_mode or DataMode.HYBRID, project)
 
-    # Load preassembled read-only fixture payload (instant, zero repeated DB queries)
+    # Fallback assembly for any non-preassembled case
     payload = load_preassembled_case(key)
 
     # 1. Bind live project identity
